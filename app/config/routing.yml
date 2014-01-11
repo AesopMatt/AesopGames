@@ -1,0 +1,4 @@
+onn_aesop_games:
+    resource: "@ONNAesopGamesBundle/Resources/config/routing.yml"
+    prefix:   /
+

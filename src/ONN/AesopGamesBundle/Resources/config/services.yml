@@ -1,0 +1,7 @@
+parameters:
+#    onn_aesop_games.example.class: ONN\AesopGamesBundle\Example
+
+services:
+#    onn_aesop_games.example:
+#        class: %onn_aesop_games.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
