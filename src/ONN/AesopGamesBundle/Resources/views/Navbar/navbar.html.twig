@@ -20,6 +20,9 @@
                 <li {% if app.session.get('page') == 'games' %} class="active" {% endif %}>
                     <a href="#" onclick="selectMain('{{ path('games') }}')">
                         Games</a></li>
+                <li>
+                    <a href="http://brunegame.blogspot.com/" target="_blank">
+                        Blog</a></li>
                 <li {% if app.session.get('page') == 'contact' %} class="active" {% endif %}>
                     <a href="#" onclick="selectMain('{{ path('contact') }}')">
                         Contact</a></li>
