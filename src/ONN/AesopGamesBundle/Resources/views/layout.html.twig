@@ -3,6 +3,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            padding-top: 70px;
+            padding-bottom: 30px;
+        }
+
+        .theme-dropdown .dropdown-menu {
+            display: block;
+            position: static;
+            margin-bottom: 20px;
+        }
+
+        .theme-showcase > p > .btn {
+            margin: 5px 0;
+        }
+    </style>
+
     {% javascripts
     '@ONNAesopGamesBundle/Resources/public/js/jquery-1.8.0.min.js'
     '@ONNAesopGamesBundle/Resources/public/js/bootstrap.min.js'
@@ -12,13 +30,57 @@
     {% endjavascripts %}
 
     {% stylesheets output='css/*.css' filter='cssrewrite' debug=false
-    'bundles/onnbrun/css/*'
+    'bundles/onnaesopgames/css/bootstrap.css'
+    'bundles/onnaesopgames/css/jquery-ui-1.10.3.custom.css'
+    'bundles/onnaesopgames/css/overall.css'
     %}
     <link href="{{ asset_url }}" rel="stylesheet" media="screen" />
     {% endstylesheets %}
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-{% block main %}
-{% endblock %}
+<div id="navbar">
+    <!-- Fixed navbar -->
+    {% render(controller('ONNAesopGamesBundle:Page:Navbar')) %}
+</div>
+
+<div id="main">
+    {% block main %}
+    {% endblock %}
+</div>
+
+<footer class="text-center" style="position:fixed; bottom: 0px; width: 100%;">
+    <img src="{{ asset('bundles/onnaesopgames/images/aesopgames-small.png') }}">
+    <p style="color:white">&copy; Aesop Games 2014</p>
+</footer>
+
+<script>
+    $.backstretch('{{ asset('bundles/onnaesopgames/images/city.jpg') }}');
+
+    function selectMain(path) {
+        document.body.style.cursor="wait";
+        $.get( path,
+            function(data){
+                $('#main').empty().html(data);
+                //the response is in the data variable
+                document.body.style.cursor="auto";
+                data = null;
+                $.get( '{{ path ('navbar') }}',
+                    function(data){
+                        $('#navbar').empty().append(data);
+                        var stateObj = { foo: "bar" };
+                        history.replaceState(stateObj, "Aesop Games", path);
+                    }
+                );
+            }
+        );
+        return false;
+    }
+</script>
 </body>
 </html>

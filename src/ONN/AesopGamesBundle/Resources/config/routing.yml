@@ -1,3 +1,18 @@
 index:
     pattern:   /
     defaults:  { _controller: ONNAesopGamesBundle:Page:index }
+about:
+    pattern:   /about
+    defaults:  { _controller: ONNAesopGamesBundle:Page:about }
+games:
+    pattern:   /games
+    defaults:  { _controller: ONNAesopGamesBundle:Page:games }
+blog:
+    pattern:   /blog
+    defaults:  { _controller: ONNAesopGamesBundle:Page:blog }
+contact:
+    pattern:   /contact
+    defaults:  { _controller: ONNAesopGamesBundle:Page:contact }
+navbar:
+    pattern:   /navbar
+    defaults:  { _controller: ONNAesopGamesBundle:Page:navbar }
