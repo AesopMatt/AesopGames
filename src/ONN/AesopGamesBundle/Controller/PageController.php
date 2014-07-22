@@ -142,10 +142,10 @@ class PageController extends Controller
         } else {
             $team_image = '/bundles/onnaesopgames/images/Photos/Team.png';
             $map_image = '/bundles/onnaesopgames/images/Web/Map.png';
-            $plat_panel = '/bundles/onnaesopgames/images/Panel/platinum.png';
-            $badge_panel = '/bundles/onnaesopgames/images/Panel/badge.png';
+            $plat_panel = '/bundles/onnaesopgames/images/Panels/platinum.png';
+            $badge_panel = '/bundles/onnaesopgames/images/Panels/badge.png';
             foreach ($calendar_images as $key=>$image){
-                $calendar_images[$key] = '/bundles/onnaesopgames/images/Panel/'.$image;
+                $calendar_images[$key] = '/bundles/onnaesopgames/images/Panels/'.$image;
             }
             $facebook_image = '/bundles/onnaesopgames/images/facebook.jpg';
             $twitter_image = '/bundles/onnaesopgames/images/twitter.jpg';
