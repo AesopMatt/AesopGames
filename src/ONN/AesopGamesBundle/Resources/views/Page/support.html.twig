@@ -45,7 +45,7 @@
                 <h4>Aesop Games is working to raise funds for completing Brunelleschi: Age of Architects and embarking on new projects!</h4>
                 <p>Information on our team, project, and progress put together towards that effort as well as perks available to supporters will be updated here.</p>
                 <p>If you have already supported us through an online campaign, but see a similarly priced Perk here that you would rather have, get in touch and we will be happy to update your reserved Perk.</p>
-                <p style="font-weight:bold; text-align:right; margin-right:10px;margin-top:10px;">Jump to information about <a>the Game</a>, <a>the Team</a>, <a>the Perks</a>, <a>the Stretch Goals</a>.</p>
+                <p style="font-weight:bold; text-align:right; margin-right:10px;margin-top:10px;">Jump to information about <a href="#looking-forward">the Game</a>, <a href="#overview">the Team</a>, <a href="#rewards">the Perks</a>, <a href="#stretch">the Stretch Goals</a>.</p>
             </div>
         </div>
         <div class="row" style="margin-bottom: 10px;">
@@ -91,7 +91,7 @@
                 {# Info Panel 1 #}
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">A Brief Intro to The Team and The Project</h3>
+                        <h3 class="panel-title" id="overview">A Brief Intro to The Team and The Project</h3>
                     </div>
                     <div class="panel-body">
                         <p>We are a small team with two chief motivations: making <b>interesting games</b> and making our programmer a <b>better cyborg</b>.  We make games because:</p>
@@ -218,7 +218,7 @@
                 {# Info Panel 5 #}
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Looking Forward</h3>
+                        <h3 class="panel-title" id="looking-forward">Looking Forward</h3>
                     </div>
                     <div class="panel-body">
                         <img src="{{ asset( forward_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
@@ -383,7 +383,7 @@
                 {# Info Panel 6 #}
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Stretch Goals</h3>
+                        <h3 class="panel-title" id="stretch">Stretch Goals</h3>
                     </div>
                     <div class="panel-body">
                         <img src="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
@@ -392,7 +392,7 @@
                 {# Info Panel 7 #}
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Selected Perk Packages</h3>
+                        <h3 class="panel-title" id="rewards">Selected Perk Packages</h3>
                     </div>
                     <div class="panel-body">
                         {% for image in rewards_images %}
