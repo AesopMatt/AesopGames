@@ -26,7 +26,7 @@ class PageController extends Controller
                 if (strpos($currentUrl,'localhost') !== false){
                     $images[$name][$type] = '/Aesop/web/bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
                 } else {
-                    $images[$name][$type] = 'bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
+                    $images[$name][$type] = '/bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
                 }
             }
         }
@@ -81,7 +81,7 @@ class PageController extends Controller
             if (strpos($currentUrl,'localhost') !== false){
                 $images[] = '/Aesop/web/bundles/onnaesopgames/images/Rewards/'.$name.'.png';
             } else {
-                $images[] = 'bundles/onnaesopgames/images/Rewards/'.$name.'.png';
+                $images[] = '/bundles/onnaesopgames/images/Rewards/'.$name.'.png';
             }
         }
 
@@ -167,7 +167,7 @@ class PageController extends Controller
             $instant_image = '/bundles/onnaesopgames/images/Headings/instant.png';
             $markets_image = '/bundles/onnaesopgames/images/Screenshots/markets.png';
             $taxation_report = '/bundles/onnaesopgames/images/Screenshots/taxation_report.png';
-            $combat_image = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/fight.png';
+            $combat_image = '/bundles/onnaesopgames/images/Screenshots/fight.png';
             $equip_unit = '/bundles/onnaesopgames/images/Screenshots/equip_unit.png';
             $scenario_image = '/bundles/onnaesopgames/images/Screenshots/scenario.png';
             $unity_shop = '/bundles/onnaesopgames/images/Screenshots/unity-alchemist-shop.png';
