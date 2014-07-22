@@ -13,6 +13,9 @@ blog:
 contact:
     pattern:   /contact
     defaults:  { _controller: ONNAesopGamesBundle:Page:contact }
+support:
+    pattern:   /support
+    defaults:  { _controller: ONNAesopGamesBundle:Page:support }
 navbar:
     pattern:   /navbar
     defaults:  { _controller: ONNAesopGamesBundle:Page:navbar }
