@@ -139,7 +139,7 @@ class PageController extends Controller
             $scenario_image = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/scenario.png';
             $unity_shop = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/unity-alchemist-shop.png';
             $construct_district = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/construct-district.png';
-            $budget_pies = '/Aesop/web/bundles/onnaesopgames/images/Panels/budget-pies.png';
+            $budget_pies = '/Aesop/web/bundles/onnaesopgames/images/Panels/budget-pies-crowdfunding.png';
         } else {
             $team_image = '/bundles/onnaesopgames/images/Photos/Team.png';
             $map_image = '/bundles/onnaesopgames/images/Web/Map.png';
@@ -173,7 +173,7 @@ class PageController extends Controller
             $scenario_image = '/bundles/onnaesopgames/images/Screenshots/scenario.png';
             $unity_shop = '/bundles/onnaesopgames/images/Screenshots/unity-alchemist-shop.png';
             $construct_district = '/bundles/onnaesopgames/images/Screenshots/construct-district.png';
-            $budget_pies = '/bundles/onnaesopgames/images/Panels/budget-pies.png';
+            $budget_pies = '/bundles/onnaesopgames/images/Panels/budget-pies-crowdfunding.png';
         }
         $rewards_images = $this->getRewardsImages($currentUrl);
         $fundraisers = $this->getFundraisersImages($currentUrl);
