@@ -133,7 +133,7 @@
                         <h3 class="panel-title">The State of Development</h3>
                     </div>
                     <div class="panel-body">
-                        <img src="{{ asset( development_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( development_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( development_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         <p>We already have most of the resources that we need to <b>complete the game</b> as outlined minimally in the Roadmap and will happily continue to do so even if this campaign is not successful. We have been working on Brunelleschi for a few years and can continue to develop at a moderate pace with the technology already at our disposal.</p>
                         <p>In order to <b>continue making games</b> we will need to stay up off the bottom of Maslow's pyramid.  While we have and will continue to make progress, every bit of help we get translates to less time spent meeting basic needs, and more time <b>making things work</b> in the game :)</p>
                         <p>Initial funds will go to paying for the test and beta servers</p>
@@ -144,8 +144,8 @@
                         <ul style="list-style: none">1) games made by people who want you to <b>love playing</b> them,</ul>
                         <ul style="list-style: none">2) knowledge that you made the world a better place by helping someone help themselves, and</ul>
                         <ul style="list-style: none">3) our sincere gratitude expressed through the perk of your choice (and living in our hearts forever).</ul>
-                        <img src="{{ asset( plat_panel ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
-                        <img src="{{ asset( badge_panel ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
+                        <img src="{{ asset( plat_panel|replace({'png':'svg'}) ) }}" onerror="{{ asset( plat_panel ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
+                        <img src="{{ asset( badge_panel|replace({'png':'svg'}) ) }}" onerror="{{ asset( badge_panel ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
                     </div>
                 </div>
                 {# Info Panel 3 #}
@@ -154,7 +154,7 @@
                         <h3 class="panel-title">Risks and Challenges</h3>
                     </div>
                     <div class="panel-body">
-                        <img src="{{ asset( challenge_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( challenge_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( challenge_image ) }}"  class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         <p>The beta version of Brunelleschi is available and free to play at <a target="_blank" href="http://brunegame.com">brunegame.com</a>, and we are committed to finishing the web version of the game regardless of the outcome of this campaign.  Should both the programmer and the designer suffer (additional) severe injury or death, progress on the game might stagnate; however, even in such an extreme situation the game might still be completed because:</p>
                         <ul>
                         <li>This game will be open sourced.</li>
@@ -172,7 +172,7 @@
                         <h3 class="panel-title">Fund Allocation Pie Charts</h3>
                     </div>
                     <div class="panel-body">
-                        <img src="{{ asset( budget_pies ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( budget_pies|replace({'png':'svg'}) ) }}" onerror="{{ asset( budget_pies ) }}"  class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                     </div>
                 </div>
                 {# Info Panel 3b #}
@@ -181,7 +181,7 @@
                         <h3 class="panel-title">Instant Rewards</h3>
                     </div>
                     <div class="panel-body">
-                        <img src="{{ asset( instant_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( instant_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( instant_image ) }}"  class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         <p>Some of the Rewards available to Supporters are 'Instant' in that they are game awards which we already have the infrastructure to provide, meaning we will deliver them as soon as we are able once the Campaign is complete and the contributions processed.</p>
 
                         <p>All contributors receive our Special Thanks and a Kickstarter Badge signifying their contribution to the Game.  Where their Special Thanks appear and the appearance and title of their Badge are determined by the level of contribution.  Supporters who provide Character information will receive these tokens of our appreciation both in the Live Beta, as soon as we are able, and in the launch server at version 1.0.</p>
@@ -195,7 +195,7 @@
                         <h3 class="panel-title">Rewards Calendar</h3>
                     </div>
                     <div class="panel-body">
-                        <img src="{{ asset( rewards_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( rewards_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( rewards_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         <p> For those Rewards which we are unable to deliver "Instantly", we have done our best to provide accurate delivery estimates!</p>
                         {% for image in calendar_images %}
                             <img src="{{ asset( image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 0px; display:block">
@@ -208,7 +208,7 @@
                         <h3 class="panel-title">How You Can Help</h3>
                     </div>
                     <div class="panel-body">
-                        <img src="{{ asset( help_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( help_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( help_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         <p>Whether you are able to contribute today or not you can still help!  Please, spread the word about our campaign and about our game!  Folks may be into interesting new games, supporting entrepreneurship, or upgrading cyborgs, but they have to know what we're up to to be able to help!  So please,</p>
                         <ul>
                             <li>Tell folks about what we're doing!</li>
@@ -238,12 +238,12 @@
                         <h3 class="panel-title" id="looking-forward">Looking Forward</h3>
                     </div>
                     <div class="panel-body">
-                        <img src="{{ asset( forward_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( forward_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( forward_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         <p>Brunelleschi’s rich feature set will eventually be extended with a variety of ‘add-on’ features such as the establishment and management of Colonies, additional Social and Historical elements like Religious Conversion and extended Dynastic Lineages.</p>
 
                         <p>The game is an Evolving entity that is constantly being improved by the suggestions and feedback of our beta testers. In future, we hope to be able to go beyond the extensive features outlined in the Roadmap to add a 3D Unity Client, a 2D Unity Mobile Client, and many other interesting expansions outlined in the stretch goals.</p>
                         <p>Following are descriptions of the features currently implemented and available in the web client beta.</p>
-                        <img src="{{ asset( game_property ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( game_property|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_property ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
 
                         <div style="width:80%; margin-left:auto;margin-right:auto;">
                             <p>Any Character in Brunelleschi can own property.  When a Settlement in Brunelleschi is first founded, all that empty potential belongs to the founding Sovereign character.  If that Sovereign brings on Ministers to help them manage and expand their Settlement, those Ministers gain governance over the Sovereign's buildings and plots in the Districts they Administer.</p>
@@ -253,7 +253,7 @@
                             <p>Depending on rules set by the Sovereigns of each Settlement, a single Character may purchase and administer property in multiple settlements, although there are trade offs in productivity.</p>
                         </div>
 
-                        <img src="{{ asset( game_craft ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( game_craft|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_craft ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
                         <div style="width:80%; margin-left:auto;margin-right:auto;">
                             <p>In many ways the production chain is the core of the Brunelleschi Economy.  Resources can be Harvested by Character actions and by NPC staffed buildings.  Those Resources can then be Processed into Goods at the appropriate Processing Buildings, and then used to create a wide variety of Equipment at various Crafting Buildings.</p>
 
@@ -261,14 +261,14 @@
 
                             <p>All game items can be bought, sold, and traded through the extensive markets, as well as through the Direct Trade action which allows complex one on one negotiations.</p>
                         </div>
-                        <img src="{{ asset( game_bond ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( game_bond|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_bond ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
                         <div style="width:80%; margin-left:auto;margin-right:auto;">
                             <h5>Relationships between Characters are a big part of Brunelleschi.</h5>
 
                             <p>Through a variety of Social actions Characters develop relationships both between each other and between their Settlements if they are not in the same one.  These Relationships can be made official through declarations of Friendship, Enmity, becoming Lovers, accepting a Handfasting, or becoming Married.  Enemy Characters may fight each other in Duels, wracking up kills and deaths, while Handfasted or Married Characters have Diplomatic benefits and limitations from their bond.</p>
                         </div>
 
-                        <img src="{{ asset( game_diplomacy ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( game_diplomacy|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_diplomacy ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
                         <div style="width:80%; margin-left:auto;margin-right:auto;">
                             <p>Diplomatic relationships between Settlements can have a huge impact on Gameplay.  For example, a Trade Treaty can bolster both economies by allowing trade between Residents of both Settlements as if they were local; whereas an Embargo prevents trade between them.</p>
 
@@ -277,7 +277,7 @@
                             <p>Alliances between Settlements with positive relationships prevent hostile actions from being initiated between them, and allow Residents of all Allied Settlements to participate should a District in one be attacked.</p>
                         </div>
 
-                        <img src="{{ asset( game_civics ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( game_civics|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_civics ) }}"  class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
                         <div style="width:80%;margin-left:auto;margin-right:auto;">
                             <p>Brunelleschi is not that different from the majority of city building games in that you collect resources and use them to construct Buildings, which then in turn provide Bonuses, Resources, Equipment, Troops, and monetary Income.</p>
                              <p>There are 65 district options in Brunelleschi, though even the largest Settlements will have to chose 50 or less of these. Since each District is composed of Buildings, they can also be customized, making it nearly impossible that 2 settlements will ever be exactly alike.</p>
@@ -294,7 +294,7 @@
 
                             <p>Since it's ultimately the opinions of other players that will decide your character's Importance, and as such their Rank, Lords will have to learn to wield public opinion carefully, and as such we hope that the game approaches a realistic simulation of the sociological forces inherent in civil administration.</p>
                         </div>
-                        <img src="{{ asset( game_combat ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( game_combat|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_combat ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
                         <div style="width:80%; margin-left:auto;margin-right:auto;">
                             <p>For the first 25 levels, everything in Brunelleschi is focused on advancement, around half a week of familiarizing yourself with the interface, possibly posting in the forums a bit, and for Lords building a few initial structures. Once characters hit level 20, they begin to unlock additional 'Life' and 'Aggressive' actions as well as their Class Actions.</p>
 
@@ -350,7 +350,7 @@
                             <p>If a combat Scenario ends without completion, we'll have failed to assault and worked ourselves into a quagmire even without resistance. The ensuing 'Standoff' scenario would give the defenders a chance to jump on our mistake and do some damage.</p>
                         </div>
 
-                        <img src="{{ asset( game_trade ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( game_trade|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_trade ) }}"  class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
                         <div style="width:80%; margin-left:auto;margin-right:auto;">
                             <h3>One of the most interesting aspects of Brunelleschi is the open economy.</h3>
                             <p>The flow of resources, goods, equipment, and currency between the game system and the players and between the players and each other is very open ended - allowing a variety of economic systems to be implemented and played with. Having such an open ended system can be confusing, so I'm going to outline some of the major aspects of it here.</p>
@@ -371,7 +371,7 @@
 
                             <p>While not all actions, buildings, and scenarios produce items, many of them do.  Actions and scenarios will generate output for anyone utilizing them, while buildings grant their output only to their owner unless they are taxed.</p>
 
-                             <p>Through the markets trades of any items for any other may be offerred or redeemed.  Characters' about pages include options for actions which would target them directly; one such action is Direct Trade which allows for direct trade negotiations between two parties.  Additionally, friends and allies may choose to simply 'donate' items from their inventory which does not require the creation of a market order.</p>
+                             <p>Through the markets trades of any items for any other may be offered or redeemed.  Characters' about pages include options for actions which would target them directly; one such action is Direct Trade which allows for direct trade negotiations between two parties.  Additionally, friends and allies may choose to simply 'donate' items from their inventory which does not require the creation of a market order.</p>
 
                             <img src="{{ asset( markets_image ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
 
@@ -390,7 +390,7 @@
                                <p>All these various mechanisms for exchanging items allow each settlement to determine and regulate an economy suited to it specifically.  On a personal note, I very much look forward to seeing the various types of setups people put together and administer in their own settlements, as well as what kind of economic setups non-Sovereigns will seek out to live in.</p>
                         </div>
 
-                            <img src="{{ asset( game_unity ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
+                            <img src="{{ asset( game_unity|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_unity ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
                         <div style="width:80%; margin-left:auto;margin-right:auto;">
                         <p>One of the goals of Brunelleschi is accessibility.  While some gamers are perfectly comfortable with the data driven web interface, having a first-person 3D interface for the game world would open up the game play experience to a much wider range of player personalities. This would increase the richness of experience for all players due to the social nature of the game.</p>
                         <p>Even learning Unity 3D as we develop and without a budget for assets, we have been able to develop the initial stages of a first-person 3D client for Brunelleschi which allows players to login to the game, render their game Settlement in the 3D environment, and interact with game functions through an internal web browser.</p>
@@ -404,7 +404,7 @@
                         <h3 class="panel-title" id="stretch">Stretch Goals</h3>
                     </div>
                     <div class="panel-body">
-                        <img src="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                     </div>
                 </div>
                 {# Info Panel 7 #}
@@ -414,7 +414,7 @@
                     </div>
                     <div class="panel-body">
                         {% for image in rewards_images %}
-                            <img src="{{ asset( image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 0px; display:block">
+                            <img src="{{ asset( image|replace({'png':'svg'}) ) }}" onerror="{{ asset( image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 0px; display:block">
                         {% endfor %}
                     </div>
                 </div>
@@ -425,7 +425,7 @@
                         <h3 class="panel-title">Future Games</h3>
                     </div>
                     <div class="panel-body">
-                        <img src="{{ asset( games ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( games|replace({'png':'svg'}) ) }}" onerror="{{ asset( games ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                     </div>
                 </div>
 
@@ -435,7 +435,7 @@
                         <h3 class="panel-title">How You Can Help</h3>
                     </div>
                     <div class="panel-body">
-                        <img src="{{ asset( help_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <img src="{{ asset( help_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( help_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         <p>Thank you for reading about Aesop Games and Brunelleschi: Age of Architects!  Please, keep in mind that whether you are able to contribute today or not <b>you can still help</b>!  Getting the word out is a vital part of this process, and we can't do it alone!</p>
                         <p>We know there are folks out there who would really enjoy helping us make new interesting games and then playing them - if only they knew we existed!  So please, if you like something about what we're doing, help us spread the word! </p>
                         <ul>
@@ -472,7 +472,7 @@
                             <h3 class="panel-title">{{ perk.title }}</h3>
                         </div>
                         <div class="panel-body">
-                            <img src="{{ asset( perk.image ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
+                            <img src="{{ asset( perk.image|replace({'png':'svg'}) ) }}" onerror="{{ asset( perk.image ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
                             {{ perk.desc }}
                         </div>
                     </div>
