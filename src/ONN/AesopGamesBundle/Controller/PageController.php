@@ -141,6 +141,7 @@ class PageController extends Controller
             $construct_district = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/construct-district.png';
             $budget_pies = '/Aesop/web/bundles/onnaesopgames/images/Panels/budget-pies-crowdfunding.png';
             $games = '/Aesop/web/bundles/onnaesopgames/images/Panels/games.png';
+            $team = '/Aesop/web/bundles/onnaesopgames/images/Headings/team.png';
         } else {
             $team_image = '/bundles/onnaesopgames/images/Photos/Team.png';
             $map_image = '/bundles/onnaesopgames/images/Web/Map.png';
@@ -176,6 +177,7 @@ class PageController extends Controller
             $construct_district = '/bundles/onnaesopgames/images/Screenshots/construct-district.png';
             $budget_pies = '/bundles/onnaesopgames/images/Panels/budget-pies-crowdfunding.png';
             $games = '/bundles/onnaesopgames/images/Panels/games.png';
+            $team = '/bundles/onnaesopgames/images/Headings/team.png';
         }
         $rewards_images = $this->getRewardsImages($currentUrl);
         $fundraisers = $this->getFundraisersImages($currentUrl);
@@ -216,6 +218,7 @@ class PageController extends Controller
             'construct_district' => $construct_district,
             'budget_pies' => $budget_pies,
             'games' => $games,
+            'team' => $team
         ));
     }
 
