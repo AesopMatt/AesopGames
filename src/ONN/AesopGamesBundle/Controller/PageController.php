@@ -96,23 +96,23 @@ class PageController extends Controller
         $currentUrl = $this->getRequest()->getUri();
         $perks = $this->getPerks($currentUrl);
         $calendar_images = [
-            1 => 'october2014.png',
-            2 => 'november2014.png',
-            3 => 'december2014.png',
-            4 => 'january2015.png',
-            5 => 'february2015.png',
-            6 => 'march2015.png',
-            7 => 'april2015.png',
-            8 => 'may2015.png'
+            'october-2014' => 'october2014.png',
+            'november-2014' => 'november2014.png',
+            'december-2014' => 'december2014.png',
+            'january-2015' => 'january2015.png',
+            'february-2015' => 'february2015.png',
+            'march-2015' => 'march2015.png',
+            'april-2015' => 'april2015.png',
+            'may-2015' => 'may2015.png'
         ];
 
         if (strpos($currentUrl,'localhost') !== false){
-            $team_image = '/Aesop/web/bundles/onnaesopgames/images/Photos/Team.png';
-            $map_image = '/Aesop/web/bundles/onnaesopgames/images/Web/Map.png';
+            $team_image = '/bundles/onnaesopgames/images/Photos/Team.png';
+            $map_image = '/bundles/onnaesopgames/images/Web/Map.png';
             $plat_panel = '/Aesop/web/bundles/onnaesopgames/images/Panels/platinum.png';
             $badge_panel = '/Aesop/web/bundles/onnaesopgames/images/Panels/badge.png';
             foreach ($calendar_images as $key=>$image){
-                $calendar_images[$key] = '/Aesop/web/bundles/onnaesopgames/images/Panels/'.$image;
+                $calendar_images[$key] = '/bundles/onnaesopgames/images/Panels/'.$image;
             }
             $facebook_image = '/Aesop/web/bundles/onnaesopgames/images/facebook.jpg';
             $twitter_image = '/Aesop/web/bundles/onnaesopgames/images/twitter.jpg';
@@ -132,13 +132,13 @@ class PageController extends Controller
             $help_image = '/Aesop/web/bundles/onnaesopgames/images/Headings/help.png';
             $stretch_image = '/Aesop/web/bundles/onnaesopgames/images/stretch.png';
             $instant_image = '/Aesop/web/bundles/onnaesopgames/images/Headings/instant.png';
-            $markets_image = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/markets.png';
+            $markets_image = '/bundles/onnaesopgames/images/Screenshots/markets.png';
             $taxation_report = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/taxation_report.png';
-            $combat_image = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/fight.png';
-            $equip_unit = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/equip_unit.png';
-            $scenario_image = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/scenario.png';
-            $unity_shop = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/unity-alchemist-shop.png';
-            $construct_district = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/construct-district.png';
+            $combat_image = '/bundles/onnaesopgames/images/Screenshots/fight.png';
+            $equip_unit = '/bundles/onnaesopgames/images/Screenshots/equip_unit.png';
+            $scenario_image = '/bundles/onnaesopgames/images/Screenshots/scenario.png';
+            $unity_shop = '/bundles/onnaesopgames/images/Screenshots/unity-alchemist-shop.png';
+            $construct_district = '/bundles/onnaesopgames/images/Screenshots/construct-district.png';
             $budget_pies = '/Aesop/web/bundles/onnaesopgames/images/Panels/budget-pies-crowdfunding.png';
             $games = '/Aesop/web/bundles/onnaesopgames/images/Panels/games.png';
             $team = '/Aesop/web/bundles/onnaesopgames/images/Headings/team.png';
@@ -220,10 +220,11 @@ class PageController extends Controller
             'games' => $games,
             'team' => $team
         ));
+        /*
         $response->setETag(md5($response->getContent()));
         $response->setPublic(); // make sure the response is public/cacheable
         $response->isNotModified($request);
-
+        */
         return $response;
     }
 

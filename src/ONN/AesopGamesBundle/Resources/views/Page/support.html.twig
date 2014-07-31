@@ -90,6 +90,9 @@
             $(function(){
                 var content = '<iframe src="http://prezi.com/embed/aiduogjnsjir/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined&amp;html5=1" width="700" height="400" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe>';
                 $("#prezi-div").html(content);
+
+                content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
+                $("#stretch-div").html(content);
             });
         </script>
         <div class="row">
@@ -113,7 +116,7 @@
                         <p>Each District in a Settlement can employ a Minister, a major element of Gameplay, which allow Lords to work together to build impressive Settlements that a single player could never effectively manage.  A Sovereign can benefit from up to <b>49 friends</b> assisting them as Ministers and Resident Heroes in their shared epic journey through a Historical Fantasy Renaissance.
                             <a href="#looking-forward"><button class="btn btn-info pull-right" style="margin:10px;">Learn More</button></a></p>
 
-                        <img id="overview" src="{{ asset( map_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
+                        <img id="overview" src="{{ asset( map_image )|apply_filter("map") }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
                         {#
                         <img src="{{ asset( team ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         #}
@@ -124,7 +127,7 @@
                         <li>Rebecca's lifelong passion for visual art and storytelling has found a happy home in game development.</li>
                         <li>Margaret has a degenerating spinal injury which interferes with most things that aren't programming.</li><br/>
 
-                        <img src="{{ asset( team_image ) }}" class="img-rounded" style="margin-left:auto;margin-right:auto; margin-bottom: 10px; display:block">
+                        <img src="{{ asset( team_image )|apply_filter("team") }}" class="img-rounded" style="margin-left:auto;margin-right:auto; margin-bottom: 10px; display:block">
 
                         <p>Any support we receive will help us to complete <b>Brunelleschi: Age of Architects</b> and to create other fun game projects to share.  Any success we achieve through our games will be turned into:</p>
                         <li style="list-style: none;">1) more awesome games and</li>
@@ -204,8 +207,8 @@
                     <div class="panel-body">
                         <img src="{{ asset( rewards_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( rewards_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         <p> For those Rewards which we are unable to deliver "Instantly", we have done our best to provide accurate delivery estimates!</p>
-                        {% for image in calendar_images %}
-                            <img src="{{ asset( image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 0px; display:block">
+                        {% for filter,image in calendar_images %}
+                            <img src="{{ asset( image )|apply_filter(filter) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 0px; display:block">
                         {% endfor %}
                     </div>
                 </div>
@@ -289,7 +292,7 @@
                             <p>Brunelleschi is not that different from the majority of city building games in that you collect resources and use them to construct Buildings, which then in turn provide Bonuses, Resources, Equipment, Troops, and monetary Income.</p>
                              <p>There are 65 district options in Brunelleschi, though even the largest Settlements will have to chose 50 or less of these. Since each District is composed of Buildings, they can also be customized, making it nearly impossible that 2 settlements will ever be exactly alike.</p>
 
-                            <img src="{{ asset( construct_district ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
+                            <img src="{{ asset( construct_district )|apply_filter("screenshot-catalog-district") }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
 
                             <p>The Buildings constructed in a Settlement will attract Citizens, both computer-generated NPCs to run the buildings, as well as Human Heroes and Ministers who want to benefit from the Settlement's economy, make use of District Actions, or just enjoy the ambiance or social environment of a Settlement.</p>
 
@@ -324,12 +327,12 @@
                             <h3>Hits and Damage</h3>
                             <p>The character's attributes are calculated to determine hits and damage per round, with a variety of factors such as ranged attacks, spell damage, and melee attacks factored in and displayed in the forum.</p>
 
-                            <img src="{{ asset( combat_image ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
+                            <img src="{{ asset( combat_image )|apply_filter("screenshot-combat") }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
 
                             <h3>And on to War</h3>
                             <p>As characters advance beyond level 50 non-consensual PvP becomes possible as Lords gain 'Military Action'. This complex action invokes the 'Military Council' and enables Lords to assemble their Brigades of soldiers. Lords can always train 'Peers' from the population as troops, and Commander classes are able to train Peasants and Yeoman, but these civilian units will be no match for the units produced in an actual training ground. Heroes will have to wait until somewhere between level 150-250 to gain 'Military Action', and the Regiments they lead will allow somewhat less troop variety than Lordly Brigades.</p>
 
-                            <img src="{{ asset( equip_unit ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
+                            <img src="{{ asset( equip_unit )|apply_filter("screenshot-equip-unit") }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
 
                             <p>Sovereigns and Minsters have a great deal of control over troop recruitment, and can theoretically turn a profit training and selling units to their Citizens and Allies.</p>
 
@@ -343,7 +346,7 @@
 
                             <p>Players can wind up spending a lot of action points this way, and as such the Scenarios usually don't have much in the way of Contribution or Detraction rewards. Only the team able to push the Scenario to the finish line will get completion rewards, and sometimes this will also come with penalties for the losing team. Additionally, the bonus (or penalty) from completion for the whole Settlement or possibly the entire World will be determined by the outcome. </p>
 
-                            <img src="{{ asset( scenario_image ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
+                            <img src="{{ asset( scenario_image )|apply_filter("screenshot-competitive-scenario") }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
 
                                 <p>Some Scenarios create week-long advantages for the winning team, and could be essential to upsetting the balance of power! Other scenarios have greater rewards for the outcome that penalizes the settlement, allowing a small group of players to gain advantage at the expense of everyone else in the Settlement.</p>
 
@@ -380,7 +383,7 @@
 
                              <p>Through the markets trades of any items for any other may be offered or redeemed.  Characters' about pages include options for actions which would target them directly; one such action is Direct Trade which allows for direct trade negotiations between two parties.  Additionally, friends and allies may choose to simply 'donate' items from their inventory which does not require the creation of a market order.</p>
 
-                            <img src="{{ asset( markets_image ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
+                            <img src="{{ asset( markets_image )|apply_filter("screenshot-markets") }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
 
                              <p>There are multiple types of taxation options in the game, which allow a Sovereign to dictate the flow of items in their settlement.  Through the Manage->Government menu, a sovereign may choose to set a specific tax rate on the output of Harvesting buildings and a separate rate for Processing buildings; these route a percentage of the output from those buildings to the Sovereign even if they are overseen by a Minister or even privately owned.</p>
 
@@ -402,7 +405,7 @@
                         <p>One of the goals of Brunelleschi is accessibility.  While some gamers are perfectly comfortable with the data driven web interface, having a first-person 3D interface for the game world would open up the game play experience to a much wider range of player personalities. This would increase the richness of experience for all players due to the social nature of the game.</p>
                         <p>Even learning Unity 3D as we develop and without a budget for assets, we have been able to develop the initial stages of a first-person 3D client for Brunelleschi which allows players to login to the game, render their game Settlement in the 3D environment, and interact with game functions through an internal web browser.</p>
                         <p>While we will continue some development of the Unity client regardless of the outcome of our fundraising efforts, accelerating and expanding development of the 3D client for the game is one of the top priorities for any funds we might receive.</p>
-                        <img src="{{ asset( unity_shop ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; margin-left:auto;margin-right:auto;display:block"></div>
+                        <img src="{{ asset( unity_shop )|apply_filter("screenshot-unity-alchemist-shop") }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; margin-left:auto;margin-right:auto;display:block"></div>
                     </div>
                 </div>
                 {# Info Panel 6 #}
@@ -410,8 +413,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title" id="stretch">Stretch Goals</h3>
                     </div>
-                    <div class="panel-body">
-                        <img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                    <div class="panel-body" id="stretch-div">
                     </div>
                 </div>
                 {# Info Panel 7 #}
