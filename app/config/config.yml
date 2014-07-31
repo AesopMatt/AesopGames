@@ -49,58 +49,67 @@ avalanche_imagine:
     filters:
         perk:
             type:    thumbnail
-            options: { size: [328, 152], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [328, 152], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         map:
             type:    thumbnail
-            options: { size: [646, 484], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [646, 484], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         team:
             type:    thumbnail
-            options: { size: [600, 600], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [600, 600], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         looking_closer:
             type:    thumbnail
-            options: { size: [646, 223], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [646, 223], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         october-2014:
             type:    thumbnail
-            options: { size: [646, 412], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [646, 412], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         november-2014:
             type:    thumbnail
-            options: { size: [646, 291], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [646, 291], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         december-2014:
             type:    thumbnail
-            options: { size: [646, 409], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [646, 409], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         january-2015:
             type:    thumbnail
-            options: { size: [646, 283], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [646, 283], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         february-2015:
             type:    thumbnail
-            options: { size: [646, 291], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [646, 291], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         march-2015:
             type:    thumbnail
-            options: { size: [646, 331], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [646, 331], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         april-2015:
             type:    thumbnail
-            options: { size: [646, 248], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [646, 248], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         may-2015:
             type:    thumbnail
-            options: { size: [646, 242], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [646, 242], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         screenshot-catalog-district:
             type:    thumbnail
-            options: { size: [517, 519], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [517, 519], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         screenshot-combat:
             type:    thumbnail
-            options: { size: [517, 134], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [517, 134], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         screenshot-equip-unit:
             type:    thumbnail
-            options: { size: [517, 338], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [517, 338], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         screenshot-competitive-scenario:
             type:    thumbnail
-            options: { size: [517, 452], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [517, 452], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         screenshot-markets:
             type:    thumbnail
-            options: { size: [517, 363], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [517, 363], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         screenshot-unity-alchemist-shop:
             type:    thumbnail
-            options: { size: [517, 362], mode: outbound, quality: 100, format: jpg, cache_type: false, cache_expires: 2 weeks }
+            options: { size: [517, 362], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
+        button-rockethub:
+            type:    thumbnail
+            options: { size: [246, 104], mode: outbound, quality: 100, format: png, cache_type: public, cache_expires: 2 weeks }
+        button-indiegogo:
+            type:    thumbnail
+            options: { size: [323, 104], mode: outbound, quality: 100, format: png, cache_type: public, cache_expires: 2 weeks }
+        button-kickstarter:
+            type:    thumbnail
+            options: { size: [258, 104], mode: outbound, quality: 100, format: png, cache_type: public, cache_expires: 2 weeks }
 
 # Doctrine Configuration
 doctrine:
