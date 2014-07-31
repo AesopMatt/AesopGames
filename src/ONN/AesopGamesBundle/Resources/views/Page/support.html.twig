@@ -86,6 +86,12 @@
                 {% endfor %}
             </div>
         </div>
+        <script>
+            $(function(){
+                var content = '<iframe src="http://prezi.com/embed/aiduogjnsjir/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined&amp;html5=1" width="700" height="400" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe>';
+                $("#prezi-div").html(content);
+            });
+        </script>
         <div class="row">
             <div class="col-md-8">
                 {# Info Panel 1 #}
@@ -94,7 +100,8 @@
                         <h3 class="panel-title">A Brief Intro to The Team and The Project</h3>
                     </div>
                     <div class="panel-body">
-                        <iframe src="http://prezi.com/embed/aiduogjnsjir/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined&amp;html5=1" width="700" height="400" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe>
+                        <div id="prezi-div">
+                        </div>
                         <h4 style="display:inline; margin-top:10px;">Brunelleschi</h4><p style="display:inline;"> is a social strategy role playing game set in the mythic renaissance where brave and daring Heroes adventure and advance in the cities, economies, and cultures constructed by teams of brilliant Lords.</p><br/>
 
                         <p style="margin-top:10px;"><b>Characters in Brunelleschi are either Heroes or Lords</b>. Lords are intended to manage Settlements, serving as Sovereigns and Ministers and providing powerful bonuses to all the Citizens of their Settlement. Heroes are somewhat more powerful in Combat and are able to access a variety of abilities that are not available to Lords.</p>
