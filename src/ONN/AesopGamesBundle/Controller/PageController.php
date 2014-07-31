@@ -182,7 +182,7 @@ class PageController extends Controller
         $rewards_images = $this->getRewardsImages($currentUrl);
         $fundraisers = $this->getFundraisersImages($currentUrl);
 
-        return $this->render('ONNAesopGamesBundle:Page:support.html.twig', array(
+        $response = $this->render('ONNAesopGamesBundle:Page:support.html.twig', array(
             'team_image' => $team_image,
             'map_image' => $map_image,
             'perks' => $perks,
@@ -220,6 +220,11 @@ class PageController extends Controller
             'games' => $games,
             'team' => $team
         ));
+        $response->setETag(md5($response->getContent()));
+        $response->setPublic(); // make sure the response is public/cacheable
+        $response->isNotModified($request);
+
+        return $response;
     }
 
     public function aboutAction(Request $request)
