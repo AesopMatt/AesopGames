@@ -88,11 +88,17 @@
         </div>
         <script>
             $(function(){
-                var content = '<iframe src="http://prezi.com/embed/aiduogjnsjir/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined&amp;html5=1" width="700" height="400" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe>';
-                $("#prezi-div").html(content);
 
-                content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
-                $("#stretch-div").html(content);
+                $.get( '{{ path ('perks') }}',
+                        function(data){
+                            $('#perks-div').html(data);
+                            var content = '<iframe src="http://prezi.com/embed/aiduogjnsjir/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined&amp;html5=1" width="700" height="400" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe>';
+                            $("#prezi-div").html(content);
+
+                            content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
+                            $("#stretch-div").html(content);
+                        }
+                );
             });
         </script>
         <div class="row">
@@ -475,17 +481,7 @@
                 <div class="alert alert-success" style="border: 2px solid green; opacity: 0.9;">
                     <h2 style="margin:0px;padding:0px;">Supporter Perks</h2>
                 </div>
-                {% for perk in perks %}
-                    <div class="panel panel-default text-left">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">{{ perk.title }}</h3>
-                        </div>
-                        <div class="panel-body">
-                            <img src="{{ asset( perk.image|replace({'png':'svg'}) ) }}" onerror="{{ asset( perk.image ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
-                            {{ perk.desc }}
-                        </div>
-                    </div>
-                {% endfor %}
+                <siv id="perks-div"></siv>
             </div>
         </div>
     </div> <!-- /container -->

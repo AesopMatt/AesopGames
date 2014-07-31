@@ -19,3 +19,6 @@ support:
 navbar:
     pattern:   /navbar
     defaults:  { _controller: ONNAesopGamesBundle:Page:navbar }
+perks:
+    pattern:   /perks
+    defaults:  { _controller: ONNAesopGamesBundle:Page:perks }

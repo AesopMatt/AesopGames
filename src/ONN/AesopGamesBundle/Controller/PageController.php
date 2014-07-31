@@ -88,13 +88,22 @@ class PageController extends Controller
         return $images;
     }
 
+    public function perksAction()
+    {
+        $currentUrl = $this->getRequest()->getUri();
+        $perks = $this->getPerks($currentUrl);
+
+        $response = $this->render('ONNAesopGamesBundle:Page:perks.html.twig', array('perks'=>$perks));
+
+        return $response;
+    }
+
     public function supportAction(Request $request)
     {
         $session = $request->getSession();
         $session->set('page','support');
 
         $currentUrl = $this->getRequest()->getUri();
-        $perks = $this->getPerks($currentUrl);
         $calendar_images = [
             'october-2014' => 'october2014.png',
             'november-2014' => 'november2014.png',
@@ -185,7 +194,6 @@ class PageController extends Controller
         $response = $this->render('ONNAesopGamesBundle:Page:support.html.twig', array(
             'team_image' => $team_image,
             'map_image' => $map_image,
-            'perks' => $perks,
             'plat_panel' => $plat_panel,
             'badge_panel' => $badge_panel,
             'calendar_images' => $calendar_images,
