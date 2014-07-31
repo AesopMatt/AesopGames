@@ -26,7 +26,7 @@ class PageController extends Controller
                 if (strpos($currentUrl,'localhost') !== false){
                     $images[$name][$type] = '/Aesop/web/bundles/onnaesopgames/images/Fundraisers/'.$name.'-small-'.$type.'.png';
                 } else {
-                    $images[$name][$type] = '/bundles/onnaesopgames/images/Fundraisers/'.$name.'-small-'.$type.'.png';
+                    $images[$name][$type] = '/bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
                 }
             }
         }
