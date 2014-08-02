@@ -14,7 +14,7 @@
    version="1.1"
    id="svg3298"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="feature-panel-budget-pies-crowdfunding.svg"
+   sodipodi:docname="feature-panel-budget-pies-crowdfunding.png"
    inkscape:export-filename="/home/mstaples/Downloads/dome-logo.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -26,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -50,8 +50,8 @@
      fit-margin-right="50"
      fit-margin-bottom="50"
      inkscape:zoom="0.38254353"
-     inkscape:cx="305.47973"
-     inkscape:cy="1401.9852"
+     inkscape:cx="28.05392"
+     inkscape:cy="1425.0556"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -432,20 +432,20 @@
      transform="matrix(1.0241457,0,0,0.84506432,-75.715866,226.07151)" />
   <text
      xml:space="preserve"
-     style="font-size:32px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Almendra Bold"
-     x="218.40886"
-     y="949.8949"
+     style="font-size:51.20000076px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Almendra Bold"
+     x="283.23807"
+     y="948.78619"
      id="text4207"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="218.40886"
-       y="949.8949"
+       x="283.23807"
+       y="948.78619"
        id="tspan4209"
-       style="-inkscape-font-specification:Almendra Bold;font-family:Almendra;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:38.4000025px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"><tspan
-         x="218.40886"
-         y="949.8949"
-         style="font-size:38.4000025px;fill:#ffffff;-inkscape-font-specification:Almendra Bold;font-family:Almendra;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-         id="tspan4211"> Budget Pie $500 &gt;&lt;  $10,000</tspan></tspan></text>
+       style="font-size:51.20000076px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Almendra;-inkscape-font-specification:Almendra Bold"><tspan
+         x="283.23807"
+         y="948.78619"
+         style="font-size:51.20000076px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+         id="tspan4211">$500 to $10,000</tspan></tspan></text>
   <path
      sodipodi:type="arc"
      style="fill:#cc333f;fill-opacity:1;stroke:#cc333f;stroke-width:15;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -459,18 +459,19 @@
   <text
      xml:space="preserve"
      style="font-size:32px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Almendra Bold"
-     x="202.1494"
-     y="1363.8436"
+     x="254.43103"
+     y="1364.335"
      id="text4201"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="202.1494"
-       y="1363.8436"
-       id="tspan4203"><tspan
-         x="202.1494"
-         y="1363.8436"
-         style="font-size:38.40000153px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
-         id="tspan4205"> Budget Pie $10,000 &gt;&lt;  $50,000</tspan></tspan></text>
+       x="254.43103"
+       y="1364.335"
+       id="tspan4203"
+       style="font-size:51.20000076px"><tspan
+         x="254.43103"
+         y="1364.335"
+         style="font-size:51.20000076px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+         id="tspan4205">$10,000 to $50,000</tspan></tspan></text>
   <path
      sodipodi:type="arc"
      style="fill:#eb6841;fill-opacity:1;stroke:#eb6841;stroke-width:15;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -483,19 +484,19 @@
      transform="matrix(1.0906115,0,0,0.84506432,-124.14396,1103.326)" />
   <text
      xml:space="preserve"
-     style="font-size:32px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Almendra Bold"
-     x="187.22089"
-     y="1827.1493"
+     style="font-size:51.20000076px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Almendra Bold"
+     x="227.44618"
+     y="1829.2406"
      id="text4195"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="187.22089"
-       y="1827.1493"
+       x="227.44618"
+       y="1829.2406"
        id="tspan4197"><tspan
-         x="187.22089"
-         y="1827.1493"
-         style="font-size:38.40000153px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
-         id="tspan4199"> Budget Pie $50,000 &gt;&lt; $250,000</tspan></tspan></text>
+         x="227.44618"
+         y="1829.2406"
+         style="font-size:51.20000076px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+         id="tspan4199">$50,000 to $250,000</tspan></tspan></text>
   <path
      sodipodi:type="star"
      style="opacity:0.98999999;fill:#542437;fill-opacity:1;stroke:#edc951;stroke-width:18.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -660,19 +661,19 @@
      transform="matrix(1.1383758,0,0,0.84506432,167.45722,1760.1874)" />
   <text
      xml:space="preserve"
-     style="font-size:32px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Almendra Bold"
-     x="461.41153"
+     style="font-size:51.20000076000000178px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#542437;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Almendra Bold"
+     x="513.2019"
      y="2484.0107"
      id="text4189"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="461.41153"
+       x="513.2019"
        y="2484.0107"
        id="tspan4191"><tspan
-         x="461.41153"
+         x="513.2019"
          y="2484.0107"
-         style="font-size:38.40000153px;font-variant:normal;font-stretch:normal;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
-         id="tspan4193"> Budget Pie $250,000 &gt;&lt; $1,250,000</tspan></tspan></text>
+         style="font-size:51.20000076000000178px;font-variant:normal;font-stretch:normal;font-family:Almendra;-inkscape-font-specification:Almendra Bold;fill:#542437;fill-opacity:1"
+         id="tspan4193">$250,000 to $1,250,000</tspan></tspan></text>
   <image
      width="236.18465"
      height="113.90465"
