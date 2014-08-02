@@ -92,10 +92,8 @@
                 $.get( '{{ path ('perks') }}',
                         function(data){
                             $('#perks-div').html(data);
-                            var content = '<iframe src="http://prezi.com/embed/aiduogjnsjir/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined&amp;html5=1" width="700" height="400" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe>';
-                            $("#prezi-div").html(content);
 
-                            content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
+                            var content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
                             $("#stretch-div").html(content);
                         }
                 );
@@ -109,8 +107,6 @@
                         <h3 class="panel-title">A Brief Intro to The Team and The Project</h3>
                     </div>
                     <div class="panel-body">
-                        <div id="prezi-div">
-                        </div>
                         <h4 style="display:inline; margin-top:10px;">Brunelleschi</h4><p style="display:inline;"> is a social strategy role playing game set in the mythic renaissance where brave and daring Heroes adventure and advance in the cities, economies, and cultures constructed by teams of brilliant Lords.</p><br/>
 
                         <p style="margin-top:10px;"><b>Characters in Brunelleschi are either Heroes or Lords</b>. Lords are intended to manage Settlements, serving as Sovereigns and Ministers and providing powerful bonuses to all the Citizens of their Settlement. Heroes are somewhat more powerful in Combat and are able to access a variety of abilities that are not available to Lords.</p>
@@ -481,7 +477,7 @@
                 <div class="alert alert-success" style="border: 2px solid green; opacity: 0.9;">
                     <h2 style="margin:0px;padding:0px;">Supporter Perks</h2>
                 </div>
-                <siv id="perks-div"></siv>
+                <div id="perks-div"></div>
             </div>
         </div>
     </div> <!-- /container -->
