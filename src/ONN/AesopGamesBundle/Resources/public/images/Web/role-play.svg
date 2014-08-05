@@ -87,16 +87,22 @@
        inkscape:randomized="0"
        d="m -434.28569,-62.331016 c -23.51635,22.789042 -522.92525,14.944922 -545.71429,-8.571429 -22.78902,-23.516352 -14.94492,-522.925255 8.57143,-545.714295 23.51635,-22.78904 522.92525,-14.94492 545.71429,8.57143 22.78905,23.51635 14.94493,522.925253 -8.57143,545.714294 z"
        transform="matrix(1.7764846,0,0,2.0255489,990.95047,1230.1965)" />
+    <path
+       style="opacity:0.5;fill:#edc951;fill-opacity:1;stroke:#000000;stroke-width:0.93585098px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -753.68313,908.88952 c -2.11335,57.91239 15.49802,163.28078 15.49802,163.28078 l 947.4901,6.4347 c 11.27123,-18.4997 19.0202,-170.51982 19.0202,-170.51982 z"
+       id="path3939"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
     <text
        xml:space="preserve"
        style="font-size:200px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
        x="-680.57593"
-       y="1023.2091"
+       y="1059.2091"
        id="text5761"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5763"
          x="-680.57593"
-         y="1023.2091">Role Play</tspan></text>
+         y="1059.2091">Role Play</tspan></text>
   </g>
 </svg>
