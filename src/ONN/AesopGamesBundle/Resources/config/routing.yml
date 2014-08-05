@@ -22,3 +22,6 @@ navbar:
 perks:
     pattern:   /perks
     defaults:  { _controller: ONNAesopGamesBundle:Page:perks }
+looking_closer:
+    pattern:   /looking_closer
+    defaults:  { _controller: ONNAesopGamesBundle:Page:lookingCloser }

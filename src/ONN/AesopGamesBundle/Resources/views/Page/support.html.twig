@@ -95,6 +95,14 @@
 
                             var content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
                             $("#stretch-div").html(content);
+
+                            var content = '<iframe width="420" height="315" src="//www.youtube.com/embed/GiHunFmzFnM" frameborder="0" allowfullscreen></iframe>';
+                            $("#create_character_video").html(content);
+                        }
+                );
+                $.get( '{{ path ('looking_closer') }}',
+                        function(data){
+                            $('#looking-closer-panel').html(data);
                         }
                 );
             });
@@ -120,14 +128,27 @@
 
                         <p style="margin-top:10px;"><b>Characters in Brunelleschi are either Heroes or Lords.</b>.</p>
 
-                        <p>Will you build walls or markets? Will you build magic shops or train Troops? Will you obey the conventions of society or pursue secret actions and the life of a criminal?</p>
+                        <img src="{{ asset( role_play|replace({'png':'svg'}) ) }}" class="img-rounded" style="width: 30%; margin:10px; display:block; float:left;">
+                        <p>Will you build walls or markets?</p>
+                        <p>Construct magic shops or train Military Troops?</p>
+                        <p>Will you obey the conventions of society or pursue secret actions and the life of a criminal?</p>
                         <p>Play a Lord and you gain the glorious opportunity to take the world on your shoulders as a Sovereign or Minister, building and managing the great Settlements of the World.</p>
+
+                        <img src="{{ asset( city_building|replace({'png':'svg'}) ) }}" class="img-rounded" style="width: 30%; margin:10px; display:block; float:right;">
+
                         <p>Play a Hero and find yourself wrapped in glory! Rescue your settlement by fending off hungry peasants and enemy armies or take up banditry and begin learning the secret ways of the criminal. Rise in level and rank as you decide where your character fits in the grand political scheme.</p>
+
+                        <img src="{{ asset( fantasy_renaissance|replace({'png':'svg'}) ) }}" class="img-rounded" style="width: 30%; margin:10px; display:block; float:left;">
+
                         <p>Own Alchemy Shops and vote in a Magiocratic government! Gather members of the clergy to overthrow an Aristocracy and replace it with Socialism! Or replace Fascism with a Free Market!</p>
                         <p>Both types of characters can wear specialized equipment, own buildings, and make a mint in the player run markets. With 50 districts per settlement and over 900 varieties of equipment, the possibilities are endless!</p>
 
-                        <p>Each District in a Settlement can employ a Minister, a major element of Gameplay, which allows Lords to team up and build impressive Settlements that a single player would struggle to effectively manage. A Sovereign can benefit from up to <b>49 friends</b> assisting them as Ministers and more as Citizens and Residents in their shared epic journey through a Historical Fantasy Renaissance.</p>
+                        <img src="{{ asset( social_strategy|replace({'png':'svg'}) ) }}" class="img-rounded" style="width: 35%; margin:10px; display:block; float:right;">
+
+                        <p>Each District in a Settlement can employ a Minister, a major element of Gameplay, which allows Lords to team up and build impressive Settlements that a single player would struggle to effectively manage.  A Sovereign can benefit from up to <b>49 friends</b> assisting them as Ministers and more as Citizens and Residents in their shared epic journey through a Historical Fantasy Renaissance.</p>
                             <a href="#looking-forward"><button class="btn btn-info pull-right" style="margin:10px;">Learn More</button></a></p>
+
+
 
                         <img id="overview" src="{{ asset( map_image )|apply_filter("map") }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
                         {#
@@ -152,6 +173,7 @@
                         <h3 class="panel-title">You Decide Our Budget</h3>
                     </div>
                     <div class="panel-body">
+                        <img src="{{ asset( you_decide|replace({'png':'svg'}) ) }}" onerror="{{ asset( you_decide ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         <h2>Off the Grid Development</h2>
                         <p>We keep our economic footprint tiny so that we can develop games, but that also leaves us without a development budget. While we can and are making Brunelleschi a <b>good</b> game on our own, your support could allow us to make it <b>Great</b>.</p>
 
@@ -162,6 +184,7 @@
                         <p>Brunelleschi is a really good game that we are proud to be making, but it could be a Great game. Brunelleschi was designed to bring people together in play.</p>
                         <p>These features deepen and come to life the more people are using them - and that means players! Any player joining makes the whole game better every time they play!</p>
                         <p>We will use any budget we receive to make the game more fun for more players! We will invest in world interactions, faster servers, snazzier 3D models, more animations, and all the cool features we can afford!</p>
+                        <img src="{{ asset( tall_grass )|apply_filter('screenshot-tall-grass') }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                     </div>
                 </div>
                 {# Info Panel Call to Action 2 #}
@@ -170,7 +193,7 @@
                         <h3 class="panel-title">The Game Belongs to The Players</h3>
                     </div>
                     <div class="panel-body">
-                        <h2>The Game Belongs to The Players</h2>
+                        <img src="{{ asset( belongs_to_players|replace({'png':'svg'}) ) }}" onerror="{{ asset( belongs_to_players ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         <h4>Empowering people to have fun interacting is the heart of Brunelleschi.</h4>
                         <p>The markets are player run - with each player deciding their own prices, and each Settlement deciding its own tax rates for trades. With Direct Trades, players may even sidestep the market to negotiate specific exchanges with each other.</p>
                         <p>Settlements are designed to let groups of players work together as Sovereign, Ministers, Citizens, and Residents to build, grow, and govern a civilization of their imagining! Everyone can take part from the Hero Fighting Bandits and adding an extra hand to the Harvest, to Lord Ministers governing whole Districts. The greatest empires are all made by their Players!</p>
@@ -180,6 +203,8 @@
                         <p>It would be great to have a budget to spend making the game Spiffy Polished Shiny and Iced with Awesomesauce, but even so it would all be to one end - to bring in more players which makes the game more fun! Players having fun - that's what we're on about.</p>
                         <p>Player driven markets - need players! Player fealty chains - need players! Player relationships, bonds, and duels - need players! So whether you're one of the awesome folks already playing, or one of the ones we want to get started, you are the heart of this project!</p>
 
+                        <img src="{{ asset( character_creation)|apply_filter('screenshot-character-creation' ) }}" class="img-rounded" style="margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+
                         <h2>You Are The Missing Ingredient</h2>
                         <p>If you haven't yet made a character - you are what this game needs! If you Have made a character - You are Also What this game Needs! Because this game is all about letting people make and be a cool character and using that character to take part in a larger very social fantasy world.</p>
                         <p>There are thirteen Zodiac signs (including Ophiuchus) for a new character to choose from - is your favorite being represented? If so, they may not have selected the same favored Season, Moonphase, day of the week, favorite Color combination that you would bring into the world of Brunelleschi - making it a richer place!</p>
@@ -188,6 +213,8 @@
                            <p>It just won’t be the same without you!</p>
 
                             <p>Brunelleschi needs every viewpoint and player type to be great. We need your playstyle and ideas, without the individual and unique qualities that you bring to gameplay, the story will be incomplete. This is a game for whole groups of players, and we need your voice to be heard in the councils and meeting halls of this Socio-Political Adventure! Your votes might make the difference between success and destruction for a City of Hundreds or even Thousands of other people!</p>
+
+                        <div id="create_character_video" style="margin-left:auto;margin-right:auto; width:430px;"></div>
                     </div>
                 </div>
                 {# Info Panel 2 #}
@@ -242,7 +269,7 @@
                         <img src="{{ asset( instant_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( instant_image ) }}"  class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         <p>Some of the Rewards available to Supporters are 'Instant' in that they are game awards which we already have the infrastructure to provide, meaning we will deliver them as soon as we are able once the Campaign is complete and the contributions processed.</p>
 
-                        <p>All contributors receive our Special Thanks and a Kickstarter Badge signifying their contribution to the Game.  Where their Special Thanks appear and the appearance and title of their Badge are determined by the level of contribution.  Supporters who provide Character information will receive these tokens of our appreciation both in the Live Beta, as soon as we are able, and in the launch server at version 1.0.</p>
+                        <p>All contributors receive our Special Thanks and a Supporter Badge signifying their contribution to the Game.  Where their Special Thanks appear and the appearance and title of their Badge are determined by the level of contribution.  Supporters who provide Character information will receive these tokens of our appreciation both in the Live Beta, as soon as we are able, and in the launch server at version 1.0.</p>
 
                         <p>Contributors also all receive some amount of the Game's premium currency, Platinum Hyperpyrons.  This premium coin will be awarded both in the Live Beta at the completion of this Campaign, and then again in the 1.0 launch (at a rate up to a monthly maximum determined by the size of the active player base).</p>
                     </div>
@@ -291,172 +318,10 @@
                         <p>Please, get in touch if you have any questions or feedback :)</p>
                     </div>
                 </div>
-                {# Info Panel 5 #}
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title" id="looking-forward">Looking Forward</h3>
-                    </div>
-                    <div class="panel-body">
-                        <img src="{{ asset( forward_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( forward_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
-                        <p>Brunelleschi’s rich feature set will eventually be extended with a variety of ‘add-on’ features such as the establishment and management of Colonies, even more Social and Historical elements like Religious Conversion and extended Dynastic Lineages.</p>
 
-                        <p>The game is an Evolving entity that is constantly being improved by the suggestions and feedback of our beta testers. In future, we hope to be able to go beyond the extensive features outlined in the Roadmap to add a 3D Unity Client, a 2D Unity Mobile Client, and many other interesting expansions outlined in the stretch goals.</p>
-                        <p>Following are descriptions of the features currently implemented and available in the web client beta.</p>
-                        <img src="{{ asset( game_property|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_property ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
+                {# Info Panel Looking Closer #}
+                <div id="looking-closer-panel"></div>
 
-                        <div style="width:80%; margin-left:auto;margin-right:auto;">
-                            <p>Any Character in Brunelleschi can own property.  When a Settlement in Brunelleschi is first founded, all that empty potential belongs to the founding Sovereign character.  If that Sovereign brings on Ministers to help them manage and expand their Settlement, those Ministers gain governance over the Sovereign's buildings and plots in the Districts they Administer.</p>
-
-                            <p>All Character Classes gain the ability to Buy and Sell Property at some level.  Ministers and Sovereigns can choose to sell buildings or empty plots under their governance, and any Character which has previously purchased private property may then sell it.  Buildings may be destroyed and replaced, or have more resources invested in upgrading their construction to improve their output and bonuses.</p>
-
-                            <p>Depending on rules set by the Sovereigns of each Settlement, a single Character may purchase and administer property in multiple settlements, although there are trade offs in productivity.</p>
-                        </div>
-
-                        <img src="{{ asset( game_craft|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_craft ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
-                        <div style="width:80%; margin-left:auto;margin-right:auto;">
-                            <p>Resources like Grain and Flax are Harvested and then Processed into Goods like Bread and Linen which can then be Crafted into Items like Crossbows and Boots or used to Train Units like Lancers and Catapults.  Goods and Resources are also used in building construction, to pay Military Units, to upkeep Buildings, Units, and Equipment, and can be traded or sold on the Markets for currency or other items.</p>
-
-                            <p>Resources and Goods are both additionally used to access some actions such as Fight in the Pit and Trade with Nomads, and to contribute to some group Scenarios.</p>
-
-                            <p>All game items can be bought, sold, and traded through the extensive markets, as well as through the Direct Trade action which allows complex one on one negotiations.</p>
-                        </div>
-                        <img src="{{ asset( game_bond|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_bond ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
-                        <div style="width:80%; margin-left:auto;margin-right:auto;">
-                            <h5>Relationships between Characters are a big part of Brunelleschi.</h5>
-
-                            <p>Through a variety of Social actions Characters develop relationships both between each other and between their Settlements if they are not in the same one.  These Relationships can be made official through declarations of Friendship, Enmity, becoming Lovers, accepting a Handfasting, or becoming Married.  Enemy Characters may fight each other in Duels, wracking up kills and deaths, while Handfasted or Married Characters have Diplomatic benefits and limitations from their bond.</p>
-                        </div>
-
-                        <img src="{{ asset( game_diplomacy|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_diplomacy ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
-                        <div style="width:80%; margin-left:auto;margin-right:auto;">
-                            <p>Diplomatic relationships between Settlements can have a huge impact on Gameplay.  For example, a Trade Treaty can bolster both economies by allowing trade between Residents of both Settlements as if they were local; whereas an Embargo prevents trade between them.</p>
-
-                            <p>Negative Diplomatic relationships can lead to War, a costly business requiring a lot of well prepared Character support, and which can lead to building destruction, looting, and eventually even the occupation of Districts and toppling of governments.</p>
-
-                            <p>Alliances between Settlements with positive relationships prevent hostile actions from being initiated between them, and allow Residents of all Allied Settlements to participate should a District in one be attacked.</p>
-                        </div>
-
-                        <img src="{{ asset( game_civics|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_civics ) }}"  class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
-                        <div style="width:80%;margin-left:auto;margin-right:auto;">
-                            <p>Brunelleschi is not that different from the majority of city building games in that you collect resources and use them to construct Buildings, which then in turn provide Bonuses, Resources, Equipment, Troops, and monetary Income.</p>
-                             <p>There are 65 district options in Brunelleschi, though even the largest Settlements will have to chose 50 or less of these. Since each District is composed of Buildings, they can also be customized, making it nearly impossible that 2 settlements will ever be exactly alike.</p>
-
-                            <img src="{{ asset( construct_district )|apply_filter("screenshot-catalog-district") }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
-
-                            <p>The Buildings constructed in a Settlement will attract Citizens, both computer-generated NPCs to run the buildings, as well as Human Heroes and Ministers who want to benefit from the Settlement's economy, make use of District Actions, or just enjoy the ambiance or social environment of a Settlement.</p>
-
-                            <p>This is fundamentally a game about player-driven politics and as such we have left all the critical decisions up to the players.</p>
-                            <h4>Control over immigration, employment, taxation, warfare, diplomacy, private property, and all other settlement decisions are made by the Sovereign and their Ministers.</h4>
-                            <p>Since we couldn't possibly predict everything players would want, we came at the problem from a different angle.</p>
-
-                            <p>Every action a player takes, from harvesting to arson and sabotage, is recorded in their 'Personal Forum'. Some actions are reported in the 'Settlement' forum, which players can even write directly to once they learn to 'Report the News' and other useful civic information services. Anything that occurs in a public forum can be voted on by players, and these votes have a powerful effect on the importance and relationship ratings of the poster and the voter. This becomes especially important when dealing with world and settlement spanning 'Scenarios', as you could suffer badly at the hands of fellow players for triggering an unwanted event such as a Swarm of Locusts.</p>
-
-                            <p>Since it's ultimately the opinions of other players that will decide your character's Importance, and as such their Rank, Lords will have to learn to wield public opinion carefully, and as such we hope that the game approaches a realistic simulation of the sociological forces inherent in civil administration.</p>
-                        </div>
-                        <img src="{{ asset( game_combat|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_combat ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
-                        <div style="width:80%; margin-left:auto;margin-right:auto;">
-                            <p>For the first 25 levels, everything in Brunelleschi is focused on advancement, around half a week of familiarizing yourself with the interface, possibly posting in the forums a bit, and for Lords building a few initial structures. Once characters hit level 20, they begin to unlock additional 'Life' and 'Aggressive' actions as well as their Class Actions.</p>
-
-                            <h3>Declaring Enmity</h3>
-                            <p>By choosing the forum action 'Declare Enmity' and then selecting a target settlement and a character, the groundwork for a duel is established. This sets the relationship between the two characters to 'Enemies' and allows the declaration of duels in the future.</p>
-
-                            <p>There are a large variety of Relationship statuses that characters can have, including Enemies, Neutral, Friends, Lovers, Handfasted, and Married. The latter two options require assistance from a pagan Caster and member of the Clergy respectively.</p>
-
-                            <h3>Challenging an Enemy to a Duel</h3>
-                            <p>Once you've declared an enemy and reached level 25 it becomes possible to launch a duel challenge. The other player must accept the duel for combat to initiate, if they refuse they will lose importance relative to the level difference between your characters. If you challenge much lower characters to duels, they can refuse without penalty.</p>
-
-                            <h3>Keeping track of Duels</h3>
-
-                            <p>Characters can always see their active duels and challenges from the 'Duel' tab on their home screen, as well as in their personal forum menu.</p>
-
-                            <h3>Fighting The Duel</h3>
-
-                            <p>Once the duel is accepted, the characters will have options based on their equipment, but at the very minimum the option for 'Close Combat' will always be available, even to unarmed characters. If both characters have chosen a strategy, the round is calculated and the next round's strategy is chosen. This repeats until 10 rounds have passed or someone dies.</p>
-
-                            <h3>Hits and Damage</h3>
-                            <p>The character's attributes are calculated to determine hits and damage per round, with a variety of factors such as ranged attacks, spell damage, and melee attacks factored in and displayed in the forum.</p>
-
-                            <img src="{{ asset( combat_image )|apply_filter("screenshot-combat") }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
-
-                            <h3>And on to War</h3>
-                            <p>As characters advance beyond level 50 non-consensual PvP becomes possible as Lords gain 'Military Action'. This complex action invokes the 'Military Council' and enables Lords to assemble their Brigades of soldiers. Lords can always train 'Peers' from the population as troops, and Commander classes are able to train Peasants and Yeoman, but these civilian units will be no match for the units produced in an actual training ground. Heroes will have to wait until somewhere between level 150-250 to gain 'Military Action', and the Regiments they lead will allow somewhat less troop variety than Lordly Brigades.</p>
-
-                            <img src="{{ asset( equip_unit )|apply_filter("screenshot-equip-unit") }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
-
-                            <p>Sovereigns and Minsters have a great deal of control over troop recruitment, and can theoretically turn a profit training and selling units to their Citizens and Allies.</p>
-
-                            <p>Of course, in order to use any of these shiny soldiers against anyone, it will usually be necessary to declare some sort of official war. The Chivalric culture of the Renaissance doesn't really allow for 'Sneak Attacks', though certain higher level characters will be able to flout those rules.</p>
-
-                            <h3>Errant Raids, on the other hand...</h3>
-                            <p>Once Lord character hit level 75 they will be able to 'Errant Raid' any settlement in the game, including their own! This can have catastrophic effects on the security of the region, but some Sovereigns may choose to turn a blind eye to their Minsters' raids, or even engage in such things themselves. Errant Raiding a foreign settlement will have negative effects on the Standings between the two settlements, and can serve as a precursor to War. Sovereigns should take care to ensure that their Citizens don't spoil existing treaties with opportunistic raiding.</p>
-
-                            <h3>Competitive Scenarios and War</h3>
-                            <p>Competitive Scenarios introduce some friction into the prosaic world of Brunelleschi, asking players to pick a side, Contributing or Detracting from scenarios with their Attributes. The Scenario will have a Threshold, a target number for both attributes that must hit + or - 100% for the Scenario to End.</p>
-
-                            <p>Players can wind up spending a lot of action points this way, and as such the Scenarios usually don't have much in the way of Contribution or Detraction rewards. Only the team able to push the Scenario to the finish line will get completion rewards, and sometimes this will also come with penalties for the losing team. Additionally, the bonus (or penalty) from completion for the whole Settlement or possibly the entire World will be determined by the outcome. </p>
-
-                            <img src="{{ asset( scenario_image )|apply_filter("screenshot-competitive-scenario") }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
-
-                                <p>Some Scenarios create week-long advantages for the winning team, and could be essential to upsetting the balance of power! Other scenarios have greater rewards for the outcome that penalizes the settlement, allowing a small group of players to gain advantage at the expense of everyone else in the Settlement.</p>
-
-                            <h3>Military Scenarios</h3>
-
-                            <p>Military Scenarios are by nature competitive, and will be one of the major uses for high leveled Characters' Action Points. It takes some amount of AP and has potentially other costs which are required for each contribution, and a single Character, even a powerful one, isn't able to make much of a dent in a battle even without active defenders.  Joining in on an attack against an actively defended target would necessitate defeating one such defender in combat before getting to complete a contribution each time.</p>
-                            <h4>Large wars will consist of thousands of players in dozens of active scenarios.</h4>
-
-                            <p>You'll need dozens of powerful Heroes and Lords to accomplish even the simplest of Assaults, and that's without any Resistance! Combat favors the Defenders numerically, but then they have nothing to gain and everything to lose.</p>
-
-                            <p>If a combat Scenario ends without completion, we'll have failed to assault and worked ourselves into a quagmire even without resistance. The ensuing 'Standoff' scenario would give the defenders a chance to jump on our mistake and do some damage.</p>
-                        </div>
-
-                        <img src="{{ asset( game_trade|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_trade ) }}"  class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
-                        <div style="width:80%; margin-left:auto;margin-right:auto;">
-                            <h3>One of the most interesting aspects of Brunelleschi is the open economy.</h3>
-                            <p>The trade and bartering system let you trade any of your Resources, Goods, Equipment or shiny Currency between almost anyone. This lets players design a huge variety of economy styles. However, open trade also leads to a complicated market so here are some of the major points:</p>
-
-                                <p>Everything that can be traded (Resources, Goods, Equipment and Currency) we will call an “Item”.</p>
-
-                            <p>You can get Items in Brunelleschi in a variety of ways:</p>
-
-                            <ul>
-                                <li>Actions</li>
-                                <li>Buildings</li>
-                                <li>Scenarios</li>
-                                <li>Markets</li>
-                                <li>Trades</li>
-                                <li>Donations</li>
-                                <li>Taxation</li>
-                            </ul>
-
-                            <p>While not every action, building, or scenario will give you items, a lot of them do. Doing actions and participating in larger Scenarios are a great way to collect items, but the most reliable way is to own a building that makes them. The items made by Harvesting, Processing, Crafting, and Currency buildings will go into their owner’s inventory unless your production is taxed.</p>
-
-                             <p>Through the markets and direct trades, characters can sell and trade any item for any other item.</p>
-
-                            <img src="{{ asset( markets_image )|apply_filter("screenshot-markets") }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
-
-                             <p>There are multiple types of taxation options in the game, which allow a Sovereign to dictate the flow of items in their settlement.  Through the Manage->Government menu, a sovereign may choose to set a specific tax rate on the output of Harvesting buildings and a separate rate for Processing buildings; these route a percentage of the output from those buildings to the Sovereign even if they are overseen by a Minister or even privately owned.</p>
-
-                              <p>A Sovereign may set these rates to 0% to allow Ministers and residents to keep and manage all of their building output, or may even set it to 100% to ensure that all such output is routed to the Sovereign's stores.</p>
-
-                              <p>In addition to building output, a Sovereign may choose to tax imports into and exports out of their settlement.  When import or export taxes are set, the tax price is added to effected market orders and the taxed amount is automatically routed to the tax issuing Sovereign.</p>
-
-                               <p>Action output may also be taxed by a Sovereign, meaning that a portion of the item rewards for every action taken within their settlement are routed to the Sovereign.</p>
-
-                               <p>Ministers may also Harvesting and Processing tax rates which apply only to their District and which are determined after Sovereign taxation is taken into account.</p>
-
-                            <img src="{{ asset( taxation_report ) }}" class="img-rounded" style="width: 80%;  margin-top: 0px; margin-bottom: 10px; display:block;margin-left:auto;margin-right:auto;">
-
-                               <p>All these various mechanisms for exchanging items allow each settlement to determine and regulate an economy suited to it specifically.  On a personal note, I very much look forward to seeing the various types of setups people put together and administer in their own settlements, as well as what kind of economic setups non-Sovereigns will seek out to live in.</p>
-                        </div>
-
-                            <img src="{{ asset( game_unity|replace({'png':'svg'}) ) }}" onerror="{{ asset( game_unity ) }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; display:block">
-                        <div style="width:80%; margin-left:auto;margin-right:auto;">
-                        <p>One of the goals of Brunelleschi is accessibility.  While some gamers are perfectly comfortable with the data driven web interface, having a first-person 3D interface for the game world would open up the game play experience to a much wider range of player personalities. This would increase the richness of experience for all players due to the social nature of the game.</p>
-                        <p>Even learning Unity 3D as we develop and without a budget for assets, we have been able to develop the initial stages of a first-person 3D client for Brunelleschi which allows players to login to the game, render their game Settlement in the 3D environment, and interact with game functions through an internal web browser.</p>
-                        <p>While we will continue some development of the Unity client regardless of the outcome of our fundraising efforts, accelerating and expanding development of the 3D client for the game is one of the top priorities for any funds we might receive.</p>
-                        <img src="{{ asset( unity_shop )|apply_filter("screenshot-unity-alchemist-shop") }}" class="img-rounded" style="width: 90%;  margin-top: 0px; margin-bottom: 0px; margin-left:auto;margin-right:auto;display:block"></div>
-                    </div>
-                </div>
                 {# Info Panel 6 #}
                 <div class="panel panel-default">
                     <div class="panel-heading">

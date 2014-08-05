@@ -98,6 +98,67 @@ class PageController extends Controller
         return $response;
     }
 
+    public function lookingCloserAction()
+
+    {
+        $currentUrl = $this->getRequest()->getUri();
+        $markets_image = '/bundles/onnaesopgames/images/Screenshots/markets.png';
+        $combat_image = '/bundles/onnaesopgames/images/Screenshots/fight.png';
+        $equip_unit = '/bundles/onnaesopgames/images/Screenshots/equip_unit.png';
+        $scenario_image = '/bundles/onnaesopgames/images/Screenshots/scenario.png';
+        $unity_shop = '/bundles/onnaesopgames/images/Screenshots/unity-alchemist-shop.png';
+        $construct_district = '/bundles/onnaesopgames/images/Screenshots/construct-district.png';
+
+        if (strpos($currentUrl,'localhost') !== false){
+            $forward_image = '/Aesop/web/bundles/onnaesopgames/images/Headings/forward.png';
+            $game_bond = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-bond.png';
+            $game_civics = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-civics.png';
+            $game_combat = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-combat.png';
+            $game_craft = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-craft.png';
+            $game_diplomacy = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-diplomacy.png';
+            $game_property = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-property.png';
+            $game_trade = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-trade.png';
+            $game_unity = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-unity.png';
+            $taxation_report = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/taxation_report.png';
+        } else {
+            $forward_image = '/bundles/onnaesopgames/images/Headings/forward.png';
+            $game_bond = '/bundles/onnaesopgames/images/Headings/game-bond.png';
+            $game_civics = '/bundles/onnaesopgames/images/Headings/game-civics.png';
+            $game_combat = '/bundles/onnaesopgames/images/Headings/game-combat.png';
+            $game_craft = '/bundles/onnaesopgames/images/Headings/game-craft.png';
+            $game_diplomacy = '/bundles/onnaesopgames/images/Headings/game-diplomacy.png';
+            $game_property = '/bundles/onnaesopgames/images/Headings/game-property.png';
+            $game_trade = '/bundles/onnaesopgames/images/Headings/game-trade.png';
+            $game_unity = '/bundles/onnaesopgames/images/Headings/game-unity.png';
+            $taxation_report = '/bundles/onnaesopgames/images/Screenshots/taxation_report.png';
+        }
+
+        $response = $this->render('ONNAesopGamesBundle:Page:lookingCloser.html.twig', array(
+            'forward_image' => $forward_image,
+            'game_bond' => $game_bond,
+            'game_civics' => $game_civics,
+            'game_combat' => $game_combat,
+            'game_craft' => $game_craft,
+            'game_diplomacy' => $game_diplomacy,
+            'game_property' => $game_property,
+            'game_trade' => $game_trade,
+            'game_unity' => $game_unity,
+            'markets_image' => $markets_image,
+            'taxation_report' => $taxation_report,
+            'combat_image' => $combat_image,
+            'equip_unit' => $equip_unit,
+            'scenario_image' => $scenario_image,
+            'unity_shop' => $unity_shop,
+            'construct_district' => $construct_district
+        ));
+        /*
+        $response->setETag(md5($response->getContent()));
+        $response->setPublic(); // make sure the response is public/cacheable
+        $response->isNotModified($request);
+        */
+        return $response;
+    }
+
     public function supportAction(Request $request)
     {
         $session = $request->getSession();
@@ -114,46 +175,47 @@ class PageController extends Controller
             'april-2015' => 'april2015.png',
             'may-2015' => 'may2015.png'
         ];
+        $team_image = '/bundles/onnaesopgames/images/Photos/Team.png';
+        $map_image = '/bundles/onnaesopgames/images/Web/Map.png';
+        $markets_image = '/bundles/onnaesopgames/images/Screenshots/markets.png';
+        $combat_image = '/bundles/onnaesopgames/images/Screenshots/fight.png';
+        $equip_unit = '/bundles/onnaesopgames/images/Screenshots/equip_unit.png';
+        $scenario_image = '/bundles/onnaesopgames/images/Screenshots/scenario.png';
+        $unity_shop = '/bundles/onnaesopgames/images/Screenshots/unity-alchemist-shop.png';
+        $construct_district = '/bundles/onnaesopgames/images/Screenshots/construct-district.png';
+        $tall_grass = '/bundles/onnaesopgames/images/Screenshots/tall-grass.png';
+        $character_creation = '/bundles/onnaesopgames/images/Screenshots/character-creation.png';
 
         if (strpos($currentUrl,'localhost') !== false){
-            $team_image = '/bundles/onnaesopgames/images/Photos/Team.png';
-            $map_image = '/bundles/onnaesopgames/images/Web/Map.png';
             $plat_panel = '/Aesop/web/bundles/onnaesopgames/images/Panels/platinum.png';
             $badge_panel = '/Aesop/web/bundles/onnaesopgames/images/Panels/badge.png';
             foreach ($calendar_images as $key=>$image){
                 $calendar_images[$key] = '/bundles/onnaesopgames/images/Panels/'.$image;
             }
+            $city_building = '/Aesop/web/bundles/onnaesopgames/images/Web/city-building.png';
+            $fantasy_renaissance = '/Aesop/web/bundles/onnaesopgames/images/Web/fantasy-renaissance.png';
+            $role_play = '/Aesop/web/bundles/onnaesopgames/images/Web/role-play.png';
+            $social_strategy = '/Aesop/web/bundles/onnaesopgames/images/Web/social-strategy.png';
             $facebook_image = '/Aesop/web/bundles/onnaesopgames/images/facebook.jpg';
             $twitter_image = '/Aesop/web/bundles/onnaesopgames/images/twitter.jpg';
             $challenge_image = '/Aesop/web/bundles/onnaesopgames/images/Headings/challenges.png';
             $development_image = '/Aesop/web/bundles/onnaesopgames/images/Headings/development.png';
             $game_overview_image = '/Aesop/web/bundles/onnaesopgames/images/Headings/overview.png';
-            $forward_image = '/Aesop/web/bundles/onnaesopgames/images/Headings/forward.png';
+            $you_decide = '/Aesop/web/bundles/onnaesopgames/images/Headings/you-decide.png';
+            $belongs_to_players = '/Aesop/web/bundles/onnaesopgames/images/Headings/belongs-to-players.png';
             $rewards_image = '/Aesop/web/bundles/onnaesopgames/images/Headings/rewards.png';
-            $game_bond = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-bond.png';
-            $game_civics = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-civics.png';
-            $game_combat = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-combat.png';
-            $game_craft = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-craft.png';
-            $game_diplomacy = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-diplomacy.png';
-            $game_property = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-property.png';
-            $game_trade = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-trade.png';
-            $game_unity = '/Aesop/web/bundles/onnaesopgames/images/Headings/game-unity.png';
             $help_image = '/Aesop/web/bundles/onnaesopgames/images/Headings/help.png';
             $stretch_image = '/Aesop/web/bundles/onnaesopgames/images/stretch.png';
             $instant_image = '/Aesop/web/bundles/onnaesopgames/images/Headings/instant.png';
-            $markets_image = '/bundles/onnaesopgames/images/Screenshots/markets.png';
             $taxation_report = '/Aesop/web/bundles/onnaesopgames/images/Screenshots/taxation_report.png';
-            $combat_image = '/bundles/onnaesopgames/images/Screenshots/fight.png';
-            $equip_unit = '/bundles/onnaesopgames/images/Screenshots/equip_unit.png';
-            $scenario_image = '/bundles/onnaesopgames/images/Screenshots/scenario.png';
-            $unity_shop = '/bundles/onnaesopgames/images/Screenshots/unity-alchemist-shop.png';
-            $construct_district = '/bundles/onnaesopgames/images/Screenshots/construct-district.png';
             $budget_pies = '/Aesop/web/bundles/onnaesopgames/images/Panels/budget-pies-crowdfunding.png';
             $games = '/Aesop/web/bundles/onnaesopgames/images/Panels/games.png';
             $team = '/Aesop/web/bundles/onnaesopgames/images/Headings/team.png';
         } else {
-            $team_image = '/bundles/onnaesopgames/images/Photos/Team.png';
-            $map_image = '/bundles/onnaesopgames/images/Web/Map.png';
+            $city_building = '/bundles/onnaesopgames/images/Web/city-building.png';
+            $fantasy_renaissance = '/bundles/onnaesopgames/images/Web/fantasy-renaissance.png';
+            $role_play = '/bundles/onnaesopgames/images/Web/role-play.png';
+            $social_strategy = '/bundles/onnaesopgames/images/Web/social-strategy.png';
             $plat_panel = '/bundles/onnaesopgames/images/Panels/platinum.png';
             $badge_panel = '/bundles/onnaesopgames/images/Panels/badge.png';
             foreach ($calendar_images as $key=>$image){
@@ -164,26 +226,13 @@ class PageController extends Controller
             $challenge_image = '/bundles/onnaesopgames/images/Headings/challenges.png';
             $development_image = '/bundles/onnaesopgames/images/Headings/development.png';
             $game_overview_image = '/bundles/onnaesopgames/images/Headings/overview.png';
-            $forward_image = '/bundles/onnaesopgames/images/Headings/forward.png';
             $rewards_image = '/bundles/onnaesopgames/images/Headings/rewards.png';
-            $game_bond = '/bundles/onnaesopgames/images/Headings/game-bond.png';
-            $game_civics = '/bundles/onnaesopgames/images/Headings/game-civics.png';
-            $game_combat = '/bundles/onnaesopgames/images/Headings/game-combat.png';
-            $game_craft = '/bundles/onnaesopgames/images/Headings/game-craft.png';
-            $game_diplomacy = '/bundles/onnaesopgames/images/Headings/game-diplomacy.png';
-            $game_property = '/bundles/onnaesopgames/images/Headings/game-property.png';
-            $game_trade = '/bundles/onnaesopgames/images/Headings/game-trade.png';
-            $game_unity = '/bundles/onnaesopgames/images/Headings/game-unity.png';
+            $you_decide = '/bundles/onnaesopgames/images/Headings/you-decide.png';
+            $belongs_to_players = '/bundles/onnaesopgames/images/Headings/belongs-to-players.png';
             $help_image = '/bundles/onnaesopgames/images/Headings/help.png';
             $stretch_image = '/bundles/onnaesopgames/images/stretch.png';
             $instant_image = '/bundles/onnaesopgames/images/Headings/instant.png';
-            $markets_image = '/bundles/onnaesopgames/images/Screenshots/markets.png';
             $taxation_report = '/bundles/onnaesopgames/images/Screenshots/taxation_report.png';
-            $combat_image = '/bundles/onnaesopgames/images/Screenshots/fight.png';
-            $equip_unit = '/bundles/onnaesopgames/images/Screenshots/equip_unit.png';
-            $scenario_image = '/bundles/onnaesopgames/images/Screenshots/scenario.png';
-            $unity_shop = '/bundles/onnaesopgames/images/Screenshots/unity-alchemist-shop.png';
-            $construct_district = '/bundles/onnaesopgames/images/Screenshots/construct-district.png';
             $budget_pies = '/bundles/onnaesopgames/images/Panels/budget-pies-crowdfunding.png';
             $games = '/bundles/onnaesopgames/images/Panels/games.png';
             $team = '/bundles/onnaesopgames/images/Headings/team.png';
@@ -192,6 +241,10 @@ class PageController extends Controller
         $fundraisers = $this->getFundraisersImages($currentUrl);
 
         $response = $this->render('ONNAesopGamesBundle:Page:support.html.twig', array(
+            'city_building' => $city_building,
+            'fantasy_renaissance' => $fantasy_renaissance,
+            'role_play' => $role_play,
+            'social_strategy' => $social_strategy,
             'team_image' => $team_image,
             'map_image' => $map_image,
             'plat_panel' => $plat_panel,
@@ -202,16 +255,7 @@ class PageController extends Controller
             'challenge_image' => $challenge_image,
             'development_image' => $development_image,
             'game_overview_image' => $game_overview_image,
-            'forward_image' => $forward_image,
             'rewards_image' => $rewards_image,
-            'game_bond' => $game_bond,
-            'game_civics' => $game_civics,
-            'game_combat' => $game_combat,
-            'game_craft' => $game_craft,
-            'game_diplomacy' => $game_diplomacy,
-            'game_property' => $game_property,
-            'game_trade' => $game_trade,
-            'game_unity' => $game_unity,
             'help_image' => $help_image,
             'stretch_image' => $stretch_image,
             'instant_image' => $instant_image,
@@ -226,7 +270,11 @@ class PageController extends Controller
             'construct_district' => $construct_district,
             'budget_pies' => $budget_pies,
             'games' => $games,
-            'team' => $team
+            'team' => $team,
+            'you_decide' => $you_decide,
+            'belongs_to_players' => $belongs_to_players,
+            'tall_grass' => $tall_grass,
+            'character_creation' => $character_creation
         ));
         /*
         $response->setETag(md5($response->getContent()));

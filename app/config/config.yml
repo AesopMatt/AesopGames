@@ -101,6 +101,12 @@ avalanche_imagine:
         screenshot-unity-alchemist-shop:
             type:    thumbnail
             options: { size: [517, 362], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
+        screenshot-tall-grass:
+            type:    thumbnail
+            options: { size: [517, 371], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
+        screenshot-character-creation:
+            type:    thumbnail
+            options: { size: [517, 523], mode: outbound, quality: 100, format: jpg, cache_type: public, cache_expires: 2 weeks }
         button-rockethub:
             type:    thumbnail
             options: { size: [246, 104], mode: outbound, quality: 100, format: png, cache_type: public, cache_expires: 2 weeks }
