@@ -91,12 +91,15 @@
 
                 $.get( '{{ path ('perks') }}',
                         function(data){
+                            var content = '<iframe width="560" height="315" src="//www.youtube.com/embed/VnwQo_d4FrA" frameborder="0" allowfullscreen></iframe>';
+                            $("#unity_demo_video").html(content);
+
                             $('#perks-div').html(data);
 
-                            var content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
+                            content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
                             $("#stretch-div").html(content);
 
-                            var content = '<iframe width="420" height="315" src="//www.youtube.com/embed/GiHunFmzFnM" frameborder="0" allowfullscreen></iframe>';
+                            content = '<iframe width="420" height="315" src="//www.youtube.com/embed/GiHunFmzFnM" frameborder="0" allowfullscreen></iframe>';
                             $("#create_character_video").html(content);
                         }
                 );
@@ -125,6 +128,7 @@
                         <li>[where brave and daring Heroes adventure and advance] image</li>
                         <li>[in the cities, economies, and cultures constructed by teams of brilliant Lords] image</li><br/>
                         #}
+                        <div id="unity_demo_video" style="margin-left:auto;margin-right:auto; width:490px;"></div>
 
                         <p style="margin-top:10px;"><b>Characters in Brunelleschi are either Heroes or Lords.</b>.</p>
 
