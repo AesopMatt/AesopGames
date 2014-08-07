@@ -6,6 +6,12 @@
         <img src="{{ asset( role_play|replace({'png':'svg'}) ) }}">
         <img src="{{ asset( social_strategy|replace({'png':'svg'}) ) }}">
         <img src="{{ asset( fantasy_renaissance|replace({'png':'svg'}) ) }}">
+        <img src="{{ asset( budget_pies|replace({'png':'svg'}) ) }}">
+        <img src="{{ asset( stretch|replace({'png':'svg'}) ) }}">
+
+        {% for image in rewards_images %}
+            <img src="{{ asset( image|replace({'png':'svg'}) ) }}">
+        {% endfor %}
     </div>
     <div id="fb-root"></div>
     <script>
@@ -26,7 +32,7 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <div class="container theme-showcase">
+    <div class="container theme-showcase" style="width:90%;">
     <div class="jumbotron" style="opacity: .8;padding:10px;z-index:100;">
         <p style="display:inline"><b>Brunelleschi: Age of Architects</b> Bootstrap Beta</p>
         <a target="_blank" href="http://brunegame.com" class="btn btn-primary btn-lg pull-right" role="button">Play Now &raquo;</a>
