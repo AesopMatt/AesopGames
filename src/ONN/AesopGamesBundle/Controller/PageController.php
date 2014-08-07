@@ -261,6 +261,7 @@ class PageController extends Controller
         if ($mobile == true){
             $page = 'mobileSupport.html.twig';
         }
+        var_dump($mobile);
         $response = $this->render('ONNAesopGamesBundle:Page:'.$page, array(
             'city_building' => $city_building,
             'fantasy_renaissance' => $fantasy_renaissance,
