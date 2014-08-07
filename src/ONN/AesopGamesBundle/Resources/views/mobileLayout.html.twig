@@ -31,19 +31,20 @@
     <link rel="icon" href={{ asset('bundles/onnaesopgames/images/favicon.ico') }} type=”image/x-icon”v>
     <style>
         html {
-            background: url('{{ asset('bundles/onnaesopgames/images/city-zoom.jpg') }}') no-repeat; 
-            background-position: center center;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
             height: 100%;
-            overflow: hidden;
+            min-height:100%;
         }
 
         body {
             min-height:100%;
             overflow: scroll;
+            background: url('{{ asset('bundles/onnaesopgames/images/city-zoom.jpg') }}') no-repeat;
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
         }
 
         body {
@@ -63,6 +64,10 @@
         @font-face { font-family: Almendra; src: url({{ asset('bundles/onnaesopgames/fonts/Almendra-Regular.ttf') }}); }
 
         .almendra {
+            font-family: Almendra !important;
+        }
+
+        h1, h2, h3 {
             font-family: Almendra !important;
         }
 
