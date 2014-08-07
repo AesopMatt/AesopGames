@@ -15,7 +15,7 @@
    id="svg3896"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="social-strategy.png">
+   sodipodi:docname="social-strategy.svg">
   <defs
      id="defs3898" />
   <sodipodi:namedview
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -82,16 +82,16 @@
        transform="matrix(0,1.7764846,-2.0255489,0,-593.85673,1849.7618)" />
     <text
        xml:space="preserve"
-       style="font-size:160px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
-       x="-436.29019"
-       y="1027.209"
+       style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+       x="93.331932"
+       y="1023.209"
        id="text5761"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5763"
-         x="-436.29019"
-         y="1027.209"
-         style="fill:#000000;fill-opacity:1">Social Strategy</tspan></text>
+         x="93.331932"
+         y="1023.209"
+         style="font-size:144px;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;-inkscape-font-specification:Almendra Bold">Social Strategy</tspan></text>
     <path
        style="fill:#edc951;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.5"
        d="m 42.629956,833.69997 c -2.413016,57.91239 17.695453,163.28077 17.695453,163.28077 l 1081.835691,6.43476 c 12.8694,-18.49979 21.7171,-170.51987 21.7171,-170.51987 z"
