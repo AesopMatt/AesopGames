@@ -30,7 +30,7 @@
     <![endif]-->
     <link rel="icon" href={{ asset('bundles/onnaesopgames/images/favicon.ico') }} type=”image/x-icon”v>
     <style>
-        .ui-mobile-viewport{
+        html{
             background: url('{{ asset('bundles/onnaesopgames/images/city.jpg') }}') no-repeat;
             background-size: 100% 100% !important;
             -webkit-background-size: cover;
@@ -38,8 +38,8 @@
             -o-background-size: cover;
             background-size: cover;
         }
-        .ui-page{
-            background:none;
+        body {
+            min-height: 100%;
         }
 
         body {
