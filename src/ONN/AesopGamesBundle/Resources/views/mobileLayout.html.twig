@@ -30,6 +30,14 @@
     <![endif]-->
     <link rel="icon" href={{ asset('bundles/onnaesopgames/images/favicon.ico') }} type=”image/x-icon”v>
     <style>
+        .ui-mobile-viewport{
+            background: url('{{ asset('bundles/onnaesopgames/images/city.jpg') }}') no-repeat;
+            background-size: 100% 100% !important;
+        }
+        .ui-page{
+            background:none;
+        }
+
         body {
             padding-top: 70px;
             padding-bottom: 30px;
@@ -159,7 +167,6 @@
 </footer>
 
 <script>
-    $.backstretch('{{ asset('bundles/onnaesopgames/images/city.jpg') }}');
 
     function selectMain(path) {
         document.body.style.cursor="wait";

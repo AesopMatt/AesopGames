@@ -1,0 +1,412 @@
+{% extends 'ONNAesopGamesBundle::layout.html.twig' %}
+
+{% block main %}
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '325678044258995',
+                xfbml      : true,
+                version    : 'v2.0'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div class="container theme-showcase">
+    <div class="jumbotron" style="opacity: .8;padding:10px;z-index:100;">
+        <p style="display:inline"><b>Brunelleschi: Age of Architects</b> Bootstrap Beta</p>
+        <a target="_blank" href="http://brunegame.com" class="btn btn-primary btn-lg pull-right" role="button">Play Now &raquo;</a>
+    </div>
+    <div class="page-header" style="margin-top:0px;">
+        <h1 class="pull-left almendra" style="margin:0px;padding:0px; color:white; font-size: 48px; font-weight:bold;">Support Aesop Games</h1>
+
+        <div style="background: white; border: solid green 3px; width:130px;text-align:center; padding: 5px;margin-bottom:10px;" class="ui-corner-all pull-right">
+            <a href="http://twitter.com/share?text=Support games like #brunegame made by folks who want you to love playing them! And checkout @brunegame now!&url=http://aesopgames.com/app.php/support" target="_blank" title="Share This on Twitter">
+                <img src="{{ asset( twitter_image ) }}" style="width:32px; height: 32px">
+            </a>
+
+            <script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u=http://aesopgames.com/app/php/support'+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
+            <a href="http://www.facebook.com/share.php?u=<full page url to share>" onClick="return fbs_click()" target="_blank" title="Share This on Facebook"><img src="{{ asset( facebook_image ) }}" alt="facebook" width="32" height="32" border="0" /></a>
+
+            <a href="https://plus.google.com/share?url=http://aesopgames.com/app.php/support" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
+                        src="https://www.gstatic.com/images/icons/gplus-32.png" alt="Share on Google+" title="Share This on Google+"/></a>
+        </div>
+        <div style="clear:both"></div>
+        <div class="alert alert-success" style="border: green 2px solid; opacity: .9;">
+            <h4>Aesop Games is working to raise funds for completing Brunelleschi: Age of Architects and embarking on new projects!</h4>
+            <p>Information on our team, project, and progress put together towards that effort as well as perks available to supporters will be updated here.</p>
+            <p>If you have already supported us through an online campaign, but see a similarly priced Perk here that you would rather have, get in touch and we will be happy to update your reserved Perk.</p>
+            <p style="font-weight:bold; text-align:right; margin-right:10px;margin-top:10px;">Jump to information about <a href="#looking-forward">the Game</a>, <a href="#overview">the Team</a>, <a href="#rewards">the Perks</a>, <a href="#stretch">the Stretch Goals</a>.</p>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 10px;">
+        <div class="col-md-4 text-center">
+            {% for type,image in fundraisers.rockethub %}
+                {% if type == 'live' or type == 'stretch' %}
+                    {% set button_class = 'btn-custom btn-custom-success' %}
+                {% else %}
+                    {% set button_class = 'btn btn-default' %}
+                {% endif %}
+                <button class="btn-large {{ button_class }}" {% if type == 'comingsoon' %}disabled="disabled"{% endif %} style="opacity: .9">
+                    <img src="{{ asset( image ) }}" class="img-rounded" style="height: 50px; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                </button>
+            {% endfor %}
+        </div>
+        <div class="col-md-4 text-center">
+            {% for type,image in fundraisers.indiegogo %}
+                {% if type == 'live' or type == 'stretch' %}
+                    {% set button_class = 'btn-custom btn-custom-success' %}
+                {% else %}
+                    {% set button_class = 'btn btn-default' %}
+                {% endif %}
+                <button class="btn-large {{ button_class }}" {% if type == 'comingsoon' %}disabled="disabled"{% endif %} style="opacity: .9">
+                    <img src="{{ asset( image ) }}" class="img-rounded" style="height: 50px; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                </button>
+            {% endfor %}
+        </div>
+        <div class="col-md-4 text-center">
+            {% for type,image in fundraisers.kickstarter %}
+                {% if type == 'live' or type == 'stretch' %}
+                    {% set button_class = 'btn-custom btn-custom-success' %}
+                {% else %}
+                    {% set button_class = 'btn btn-default' %}
+                {% endif %}
+                <button class="btn-large {{ button_class }}" {% if type == 'comingsoon' %}disabled="disabled"{% endif %} style="opacity: .9">
+                    <img src="{{ asset( image ) }}" class="img-rounded" style="height: 50px; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                </button>
+            {% endfor %}
+        </div>
+    </div>
+    <script>
+        $(function(){
+
+            $.get( '{{ path ('perks') }}',
+                    function(data){
+                        $('#perks-div').html(data);
+
+                        var content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
+                        $("#stretch-div").html(content);
+
+                        var content = '<iframe width="420" height="315" src="//www.youtube.com/embed/GiHunFmzFnM" frameborder="0" allowfullscreen></iframe>';
+                        $("#create_character_video").html(content);
+                    }
+            );
+            $.get( '{{ path ('looking_closer') }}',
+                    function(data){
+                        $('#looking-closer-panel').html(data);
+                    }
+            );
+        });
+    </script>
+    <div class="row">
+    <div class="col-md-8">
+    {# Info Panel 1 #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">A Brief Intro to The Team and The Project</h3>
+        </div>
+        <div class="panel-body">
+            {# Replace with word image: social strategy role playing ? #}
+            {#
+            <h4>Brunelleschi is ...</h4>
+            <li>[a role playing game] image</li>
+            <li>[a city building game] image</li>
+            <li>[a social strategy game] image</li>
+            <li>[set in the mythic renaissance] image</li>
+            <li>[where brave and daring Heroes adventure and advance] image</li>
+            <li>[in the cities, economies, and cultures constructed by teams of brilliant Lords] image</li><br/>
+            #}
+
+            <p style="margin-top:10px;"><b>Characters in Brunelleschi are either Heroes or Lords.</b>.</p>
+
+            <img src="{{ asset( role_play|replace({'png':'svg'}) ) }}" class="img-rounded" style="width: 30%; margin:10px; display:block; float:left;">
+            <p>Will you build walls or markets?</p>
+            <p>Construct magic shops or train Military Troops?</p>
+            <p>Will you obey the conventions of society or pursue secret actions and the life of a criminal?</p>
+            <p>Play a Lord and you gain the glorious opportunity to take the world on your shoulders as a Sovereign or Minister, building and managing the great Settlements of the World.</p>
+
+            <img src="{{ asset( city_building|replace({'png':'svg'}) ) }}" class="img-rounded" style="width: 30%; margin:10px; display:block; float:right;">
+
+            <p>Play a Hero and find yourself wrapped in glory! Rescue your settlement by fending off hungry peasants and enemy armies or take up banditry and begin learning the secret ways of the criminal. Rise in level and rank as you decide where your character fits in the grand political scheme.</p>
+
+            <img src="{{ asset( fantasy_renaissance|replace({'png':'svg'}) ) }}" class="img-rounded" style="width: 30%; margin:10px; display:block; float:left;">
+
+            <p>Own Alchemy Shops and vote in a Magiocratic government! Gather members of the clergy to overthrow an Aristocracy and replace it with Socialism! Or replace Fascism with a Free Market!</p>
+            <p>Both types of characters can wear specialized equipment, own buildings, and make a mint in the player run markets. With 50 districts per settlement and over 900 varieties of equipment, the possibilities are endless!</p>
+
+            <img src="{{ asset( social_strategy|replace({'png':'svg'}) ) }}" class="img-rounded" style="width: 35%; margin:10px; display:block; float:right;">
+
+            <p>Each District in a Settlement can employ a Minister, a major element of Gameplay, which allows Lords to team up and build impressive Settlements that a single player would struggle to effectively manage.  A Sovereign can benefit from up to <b>49 friends</b> assisting them as Ministers and more as Citizens and Residents in their shared epic journey through a Historical Fantasy Renaissance.</p>
+            <a href="#looking-forward"><button class="btn btn-info pull-right" style="margin:10px;">Learn More</button></a></p>
+
+
+
+            <img id="overview" src="{{ asset( map_image )|apply_filter("map") }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
+            {#
+            <img src="{{ asset( team ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            #}
+            <p>Aesop Games is a small, currently three-member studio. We believe in making really interesting games that offer players a little something they’ve never had before. Brunelleschi is our idea of an educational game in which players have the opportunity to relive the extraordinary circumstances of the Renaissance with a few fun additions like the definite existence of magic and gender equality.</p>
+
+            <p>In short, we make games because:</p>
+            <li>Designer Matt has always loved designing games that are fun to play</li>
+            <li>Unity Developer Rebecca had found game development to be the perfect cross between visual art and compelling storytelling</li>
+            <li>Programmer Margaret’s dedication to educational gaming and doing things that don’t require spines have inspired her to learn to program Brune’s engine and Web client</li>
+
+            <img src="{{ asset( team_image )|apply_filter('team') }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+
+            <a target="_blank" class="popularitybtn pull-left" href="http://www.indiedb.com/games/brunelleschi" title="View Brunelleschi on Indie DB"><img src="http://button.indiedb.com/popularity/medium/games/28789.png" alt="Brunelleschi" style="margin-top:10px;margin-bottom:10px;"></a>
+            <a target="_blank" class="ratingbtn pull-right" href="http://www.indiedb.com/games/brunelleschi" title="View Brunelleschi on Indie DB"><img src="http://button.indiedb.com/rating/medium/games/28789.png" alt="Brunelleschi"  style="margin-top:10px;margin-bottom:10px;"></a>
+        </div>
+    </div>
+    {# Info Panel Call to Action #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">You Decide Our Budget</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ asset( you_decide|replace({'png':'svg'}) ) }}" onerror="{{ asset( you_decide ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            <h2>Off the Grid Development</h2>
+            <p>We keep our economic footprint tiny so that we can develop games, but that also leaves us without a development budget. While we can and are making Brunelleschi a <b>good</b> game on our own, your support could allow us to make it <b>Great</b>.</p>
+
+            <h2>You decide the Budget!</h2>
+            <p>We’ll make whatever game the community decides to fund! Want to see an MMORPG-sized Brune Server? If you trust us with the budget, we’ll give you the game you want! If not, we’ll make a little web-game and give that to the Community, but you could help us turn this little project into a FULL SIZED WORLD!</p>
+
+            <h2>Good Alone - Great With You</h2>
+            <p>Brunelleschi is a really good game that we are proud to be making, but it could be a Great game. Brunelleschi was designed to bring people together in play.</p>
+            <p>These features deepen and come to life the more people are using them - and that means players! Any player joining makes the whole game better every time they play!</p>
+            <p>We will use any budget we receive to make the game more fun for more players! We will invest in world interactions, faster servers, snazzier 3D models, more animations, and all the cool features we can afford!</p>
+            <img src="{{ asset( tall_grass )|apply_filter('screenshot-tall-grass') }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+        </div>
+    </div>
+    {# Info Panel Call to Action 2 #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">The Game Belongs to The Players</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ asset( belongs_to_players|replace({'png':'svg'}) ) }}" onerror="{{ asset( belongs_to_players ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            <h4>Empowering people to have fun interacting is the heart of Brunelleschi.</h4>
+            <p>The markets are player run - with each player deciding their own prices, and each Settlement deciding its own tax rates for trades. With Direct Trades, players may even sidestep the market to negotiate specific exchanges with each other.</p>
+            <p>Settlements are designed to let groups of players work together as Sovereign, Ministers, Citizens, and Residents to build, grow, and govern a civilization of their imagining! Everyone can take part from the Hero Fighting Bandits and adding an extra hand to the Harvest, to Lord Ministers governing whole Districts. The greatest empires are all made by their Players!</p>
+            <p>The opinions of your peers matter a great deal to aspiring Lords as positive and negative feedback in the forums directly effects the Importance a Lord uses to advance in Rank. And the support of your fellow players will be sweet indeed when a Scenario comes along that needs their helping hands!</p>
+
+            <h2>Without Players There's No Game</h2>
+            <p>It would be great to have a budget to spend making the game Spiffy Polished Shiny and Iced with Awesomesauce, but even so it would all be to one end - to bring in more players which makes the game more fun! Players having fun - that's what we're on about.</p>
+            <p>Player driven markets - need players! Player fealty chains - need players! Player relationships, bonds, and duels - need players! So whether you're one of the awesome folks already playing, or one of the ones we want to get started, you are the heart of this project!</p>
+
+
+            <div id="create_character_video" style="margin-left:auto;margin-right:auto; width:430px;"></div>
+
+            <h2>You Are The Missing Ingredient</h2>
+            <p>If you haven't yet made a character - you are what this game needs! If you Have made a character - You are Also What this game Needs! Because this game is all about letting people make and be a cool character and using that character to take part in a larger very social fantasy world.</p>
+            <p>There are thirteen Zodiac signs (including Ophiuchus) for a new character to choose from - is your favorite being represented? If so, they may not have selected the same favored Season, Moonphase, day of the week, favorite Color combination that you would bring into the world of Brunelleschi - making it a richer place!</p>
+            <p>Looking deeper, for those who enjoy Role Play, there are all the Culture, Philosophy, and Religion options for Characters to choose to represent however they see fit. As well as similarly rich options for the various Government, Social, and Economic systems for player Settlements.</p>
+
+            <p>It just won’t be the same without you!</p>
+
+            <p>Brunelleschi needs every viewpoint and player type to be great. We need your playstyle and ideas, without the individual and unique qualities that you bring to gameplay, the story will be incomplete. This is a game for whole groups of players, and we need your voice to be heard in the councils and meeting halls of this Socio-Political Adventure! Your votes might make the difference between success and destruction for a City of Hundreds or even Thousands of other people!</p>
+
+            <img src="{{ asset( character_creation)|apply_filter('screenshot-character-creation' ) }}" class="img-rounded" style="margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+        </div>
+    </div>
+    {# Info Panel 2 #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">The State of Development</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ asset( development_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( development_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            <p>A lot of the development of Brunelleschi is already done. The Aesop team has been working for years to complete what is currently the beta web-game. Check out the current state of development by playing with us at <a href="http://www.brunegame.com" target="_blank">Brunegame.com</a>. Track our progress in detail by checking up on our <a href="http://wiki.brunegame.com/index.php/Roadmap" target="_blank">Roadmap</a> and <a href="https://docs.google.com/a/aesopgames.com/spreadsheets/d/1DPWCGOYrx_CyQNuiheVRtLfpejAQfxAEhP17NjIoUok/edit#gid=0" target="_blank">Completion Documents</a></p>
+            <p>Initial funds will go to paying for the test and beta servers</p>
+            <p>Subsequent funds will be used for development services and software</p>
+            <p>Once overhead is covered we will be able to use whatever budget we receive on expanding Brunelleschi from an interesting and fun web game with a 3D client into a fully immersive 3D MMO world.</p>
+
+            <img src="{{ asset( plat_panel|replace({'png':'svg'}) ) }}" onerror="{{ asset( plat_panel ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
+            <img src="{{ asset( badge_panel|replace({'png':'svg'}) ) }}" onerror="{{ asset( badge_panel ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
+        </div>
+    </div>
+    {# Info Panel 3 #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Risks and Challenges</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ asset( challenge_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( challenge_image ) }}"  class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            <p>The beta version of Brunelleschi is available and free to play at <a target="_blank" href="http://brunegame.com">brunegame.com</a>, and we are dedicated to finishing the web game no matter how this campaign turns out. Even in extreme circumstances of injury or tragedy, the game could still be completed because: </p>
+            <ul>
+                <li>This game will be open sourced.</li>
+                <li>All code and image assets will be released on a three year delay from commit starting with commits made January of this year.</li>
+                <li>Documentation on getting a version of the game server up will be included in the open source release.</li>
+                <li>Admin tools have been built into the game to allow future administrators to customize the game even without needing to understand the code.</li>
+                <li>Since the game has been built in a well known framework, anyone with a strong desire to pick up and complete the project should be able to use existing documentation to do it.</li>
+            </ul>
+            <p>While the Beta server hasn't been totally immune to minor data loss, no Characters or Settlements have ever been deleted unintentionally and we've always been able to track down lost items and buildings quickly. The game is backed up frequently and we are generally quick to notice irregularities, but we do acknowledge that loss of hard earned digital property can occur, and is very frustrating.</p>
+        </div>
+    </div>
+    {# Info Panel 3a #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Fund Allocation Pie Charts</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ asset( budget_pies|replace({'png':'svg'}) ) }}" onerror="{{ asset( budget_pies ) }}"  class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+        </div>
+    </div>
+    {# Info Panel 3b #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Instant Rewards</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ asset( instant_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( instant_image ) }}"  class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            <p>Some of the Rewards available to Supporters are 'Instant' in that they are game awards which we already have the infrastructure to provide, meaning we will deliver them as soon as we are able once the Campaign is complete and the contributions processed.</p>
+
+            <p>All contributors receive our Special Thanks and a Supporter Badge signifying their contribution to the Game.  Where their Special Thanks appear and the appearance and title of their Badge are determined by the level of contribution.  Supporters who provide Character information will receive these tokens of our appreciation both in the Live Beta, as soon as we are able, and in the launch server at version 1.0.</p>
+
+            <p>Contributors also all receive some amount of the Game's premium currency, Platinum Hyperpyrons.  This premium coin will be awarded both in the Live Beta at the completion of this Campaign, and then again in the 1.0 launch (at a rate up to a monthly maximum determined by the size of the active player base).</p>
+        </div>
+    </div>
+    {# Info Panel 3c #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Rewards Calendar</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ asset( rewards_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( rewards_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            <p>Not every reward can be instantly sent to you.</p>
+            <p>For our rewards that are early and easy access to future game features, here’s our best estimate of when we’ll get those features and your shiny rewards out.</p>
+            {% for filter,image in calendar_images %}
+                <img src="{{ asset( image )|apply_filter(filter) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 0px; display:block">
+            {% endfor %}
+        </div>
+    </div>
+    {# Info Panel 4 #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">How You Can Help</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ asset( help_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( help_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            <p>Whether you are able to contribute today or not you can still help!  Please, spread the word about our campaign and about our game!  Folks may be into interesting new games, supporting entrepreneurship, or upgrading cyborgs, but they have to know what we're up to to be able to help!  So please,</p>
+            <ul>
+                <li>Tell folks about what we're doing!</li>
+                <li>Share this campaign through the built in options!</li>
+                <li>And point your gamer friends at our beta - the more players the better!</li>
+            </ul>
+
+            <div style="margin-left:auto;margin-right:auto;width:200px;text-align:center">
+                <a href="http://twitter.com/share?text=Support games like #brunegame made by folks who want you to love playing them! And checkout @brunegame now!&url=http://aesopgames.com/app.php/support" target="_blank" title="Share This on Twitter">
+                    <img src="{{ asset( twitter_image ) }}" style="width:64px; height: 64px">
+                </a>
+
+                <script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u=http://aesopgames.com/app/php/support'+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
+                <a href="http://www.facebook.com/share.php?u=<full page url to share>" onClick="return fbs_click()" target="_blank" title="Share This on Facebook"><img src="{{ asset( facebook_image ) }}" alt="facebook" width="64" height="64" border="0" /></a>
+
+                <a href="https://plus.google.com/share?url=http://aesopgames.com/app.php/support" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
+                            src="https://www.gstatic.com/images/icons/gplus-64.png" alt="Share on Google+" title="Share This on Google+"/></a>
+            </div>
+            <p>Thank you for reading!</p>
+            <p>Please, get in touch if you have any questions or feedback :)</p>
+        </div>
+    </div>
+
+    {# Info Panel Looking Closer #}
+    <div id="looking-closer-panel"></div>
+
+    {# Info Panel 6 #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title" id="stretch">Stretch Goals</h3>
+        </div>
+        <div class="panel-body" id="stretch-div">
+        </div>
+    </div>
+    {# Info Panel 7 #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title" id="rewards">Selected Perk Packages</h3>
+        </div>
+        <div class="panel-body">
+            {% for image in rewards_images %}
+                <img src="{{ asset( image|replace({'png':'svg'}) ) }}" onerror="{{ asset( image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 0px; display:block">
+            {% endfor %}
+        </div>
+    </div>
+
+    {# Info Panel Future Games #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Future Games</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ asset( games|replace({'png':'svg'}) ) }}" onerror="{{ asset( games ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+        </div>
+    </div>
+
+    {# Info Panel LAST Call to Action #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">How You Can Help</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ asset( help_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( help_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            <p>Thank you for reading about Aesop Games and Brunelleschi: Age of Architects!  Please, keep in mind that whether you are able to contribute today or not <b>you can still help</b>!  Getting the word out is a vital part of this process, and we can't do it alone!</p>
+            <p>We know there are folks out there who would really enjoy helping us make new interesting games and then playing them - if only they knew we existed!  So please, if you like something about what we're doing, help us spread the word! </p>
+            <ul>
+                <li>Tell folks about what we're doing!</li>
+                <li>Share this campaign through the built in options!</li>
+                <li>And point your gamer friends at our beta - the more players the better!</li>
+            </ul>
+
+            <div style="margin-left:auto;margin-right:auto;width:200px;text-align:center">
+                <a href="http://twitter.com/share?text=Support games like #brunegame made by folks who want you to love playing them! And checkout @brunegame now!&url=http://aesopgames.com/app.php/support" target="_blank" title="Share This on Twitter">
+                    <img src="{{ asset( twitter_image ) }}" style="width:64px; height: 64px">
+                </a>
+
+                <script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u=http://aesopgames.com/app/php/support'+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
+                <a href="http://www.facebook.com/share.php?u=<full page url to share>" onClick="return fbs_click()" target="_blank" title="Share This on Facebook"><img src="{{ asset( facebook_image ) }}" alt="facebook" width="64" height="64" border="0" /></a>
+
+                <a href="https://plus.google.com/share?url=http://aesopgames.com/app.php/support" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
+                            src="https://www.gstatic.com/images/icons/gplus-64.png" alt="Share on Google+" title="Share This on Google+"/></a>
+            </div>
+            <p>Thank you for reading!</p>
+            <p>Please, get in touch if you have any questions or feedback :)</p>
+        </div>
+    </div>
+    {# Info Panel LAST Call to Action #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Footnotes</h3>
+        </div>
+        <div class="panel-body">
+            <small>*Private Server: Your server will be specially branded as a Brunelleschi: Private Server. We won’t remove this branding but we’ll be happy to add your logo and images within reason. If for some reason you use your Brunelleschi Server to violate US Law we will have to cancel service and take the server down. Violation of certain sections of the ToS will also cause your server to be shut down, as our company will not support Hate Speech or other overtly objectionable uses of the software. If you have specific questions please contact us about your intended use case and we’ll let you know if there are any potential problems.</small>
+        </div>
+    </div>
+    </div><!-- /.col-sm-4 -->
+    <div class="col-md-4 text-center">
+        <div class="alert alert-success" style="border: 2px solid green; opacity: 0.9;">
+            <h2 style="margin:0px;padding:0px;">Supporter Perks (mobile)</h2>
+        </div>
+        <div id="perks-div"></div>
+    </div>
+    </div>
+    </div> <!-- /container -->
+    <script type="text/javascript">
+        (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/platform.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+{% endblock %}
