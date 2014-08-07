@@ -77,15 +77,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.005652"
-     inkscape:cx="138.1097"
-     inkscape:cy="91.055461"
+     inkscape:cx="140.75767"
+     inkscape:cy="50.199891"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1000"
      inkscape:window-height="757"
-     inkscape:window-x="1442"
-     inkscape:window-y="88"
+     inkscape:window-x="1373"
+     inkscape:window-y="103"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -99,7 +99,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -194,27 +194,6 @@
        sodipodi:ry="17.627853"
        d="m -138.90748,121.37215 c 0,9.73559 -13.259,17.62785 -29.6148,17.62785 -16.3558,0 -29.61479,-7.89226 -29.61479,-17.62785 0,-9.7356 13.25899,-17.62786 29.61479,-17.62786 16.3558,0 29.6148,7.89226 29.6148,17.62786 z"
        transform="translate(243.96949,919.70821)" />
-    <path
-       inkscape:connector-curvature="0"
-       style="color:#000000;fill:#afdde9;fill-opacity:0.79215686;fill-rule:nonzero;stroke:#ea5f34;stroke-width:0.96196485;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter4058);enable-background:accumulate"
-       d="m 47.165684,922.61459 c -23.352587,0 -42.3125002,4.1193 -42.3125002,9.21875 0,4.47152 14.5769422,8.21191 33.9062502,9.0625 2.532331,4.10512 18.631234,7.3597 38.1875,7.46875 21.37521,0.11919 38.755456,-3.54602 38.843756,-8.1875 0.0707,-3.71727 -10.9897,-6.93058 -26.375006,-8.125 0.008,-0.074 0.03125,-0.14429 0.03125,-0.21875 0,-5.09945 -18.928664,-9.21875 -42.28125,-9.21875 z"
-       id="path3980" />
-    <path
-       sodipodi:type="star"
-       style="fill:none;stroke:#eb6841;stroke-width:3.35348511;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path2985"
-       sodipodi:sides="4"
-       sodipodi:cx="4.2306848"
-       sodipodi:cy="4.3232031"
-       sodipodi:r1="81.768921"
-       sodipodi:r2="57.819359"
-       sodipodi:arg1="0.78539816"
-       sodipodi:arg2="1.5707963"
-       inkscape:flatsided="true"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 62.050043,62.142561 -115.638717,10e-7 0,-115.638717 115.638717,-10e-7 z"
-       transform="matrix(2.3209014,0,0,1.0614031,130.21684,975.95446)" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot4481"
@@ -266,6 +245,13 @@
        sodipodi:ry="13.749725"
        d="m -106.47224,80.122971 c 0,7.593763 -7.10303,13.749725 -15.86506,13.749725 -8.76204,0 -15.86507,-6.155962 -15.86507,-13.749725 0,-7.593764 7.10303,-13.749726 15.86507,-13.749726 8.76203,0 15.86506,6.155962 15.86506,13.749726 z"
        transform="translate(243.96949,919.70821)" />
+    <rect
+       style="opacity:0.5;fill:#ffffff;fill-opacity:1;stroke:#00a0b0;stroke-opacity:1"
+       id="rect3938"
+       width="269.71832"
+       height="33.450703"
+       x="3.7417245"
+       y="1006.5176" />
     <text
        xml:space="preserve"
        style="font-size:36px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:112.00000047999999708%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#cc333f;fill-opacity:1;stroke:#542437;stroke-opacity:1;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
@@ -325,23 +311,8 @@
        id="image7643"
        x="31.553087"
        y="947.35486" />
-    <text
-       xml:space="preserve"
-       style="font-size:17px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:84.00000334000000600%;letter-spacing:0px;word-spacing:0px;fill:#00a0b0;fill-opacity:1;stroke:#000000;font-family:Almendra;-inkscape-font-specification:Almendra Bold;stroke-opacity:1;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
-       x="11.460185"
-       y="936.48816"
-       id="text4600"
-       sodipodi:linespacing="84.000003%"><tspan
-         sodipodi:role="line"
-         id="tspan4602"
-         x="11.460185"
-         y="936.48816">Trade Master</tspan><tspan
-         sodipodi:role="line"
-         x="11.460185"
-         y="949.92816"
-         id="tspan4604">                         Title</tspan></text>
     <g
-       transform="translate(-75.703883,3.7826216)"
+       transform="translate(-76.701065,4.2812126)"
        id="g4480">
       <path
          sodipodi:nodetypes="cccccccccc"
@@ -382,18 +353,68 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:93.99999975999999400%;letter-spacing:-0.31999999000000001px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
-       x="41.260632"
-       y="1018.2571"
+       style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:93.99999976%;letter-spacing:-0.31999999px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+       x="43.753586"
+       y="1019.2543"
        id="text5207"
        sodipodi:linespacing="94%"><tspan
          sodipodi:role="line"
          id="tspan5209"
-         x="90.12162"
-         y="1018.2571">Bronze</tspan><tspan
+         x="43.753586"
+         y="1019.2543">Bronze</tspan><tspan
          sodipodi:role="line"
-         x="90.121613"
-         y="1031.4171"
+         x="43.753586"
+         y="1031.4742"
          id="tspan5211">Supporter Badge</tspan></text>
+    <path
+       style="opacity:0.73662552;fill:#ffffff;fill-opacity:1;stroke:#00a0b0;stroke-width:0.94424105px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 6.2167605,968.29662 110.49787,919.63747 34.765768,920.17156 5.1604225,933.38171 z"
+       id="path3908"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:type="star"
+       style="fill:none;stroke:#eb6841;stroke-width:3.35348511;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2985"
+       sodipodi:sides="4"
+       sodipodi:cx="4.2306848"
+       sodipodi:cy="4.3232031"
+       sodipodi:r1="81.768921"
+       sodipodi:r2="57.819359"
+       sodipodi:arg1="0.78539816"
+       sodipodi:arg2="1.5707963"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 62.050043,62.142561 -115.638717,10e-7 0,-115.638717 115.638717,-10e-7 z"
+       transform="matrix(2.3209014,0,0,1.0614031,130.21684,975.95446)" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cc333f;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+       x="-388.21353"
+       y="881.23334"
+       id="text3048"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.90954507,-0.41560531,0.41560531,0.90954507,0,0)"
+       inkscape:export-filename="M:\Images\Fundraisers\Perks\7-trading_sash.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         x="-388.21353"
+         y="881.23334"
+         id="tspan3052">Trade Master</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+       x="-365.56299"
+       y="869.61951"
+       id="text3048-3"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.91490058,-0.40367923,0.40367923,0.91490058,0,0)"><tspan
+         sodipodi:role="line"
+         x="-365.56299"
+         y="869.61951"
+         id="tspan3052-1"
+         style="font-size:12px;fill:#000000;fill-opacity:1;stroke:none">Title:</tspan></text>
   </g>
 </svg>
