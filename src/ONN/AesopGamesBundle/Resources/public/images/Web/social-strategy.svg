@@ -15,7 +15,7 @@
    id="svg3896"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="social-strategy.svg">
+   sodipodi:docname="social-strategy.png">
   <defs
      id="defs3898" />
   <sodipodi:namedview
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="0"
      inkscape:zoom="0.5"
-     inkscape:cx="505.23174"
-     inkscape:cy="478.95441"
+     inkscape:cx="143.23174"
+     inkscape:cy="384.89506"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -80,13 +80,6 @@
        inkscape:randomized="0"
        d="m -434.28569,-62.331016 c -23.51635,22.789042 -522.92525,14.944922 -545.71429,-8.571429 -22.78902,-23.516352 -14.94492,-522.925255 8.57143,-545.714295 23.51635,-22.78904 522.92525,-14.94492 545.71429,8.57143 22.78905,23.51635 14.94493,522.925253 -8.57143,545.714294 z"
        transform="matrix(0,1.7764846,-2.0255489,0,-593.85673,1849.7618)" />
-    <path
-       style="fill:#edc951;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.5"
-       d="m 42.629956,833.69997 c -2.413016,57.91239 17.695453,163.28077 17.695453,163.28077 l 1081.835691,6.43476 c 12.8694,-18.49979 21.7171,-170.51987 21.7171,-170.51987 z"
-       id="path3939"
-       inkscape:connector-curvature="0"
-       transform="translate(-515.44516,66.879671)"
-       sodipodi:nodetypes="ccccc" />
     <text
        xml:space="preserve"
        style="font-size:160px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
@@ -97,6 +90,14 @@
          sodipodi:role="line"
          id="tspan5763"
          x="-432.29019"
-         y="1027.209">Social Strategy</tspan></text>
+         y="1027.209"
+         style="fill:#000000;fill-opacity:1">Social Strategy</tspan></text>
+    <path
+       style="fill:#edc951;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.5"
+       d="m 42.629956,833.69997 c -2.413016,57.91239 17.695453,163.28077 17.695453,163.28077 l 1081.835691,6.43476 c 12.8694,-18.49979 21.7171,-170.51987 21.7171,-170.51987 z"
+       id="path3939"
+       inkscape:connector-curvature="0"
+       transform="translate(-515.44516,66.879671)"
+       sodipodi:nodetypes="ccccc" />
   </g>
 </svg>

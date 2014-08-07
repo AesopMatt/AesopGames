@@ -15,7 +15,7 @@
    id="svg3896"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="role-play.svg">
+   sodipodi:docname="role-play.png">
   <defs
      id="defs3898" />
   <sodipodi:namedview
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="0"
      inkscape:zoom="0.35"
-     inkscape:cx="108.87376"
+     inkscape:cx="-408.2691"
      inkscape:cy="618.12572"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -103,6 +103,7 @@
          sodipodi:role="line"
          id="tspan5763"
          x="-680.57593"
-         y="1059.2091">Role Play</tspan></text>
+         y="1059.2091"
+         style="fill:#000000;fill-opacity:1">Role Play</tspan></text>
   </g>
 </svg>
