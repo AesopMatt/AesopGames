@@ -88,20 +88,22 @@
     <script>
         $(function(){
 
+            {#
             $.get( '{{ path ('perks') }}',
                     function(data){
                         $('#perks-div').html(data);
 
+                    }
+            );
+            #}
+            $.get( '{{ path ('looking_closer') }}',
+                    function(data){
+                        $('#looking-closer-panel').html(data);
                         var content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
                         $("#stretch-div").html(content);
 
                         var content = '<iframe width="420" height="315" src="//www.youtube.com/embed/GiHunFmzFnM" frameborder="0" allowfullscreen></iframe>';
                         $("#create_character_video").html(content);
-                    }
-            );
-            $.get( '{{ path ('looking_closer') }}',
-                    function(data){
-                        $('#looking-closer-panel').html(data);
                     }
             );
         });
@@ -394,6 +396,7 @@
     </div>
     </div><!-- /.col-sm-4 -->
     </div>
+    {#
     <div class="row">
     <div class="col-md-4 text-center">
         <div class="alert alert-success" style="border: 2px solid green; opacity: 0.9;">
@@ -402,6 +405,7 @@
         <div id="perks-div"></div>
     </div>
     </div>
+    #}
     </div> <!-- /container -->
     <script type="text/javascript">
         (function() {
