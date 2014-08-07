@@ -1,7 +1,7 @@
 {% extends 'ONNAesopGamesBundle::mobileLayout.html.twig' %}
 
 {% block main %}
-    <div class="icons">
+{#    <div class="icons">
         <img src="{{ asset( city_building|replace({'png':'svg'}) ) }}">
         <img src="{{ asset( role_play|replace({'png':'svg'}) ) }}">
         <img src="{{ asset( social_strategy|replace({'png':'svg'}) ) }}">
@@ -13,7 +13,7 @@
         {% endfor %}
 
 
-    </div>
+    </div>#}
     <div id="fb-root"></div>
     <script>
         window.fbAsyncInit = function() {
@@ -142,13 +142,14 @@
 
             <p style="margin-top:10px;"><b>Characters in Brunelleschi are either Heroes or Lords.</b>.</p>
 
-            <img src="{{ asset( role_play|replace({'png':'svg'}) ) }}" class="img-rounded" style="width: 30%; margin:10px; display:block; float:left;">
+            <object data="{{ asset( role_play|replace({'png':'svg'}) ) }}" type="image/svg+xml" style="width:30%; margin:10px; display:block; float:left;"></object>
+
             <p>Will you build walls or markets?</p>
             <p>Construct magic shops or train Military Troops?</p>
             <p>Will you obey the conventions of society or pursue secret actions and the life of a criminal?</p>
             <p>Play a Lord and you gain the glorious opportunity to take the world on your shoulders as a Sovereign or Minister, building and managing the great Settlements of the World.</p>
 
-            <img src="{{ asset( city_building) }}" class="img-rounded" style="width: 30%; margin:10px; display:block; float:right;">
+            <object data="{{ asset( city_building|replace({'png':'svg'}) ) }}" type="image/svg+xml" style="width:30%; margin:10px; display:block; float:right;"></object>
 
             <p>Play a Hero and find yourself wrapped in glory! Rescue your settlement by fending off hungry peasants and enemy armies or take up banditry and begin learning the secret ways of the criminal. Rise in level and rank as you decide where your character fits in the grand political scheme.</p>
 
@@ -157,7 +158,7 @@
             <p>Own Alchemy Shops and vote in a Magiocratic government! Gather members of the clergy to overthrow an Aristocracy and replace it with Socialism! Or replace Fascism with a Free Market!</p>
             <p>Both types of characters can wear specialized equipment, own buildings, and make a mint in the player run markets. With 50 districts per settlement and over 900 varieties of equipment, the possibilities are endless!</p>
 
-            <img src="{{ asset( social_strategy|replace({'png':'svg'}) ) }}" class="img-rounded" style="width: 35%; margin:10px; display:block; float:right;">
+            <object data="{{ asset( social_strategy|replace({'png':'svg'}) ) }}" type="image/svg+xml" style="width:30%; margin:10px; display:block; float:right;"></object>
 
             <p>Each District in a Settlement can employ a Minister, a major element of Gameplay, which allows Lords to team up and build impressive Settlements that a single player would struggle to effectively manage.  A Sovereign can benefit from up to <b>49 friends</b> assisting them as Ministers and more as Citizens and Residents in their shared epic journey through a Historical Fantasy Renaissance.</p>
             <a href="#looking-forward"><button class="btn btn-info pull-right" style="margin:10px;">Learn More</button></a></p>
