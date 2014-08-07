@@ -30,17 +30,20 @@
     <![endif]-->
     <link rel="icon" href={{ asset('bundles/onnaesopgames/images/favicon.ico') }} type=”image/x-icon”v>
     <style>
-        body{
-            background: url('{{ asset('bundles/onnaesopgames/images/city-zoom.jpg') }}') no-repeat;
-            background-size: 100% auto !important;
+        html {
+            background: url('{{ asset('bundles/onnaesopgames/images/city-zoom.jpg') }}') no-repeat; 
+            background-position: center center;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-            background-attachment: fixed;
+            height: 100%;
+            overflow: hidden;
         }
+
         body {
-            min-height: 100%;
+            min-height:100%;
+            overflow: scroll;
         }
 
         body {
