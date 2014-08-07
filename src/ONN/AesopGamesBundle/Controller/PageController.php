@@ -257,11 +257,15 @@ class PageController extends Controller
         $rewards_images = $this->getRewardsImages($currentUrl);
         $fundraisers = $this->getFundraisersImages($currentUrl);
 
+        $mobileDetector = $this->get('mobile_detect.mobile_detector');
+        $mobile = $mobileDetector->isMobile();
+        $tablet = $mobileDetector->isTablet();
+        var_dump($mobile);
+        var_dump($tablet);
         $page = 'support.html.twig';
-        if ($mobile == true){
+        if ($mobile == true || $tablet == true){
             $page = 'mobileSupport.html.twig';
         }
-        var_dump($mobile);
         $response = $this->render('ONNAesopGamesBundle:Page:'.$page, array(
             'city_building' => $city_building,
             'fantasy_renaissance' => $fantasy_renaissance,

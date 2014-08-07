@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
             new ONN\AesopGamesBundle\ONNAesopGamesBundle(),
+            new SunCat\MobileDetectBundle\MobileDetectBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
