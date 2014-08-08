@@ -16,7 +16,7 @@ class PageController extends Controller
 
     public function getFundraisersImages($currentUrl)
     {
-        $names = ['indiegogo','kickstarter','rockethub'];
+        $names = ['indiegogo','kickstarter','rockethub','greenlight','epocu'];
         //$types = ['comingsoon','live','stretch','complete-no','complete-yes'];
         $types = ['comingsoon'];
         $images = [];

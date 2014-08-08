@@ -45,9 +45,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4182101"
-     inkscape:cx="158.91006"
-     inkscape:cy="45.393153"
+     inkscape:zoom="2.8364202"
+     inkscape:cx="119.32229"
+     inkscape:cy="67.821058"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -261,6 +261,13 @@
        id="image8421"
        x="15.322498"
        y="945.93774" />
+    <rect
+       style="opacity:0.5;fill:#ffffff;fill-opacity:1;stroke:#00a0b0;stroke-opacity:1"
+       id="rect3938"
+       width="269.71832"
+       height="33.450703"
+       x="2.5097091"
+       y="1001.0158" />
     <image
        width="50"
        height="50"
@@ -268,64 +275,25 @@
        id="image8411"
        x="51.729053"
        y="984.98492" />
-    <path
-       inkscape:connector-curvature="0"
-       style="color:#000000;fill:#afdde9;fill-opacity:0.79215686;fill-rule:nonzero;stroke:#ea5f34;stroke-width:0.96196485;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter4058-0);enable-background:accumulate"
-       d="m 47.355007,917.43058 c -23.35258,0 -42.3124904,4.1193 -42.3124904,9.2187 0,4.4716 14.5769404,8.2119 33.9062404,9.0625 2.53233,4.1052 18.63124,7.3597 38.1875,7.4688 21.37521,0.1192 38.755463,-3.546 38.843763,-8.1875 0.0707,-3.7173 -10.9897,-6.9306 -26.375013,-8.125 0.008,-0.074 0.0312,-0.1443 0.0312,-0.2188 0,-5.0994 -18.92866,-9.2187 -42.28125,-9.2187 z"
-       id="path3980-48" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:91.99999571%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00a0b0;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
-       x="184.03902"
-       y="958.33826"
+       style="font-size:45px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:85.00000238%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00a0b0;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+       x="189.67993"
+       y="952.69733"
        id="text4489"
-       sodipodi:linespacing="91.999996%"><tspan
+       sodipodi:linespacing="85.000002%"><tspan
          sodipodi:role="line"
-         x="184.03902"
-         y="958.33826"
+         x="189.67993"
+         y="952.69733"
          id="tspan4493"
-         style="font-size:48px;line-height:91.99999571%;fill:#00a0b0;fill-opacity:1;stroke:#000000;stroke-opacity:1">Ranger</tspan><tspan
+         style="font-size:45px;line-height:85.00000238%;fill:#00a0b0;fill-opacity:1;stroke:#000000;stroke-opacity:1">Ranger</tspan><tspan
          sodipodi:role="line"
-         x="188.35152"
-         y="1002.4982"
-         style="font-size:48px;line-height:91.99999571%;fill:#00a0b0;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+         x="193.7229"
+         y="990.94733"
+         style="font-size:45px;line-height:85.00000238%;fill:#00a0b0;fill-opacity:1;stroke:#000000;stroke-opacity:1"
          id="tspan5243">Pack </tspan></text>
-    <path
-       sodipodi:type="star"
-       style="fill:none;stroke:#00a0b0;stroke-width:3.35348511;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path2985"
-       sodipodi:sides="4"
-       sodipodi:cx="4.2306848"
-       sodipodi:cy="4.3232031"
-       sodipodi:r1="81.768921"
-       sodipodi:r2="57.819359"
-       sodipodi:arg1="0.78539816"
-       sodipodi:arg2="1.5707963"
-       inkscape:flatsided="true"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 62.050043,62.142561 -115.638717,10e-7 0,-115.638717 115.638717,-10e-7 z"
-       transform="matrix(2.3209014,0,0,1.0796892,130.21684,974.9327)"
-       inkscape:export-filename="M:\Images\Fundraisers\Perks\15-ranger_badge.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <text
-       xml:space="preserve"
-       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:81%;letter-spacing:0px;word-spacing:0px;fill:#eb6841;fill-opacity:1;stroke:#000000;stroke-width:0.50000000000000000;stroke-miterlimit:4;stroke-dasharray:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
-       x="10.448332"
-       y="935.24274"
-       id="text3144"
-       sodipodi:linespacing="81%"><tspan
-         sodipodi:role="line"
-         id="tspan3146"
-         x="10.448332"
-         y="935.24274">Benefactor</tspan><tspan
-         sodipodi:role="line"
-         x="10.448332"
-         y="957.74274"
-         id="tspan3148">                  Title</tspan></text>
     <g
-       transform="translate(18.327896,2.3050116)"
+       transform="matrix(0.88227424,0,0,0.89705874,29.946277,103.94564)"
        id="g4480">
       <path
          sodipodi:nodetypes="cccccccccc"
@@ -366,18 +334,68 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra"
-       x="137.41391"
-       y="1015.811"
+       style="font-size:17px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:75%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra"
+       x="138.11903"
+       y="1015.8109"
        id="text5351"
-       sodipodi:linespacing="100%"><tspan
+       sodipodi:linespacing="75%"><tspan
          sodipodi:role="line"
          id="tspan5353"
-         x="137.41391"
-         y="1015.811">Bronze </tspan><tspan
+         x="138.11903"
+         y="1015.8109">Bronze </tspan><tspan
          sodipodi:role="line"
-         x="137.41391"
-         y="1033.8109"
+         x="138.11903"
+         y="1028.5608"
          id="tspan5355">Supporter Badge</tspan></text>
+    <path
+       style="opacity:0.73662552;fill:#ffffff;fill-opacity:1;stroke:#00a0b0;stroke-width:0.94424105px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 7.4888158,967.32862 111.76993,918.66947 36.037824,919.20356 6.4324778,932.41371 z"
+       id="path3908"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:type="star"
+       style="fill:none;stroke:#00a0b0;stroke-width:3.35348511;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2985"
+       sodipodi:sides="4"
+       sodipodi:cx="4.2306848"
+       sodipodi:cy="4.3232031"
+       sodipodi:r1="81.768921"
+       sodipodi:r2="57.819359"
+       sodipodi:arg1="0.78539816"
+       sodipodi:arg2="1.5707963"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 62.050043,62.142561 -115.638717,10e-7 0,-115.638717 115.638717,-10e-7 z"
+       transform="matrix(2.3209014,0,0,1.0796892,130.21684,974.9327)"
+       inkscape:export-filename="M:\Images\Fundraisers\Perks\15-ranger_sash.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+       x="-365.78015"
+       y="868.25598"
+       id="text3048-3"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.91490058,-0.40367923,0.40367923,0.91490058,0,0)"><tspan
+         sodipodi:role="line"
+         x="-365.78015"
+         y="868.25598"
+         id="tspan3052-1"
+         style="font-size:12px;fill:#000000;fill-opacity:1;stroke:none">Title:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:-0.87000006px;word-spacing:0px;fill:#eb6841;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+       x="-385.55823"
+       y="878.99011"
+       id="text3048"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.90954507,-0.41560531,0.41560531,0.90954507,0,0)"><tspan
+         sodipodi:role="line"
+         x="-385.55823"
+         y="878.99011"
+         id="tspan3052">Benefactor</tspan></text>
   </g>
 </svg>

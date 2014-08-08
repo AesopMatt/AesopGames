@@ -39,15 +39,6 @@
        x2="269.12314"
        y2="984.71423"
        gradientUnits="userSpaceOnUse" />
-    <filter
-       color-interpolation-filters="sRGB"
-       inkscape:collect="always"
-       id="filter4058">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.93497753"
-         id="feGaussianBlur4060" />
-    </filter>
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath3976">
@@ -84,8 +75,8 @@
      showgrid="false"
      inkscape:window-width="1000"
      inkscape:window-height="757"
-     inkscape:window-x="1373"
-     inkscape:window-y="103"
+     inkscape:window-x="18"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -250,8 +241,8 @@
        id="rect3938"
        width="269.71832"
        height="33.450703"
-       x="3.7417245"
-       y="1006.5176" />
+       x="4.2403154"
+       y="1001.0331" />
     <text
        xml:space="preserve"
        style="font-size:36px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:112.00000047999999708%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#cc333f;fill-opacity:1;stroke:#542437;stroke-opacity:1;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
@@ -309,10 +300,10 @@
        height="56.94886"
        xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABAAEADASIA AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3 ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3 uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDxenAZ oAzUqJmv1hs4xUjzSzh4Yd6RGQ5xgVO2ILd5SM7FziqEvm+THcXl55QbDxwxjJI7HH+NeTmGPVGL hG/M1vpp0vrp6LqXGNyxbbp4S7R7DnGKR48VSl1m4Yv5YVAzZzjJFbPl+ZBHIOQyhs1OXZjDEL2c W24rVtWvuEotamcVxTcVaeLFQsmK9dMgciZqV4brA+zCM+u6pII8ms+71mTc0dsQiDjeOpry8zxl LD0vfk1fa25cI3ehv+VFJZushADxk474xVTT/DkmoXDz35ZIY8RhQeW2jB/DipLZF0fQE1GRRJNI qlNx6sfu/gB/Wueu9Xv74FZ7lih/gU7V/IV8/jsZSk4SrRu7Xt+V3+hpGL6Gw3/CORfaQ6bsSlY1 QsSVAHIOfXNW4YZYtPDQWr+X1SOWQBgv5VgaBaLe63awOMoWLEeu0E4/Su08RzCx0mZ8gO/7tPqf /rZp5fWvTnXaUVG+yV+/+SCS1sczeyme/Wyt3wQSWceo5xSRbpIjvXEiHY31rN0pwupwbycM20nP rxXSXECxghVAHtXoZTiKmJnKtJ9bW6Wsrfdrr1JmktBlsQMFunrWE2j3j372sEDSMvIx0K9jmty1 fBFJqMd3ZwNfWN1JGqY3RA8Aeo/wqs6wyqwU5JtR7b267hTdiTUY57jwLAXidHtZVWQEY+UAqD+o rjq6Cy8VXsMItLkR3Fo2VkR15Kk88j8a0IPBcV5fBrfUojpzqXSUEMw/2SM9ff2/Cvma0frLjKlq 0kmarTcwtBvEsNctLmQ4jV8MfQEYJ/WtjxleNfavHY22ZFhAGEGdzt/kVOnhLTANRafU2ijtJdgk IGCNoPT6nFZy62NJs2stNkjnQyrJ57QbG4Ocdeeg600p0qLpVHaLd+706W/rYN3dFE6FqqJ5hsph j25/KtyK6a6th5qlJ04kRhg59aoW+pa3r2oR2cd4qySkhcyJCowMnLHA6D1rp9c8N6joKQjUgqPt AVWuI2cjnnap3Y+U89K9HJ62Hp4n2dOdnLpK2vot9Ov420Jmm1exzsEmDWrEyzQPC/3XUqfxrCRs Vchn219fVpqSaZgmZr+HNSDsEgEig8Mrrz+tRHQdUB/48pPwxXTxXuB1qyt+fWvm58P0r+7J/ga+ 0Zx/9g6p/wA+Mv5ClHh/VCf+PNx9SB/Wux/tD3qN7/PepXD9PrJ/gHtGZukaUdNDz3G3z2GFUHO0 fX1rvfjE+3xTaj/pxX/0ZJXFpcW8lwq3U0sUBzueKMOw44wpZc8+9bPxB8TaV4p1CC/sTeRyxxLA YZ4VC7QWbduDnn5gMY/Gp/s+VHNcJKlBuEI1U3bROSja787Pppp3RSmnTkm9dD//2Q== "
        id="image7643"
-       x="31.553087"
+       x="39.530544"
        y="947.35486" />
     <g
-       transform="translate(-76.701065,4.2812126)"
+       transform="matrix(0.88227424,0,0,0.89705874,-66.492912,103.87737)"
        id="g4480">
       <path
          sodipodi:nodetypes="cccccccccc"
@@ -355,16 +346,16 @@
        xml:space="preserve"
        style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:93.99999976%;letter-spacing:-0.31999999px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
        x="43.753586"
-       y="1019.2543"
+       y="1016.7613"
        id="text5207"
        sodipodi:linespacing="94%"><tspan
          sodipodi:role="line"
          id="tspan5209"
          x="43.753586"
-         y="1019.2543">Bronze</tspan><tspan
+         y="1016.7613">Bronze</tspan><tspan
          sodipodi:role="line"
          x="43.753586"
-         y="1031.4742"
+         y="1028.9813"
          id="tspan5211">Supporter Badge</tspan></text>
     <path
        style="opacity:0.73662552;fill:#ffffff;fill-opacity:1;stroke:#00a0b0;stroke-width:0.94424105px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -387,7 +378,10 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 62.050043,62.142561 -115.638717,10e-7 0,-115.638717 115.638717,-10e-7 z"
-       transform="matrix(2.3209014,0,0,1.0614031,130.21684,975.95446)" />
+       transform="matrix(2.3209014,0,0,1.0614031,130.21684,975.95446)"
+       inkscape:export-filename="M:\Images\Fundraisers\Perks\7-trading_sash.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cc333f;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"

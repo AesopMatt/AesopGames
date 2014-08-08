@@ -56,16 +56,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.4865144"
-     inkscape:cx="131.37665"
-     inkscape:cy="79.764548"
+     inkscape:zoom="1.7582312"
+     inkscape:cx="145.33756"
+     inkscape:cy="52.977607"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1037"
-     inkscape:window-height="770"
-     inkscape:window-x="1327"
-     inkscape:window-y="91"
+     inkscape:window-width="742"
+     inkscape:window-height="688"
+     inkscape:window-x="1803"
+     inkscape:window-y="258"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -210,25 +210,6 @@
        id="path3908"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
-    <path
-       sodipodi:type="star"
-       style="fill:none;stroke:#eb6841;stroke-width:3.35348511;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path2985"
-       sodipodi:sides="4"
-       sodipodi:cx="4.2306848"
-       sodipodi:cy="4.3232031"
-       sodipodi:r1="81.768921"
-       sodipodi:r2="57.819359"
-       sodipodi:arg1="0.78539816"
-       sodipodi:arg2="1.5707963"
-       inkscape:flatsided="true"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 62.050043,62.142561 -115.638717,10e-7 0,-115.638717 115.638717,-10e-7 z"
-       transform="matrix(2.3209014,0,0,1.0804701,130.21684,976.97448)"
-       inkscape:export-filename="M:\Images\Fundraisers\Perks\2500-action_sash.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot4481"
@@ -270,6 +251,13 @@
        sodipodi:ry="13.749725"
        d="m -106.47224,80.122971 c 0,7.593763 -7.10303,13.749725 -15.86506,13.749725 -8.76204,0 -15.86507,-6.155962 -15.86507,-13.749725 0,-7.593764 7.10303,-13.749726 15.86507,-13.749726 8.76203,0 15.86506,6.155962 15.86506,13.749726 z"
        transform="translate(243.96949,919.70821)" />
+    <rect
+       style="opacity:0.5;fill:#ffffff;fill-opacity:1;stroke:#00a0b0;stroke-opacity:1"
+       id="rect3938-7"
+       width="269.71832"
+       height="33.450703"
+       x="4.1973729"
+       y="1004.1715" />
     <path
        sodipodi:type="arc"
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -302,11 +290,11 @@
        transform="translate(442.10656,901.72779)" />
     <text
        xml:space="preserve"
-       style="font-size:30px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:88.99999857%;letter-spacing:1.75px;word-spacing:0px;text-anchor:middle;fill:#00a0b0;fill-opacity:1;stroke:#eb6841;stroke-opacity:1;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:87%;letter-spacing:2px;word-spacing:0px;text-anchor:middle;fill:#00a0b0;fill-opacity:1;stroke:#eb6841;stroke-opacity:1;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
        x="203.04616"
        y="945.71234"
        id="text12410"
-       sodipodi:linespacing="88.999999%"><tspan
+       sodipodi:linespacing="87%"><tspan
          sodipodi:role="line"
          x="203.92116"
          y="945.71234"
@@ -403,7 +391,7 @@
          y="1045.8083"
          style="stroke-width:2.24269795">?</tspan></text>
     <g
-       transform="translate(11.065104,0.38153431)"
+       transform="matrix(0.88194466,0,0,0.897552,30.22576,105.39158)"
        id="g3023">
       <path
          id="path3027"
@@ -422,18 +410,18 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:110.00000238%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
-       x="161.63217"
-       y="1015.7922"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:94.99999881%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+       x="164.47594"
+       y="1017.4984"
        id="text3059"
-       sodipodi:linespacing="110%"><tspan
+       sodipodi:linespacing="94.999999%"><tspan
          sodipodi:role="line"
          id="tspan3061"
-         x="161.63217"
-         y="1015.7922">Cut Gem</tspan><tspan
+         x="164.47594"
+         y="1017.4984">Cut Gem</tspan><tspan
          sodipodi:role="line"
-         x="161.63217"
-         y="1031.1923"
+         x="164.47594"
+         y="1030.7985"
          id="tspan3063">Supporter Badge</tspan></text>
     <text
        xml:space="preserve"
@@ -464,5 +452,24 @@
          x="-363.49228"
          y="882.31384"
          id="tspan3083">the Sciences</tspan></text>
+    <path
+       sodipodi:type="star"
+       style="fill:none;stroke:#eb6841;stroke-width:3.35348511;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2985"
+       sodipodi:sides="4"
+       sodipodi:cx="4.2306848"
+       sodipodi:cy="4.3232031"
+       sodipodi:r1="81.768921"
+       sodipodi:r2="57.819359"
+       sodipodi:arg1="0.78539816"
+       sodipodi:arg2="1.5707963"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 62.050043,62.142561 -115.638717,10e-7 0,-115.638717 115.638717,-10e-7 z"
+       transform="matrix(2.3209014,0,0,1.0804701,130.21684,976.97448)"
+       inkscape:export-filename="M:\Images\Fundraisers\Perks\2500-action_sash.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>

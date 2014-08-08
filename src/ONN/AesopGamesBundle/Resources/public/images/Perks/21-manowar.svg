@@ -39,15 +39,6 @@
        x2="269.12314"
        y2="984.71423"
        gradientUnits="userSpaceOnUse" />
-    <filter
-       color-interpolation-filters="sRGB"
-       inkscape:collect="always"
-       id="filter4058">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.93497753"
-         id="feGaussianBlur4060" />
-    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -56,16 +47,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4182101"
-     inkscape:cx="118.487"
-     inkscape:cy="61.988268"
+     inkscape:zoom="2.005652"
+     inkscape:cx="133.34852"
+     inkscape:cy="56.63676"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="995"
-     inkscape:window-height="742"
-     inkscape:window-x="1373"
-     inkscape:window-y="69"
+     inkscape:window-width="703"
+     inkscape:window-height="679"
+     inkscape:window-x="302"
+     inkscape:window-y="89"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -79,7 +70,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -262,6 +253,13 @@
        sodipodi:ry="13.749725"
        d="m -106.47224,80.122971 c 0,7.593763 -7.10303,13.749725 -15.86506,13.749725 -8.76204,0 -15.86507,-6.155962 -15.86507,-13.749725 0,-7.593764 7.10303,-13.749726 15.86507,-13.749726 8.76203,0 15.86506,6.155962 15.86506,13.749726 z"
        transform="translate(442.10656,901.72779)" />
+    <rect
+       style="opacity:0.5;fill:#ffffff;fill-opacity:1;stroke:#00a0b0;stroke-opacity:1"
+       id="rect3938"
+       width="269.71832"
+       height="33.450703"
+       x="7.2318654"
+       y="1004.5233" />
     <image
        width="46"
        height="46"
@@ -269,11 +267,6 @@
        id="image8054"
        x="35.347397"
        y="973.09967" />
-    <path
-       inkscape:connector-curvature="0"
-       style="color:#000000;fill:#afdde9;fill-opacity:0.79215686;fill-rule:nonzero;stroke:#ea5f34;stroke-width:0.96196485;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter4058);enable-background:accumulate"
-       d="m 47.355006,919.4008 c -23.35258,0 -42.3124991,4.1193 -42.3124991,9.21875 0,4.47152 14.5769491,8.21191 33.9062491,9.0625 2.53233,4.10512 18.63124,7.3597 38.1875,7.46875 21.375206,0.11919 38.755464,-3.54602 38.843764,-8.1875 0.0707,-3.71727 -10.9897,-6.93058 -26.375014,-8.125 0.008,-0.074 0.0312,-0.14429 0.0312,-0.21875 0,-5.09945 -18.92866,-9.21875 -42.28125,-9.21875 z"
-       id="path3980" />
     <text
        xml:space="preserve"
        style="font-size:36px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:98.00000191%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#cc333f;fill-opacity:1;stroke:#542437;stroke-opacity:1;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
@@ -298,52 +291,6 @@
        xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABAAEADASIA AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3 ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3 uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDz0CnB c09EzUp2RLl1kI/2Y2b+Qrwkrn6rOooq7ZD5Zo8s1LZXUN7dPBFHKCi7suu3P0B5q3dCGzhM1xIs cY4y1W6bTtYwjiqco8yehnFMUwitHyRJEsicqw3A47VWkiIqGrG0ailsVcUVIVxTCKRqaUEWasXl zb6VYPdXB+VeFXuzdgKxrvw/dandCVNQMKqMIqoeP1rndekNtNHpizGVbUHzJD/HIep/DgfhXZRo xk1qfN5hmVWgpXhbonda/It6RrF7N4gnv/LWZ/JctDnH7tfmKr9AP85q34g11NUNmdNunt4lUtI7 MV2segOPTH61S8CMB4ysVYDa+9SP+ANVDU0t7TX76GEtFDHcSRqFG4bQxA4Pauzkjz7bHzaxVVYe 3No27/g/+HNDRtWltNTiFzqP2iGT92yl3O3PQ/MMf/WrtLi1xnivO2sdOdPMGsWyMf8Aln5M3H/j prtLLXGvtJT95ELpW8tJGz5U7KPu5OCpI/yeRWOIpc2qPVynHOmnTqPzWt/1CWHFVmTFWLPVrTUW aLBgulJDwScEHvj1pZo8Vwzg4uzPqMPiIVo80HdEl3qaaXp0ly2CwGEU/wATdhXmsjvLI0jsWdyW YnuTXo4SG4TZNEkg7b0DY/Ouam0vV/OkVLC2ljDEKwiiXcOx4rsws4pNHzee4atUnGSTa8lf7yl4 WuFtfFGnTMcKswyfbpWZcztc3U07fekdnP4nNbR0TViQRpMasDkFXx/7NThomqAf8gOD8XP/AMXX Vzxve54X1Wvy8vK/uf8Akc7W5o2rwWdndWF9bGezuSu7afmQjPzL7/4VqadoXiC6k+yWmi6eXY5U TeUCc4GA0jc/TNPk8FeJLbVUs720srR5/lfdPAVQcNlvmIX2zjPasp4minySmr72urhToVoTXKnf 0/z6HPNBPcXDC3L3IU4SVRhj6fj7V1WnrqSQBb9lYY+Uk/P+NdHJ4Wm8NxxWz28Nu8pAG+4j3tnP zH5uBweTwKZqehalp1ol1dxQxwyLujb7TGxkHHKgNluo6etcFXHUaiSjJWe2u/ofUZZgYUJKpKpq +ien/BMZJMVYS4I71RzS76yufQuKZpC7PrS/az61m+Yf8mjzD6U+Yn2SOi0G5LeI9LGet3EP/HxV 3x5Nt8ZX6+nl/wDotawdEu7Wz1i1vLx51jt5UmAhjDlirA45YYHXn9K0PEep6VrniN9QjmvIoZ8e arW6lo9qBRj9582cf7OPeuGSl9cU7acrX4pnK6dsSpW05X+aZtfFJ9viW2H/AE5r/wChvTfHJ/4p jwj/ANeX/skVUPGGu6V4k1S2vYHvYtqLC6PApwu5iWBD8n5vu8fWjxJr2lavoulWds96s2mw+Uvm QKFl4QZJDnb93PQ1xYelUjHDpxfu3v5aNGFCnOKopp6Xv9zP/9k= "
        height="47.153381"
        width="46" />
-    <g
-       id="g3835"
-       transform="translate(-7.9683921,0.13164697)">
-      <path
-         sodipodi:nodetypes="cccccccccc"
-         inkscape:connector-curvature="0"
-         id="path3904-3"
-         d="m 126.79265,1004.1287 c -3.55845,-0.1319 -4.21743,2.1087 -4.21743,2.1087 l -0.39538,21.3507 c 0,2.6359 2.5041,3.822 2.5041,3.822 10.93896,7.2488 11.07075,4.7447 11.07075,4.7447 0,0 0.65898,2.1087 11.33435,-5.0082 0,0 2.63589,-1.0544 2.3723,-3.8221 l 0.1318,-21.2189 c 0,0 0,-1.977 -3.82205,-2.1088 0,0 -22.2733,0.1318 -18.97844,0.1318 z"
-         style="fill:#00a0b0;fill-opacity:1;stroke:#00a0b0;stroke-width:0.92256278;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         sodipodi:nodetypes="cccccccccc"
-         inkscape:connector-curvature="0"
-         id="path3904-0"
-         d="m 127.84384,1005.1772 c -3.20995,-0.121 -3.80438,1.9366 -3.80438,1.9366 l -0.35666,19.6073 c 0,2.4206 2.25885,3.5099 2.25885,3.5099 9.86762,6.6567 9.9865,4.3571 9.9865,4.3571 0,0 0.59444,1.9365 10.22429,-4.5992 0,0 2.37774,-0.9682 2.13996,-3.51 l 0.11888,-19.4862 c 0,0 0,-1.8155 -3.44772,-1.9365 0,0 -20.09189,0.121 -17.11972,0.121 z"
-         style="fill:#cccccc;fill-opacity:1;stroke:#edc951;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <text
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="M:\Images\Fundraisers\Perks\1-thankyou_badge.png"
-         sodipodi:linespacing="125%"
-         id="text5200"
-         y="1027.5583"
-         x="126.75635"
-         style="font-size:8.81991863px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#00a0b0;fill-opacity:1;stroke:#241c1c;stroke-width:0.40000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Almendra;-inkscape-font-specification:Almendra"
-         xml:space="preserve"><tspan
-           style="font-size:26.45975685px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#00a0b0;fill-opacity:1;stroke:#241c1c;stroke-width:0.40000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Dearest;-inkscape-font-specification:Dearest"
-           y="1027.5583"
-           x="126.75635"
-           id="tspan5202"
-           sodipodi:role="line">S</tspan></text>
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra"
-       x="145.45222"
-       y="1017.4393"
-       id="text5351"
-       sodipodi:linespacing="100%"><tspan
-         sodipodi:role="line"
-         id="tspan5353"
-         x="145.45222"
-         y="1017.4393">Silver </tspan><tspan
-         sodipodi:role="line"
-         x="145.45222"
-         y="1033.4393"
-         id="tspan5355">Supporter Badge</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
@@ -356,25 +303,83 @@
          x="52.178448"
          y="-50.083881"
          id="tspan3062" /></text>
+    <g
+       transform="translate(1.3716678,0.48170746)"
+       id="g3125">
+      <path
+         sodipodi:nodetypes="cccccccccc"
+         inkscape:connector-curvature="0"
+         id="path3904-3"
+         d="m 123.71485,1005.94 c -3.26511,-0.121 -3.86976,1.9349 -3.86976,1.9349 l -0.36279,19.5906 c 0,2.4187 2.29767,3.507 2.29767,3.507 10.03721,6.6512 10.15814,4.3535 10.15814,4.3535 0,0 0.60466,1.9349 10.4,-4.5953 0,0 2.4186,-0.9675 2.17674,-3.507 l 0.12094,-19.4698 c 0,0 0,-1.814 -3.50698,-1.9349 0,0 -20.43721,0.1209 -17.41396,0.1209 z"
+         style="fill:#00a0b0;fill-opacity:1;stroke:#00a0b0;stroke-width:0.84651142;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="cccccccccc"
+         inkscape:connector-curvature="0"
+         id="path3904-0"
+         d="m 124.67939,1006.9021 c -2.94534,-0.111 -3.49077,1.7769 -3.49077,1.7769 l -0.32726,17.991 c 0,2.2211 2.07265,3.2206 2.07265,3.2206 9.05418,6.1079 9.16326,3.9979 9.16326,3.9979 0,0 0.54544,1.7769 9.38145,-4.2201 0,0 2.18173,-0.8884 1.96355,-3.2206 l 0.10908,-17.8799 c 0,0 0,-1.6658 -3.1635,-1.7768 0,0 -18.43562,0.111 -15.70846,0.111 z"
+         style="fill:#cccccc;fill-opacity:1;stroke:#edc951;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="M:\Images\Fundraisers\Perks\1-thankyou_badge.png"
+         sodipodi:linespacing="125%"
+         id="text5200"
+         y="1028.4341"
+         x="124.1795"
+         style="font-size:8.09284973px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#00a0b0;fill-opacity:1;stroke:#241c1c;stroke-width:0.36702606;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Deutsch Gothic;-inkscape-font-specification:Deutsch Gothic"
+         xml:space="preserve"><tspan
+           style="font-size:24.2785511px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#00a0b0;fill-opacity:1;stroke:#241c1c;stroke-width:0.36702606;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Deutsch Gothic;-inkscape-font-specification:Deutsch Gothic"
+           y="1028.4341"
+           x="124.1795"
+           id="tspan5202"
+           sodipodi:role="line">S</tspan></text>
+    </g>
     <text
        xml:space="preserve"
-       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:83.99999737999999600%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#00a0b0;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none;font-family:Almendra;-inkscape-font-specification:Almendra"
-       x="13.885664"
-       y="936.01569"
-       id="text3725"
-       sodipodi:linespacing="83.999997%"><tspan
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:75%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra"
+       x="148.96378"
+       y="1019.0009"
+       id="text5351"
+       sodipodi:linespacing="75%"><tspan
          sodipodi:role="line"
-         x="13.885664"
-         y="936.01569"
-         id="tspan4112">Sea Captain</tspan><tspan
+         id="tspan5353"
+         x="148.96378"
+         y="1019.0009">Silver </tspan><tspan
          sodipodi:role="line"
-         x="13.885664"
-         y="951.13568"
-         id="tspan3031">            Title</tspan><tspan
+         x="148.96378"
+         y="1031.001"
+         id="tspan5355">Supporter Badge</tspan></text>
+    <path
+       style="opacity:0.73662552;fill:#ffffff;fill-opacity:1;stroke:#00a0b0;stroke-width:0.94424105px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 5.7181709,968.29662 109.99929,919.63747 34.267178,920.17156 4.6618329,933.38171 z"
+       id="path3908"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:15px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#eb6841;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+       x="-389.70859"
+       y="878.7818"
+       id="text3048"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.90954507,-0.41560531,0.41560531,0.90954507,0,0)"><tspan
          sodipodi:role="line"
-         x="13.885664"
-         y="966.25568"
-         id="tspan3029" /></text>
+         x="-389.70859"
+         y="878.7818"
+         id="tspan3052">Sea Captain</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
+       x="-365.93167"
+       y="869.25165"
+       id="text3048-3"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.91490058,-0.40367923,0.40367923,0.91490058,0,0)"><tspan
+         sodipodi:role="line"
+         x="-365.93167"
+         y="869.25165"
+         id="tspan3052-1"
+         style="font-size:12px;fill:#000000;fill-opacity:1;stroke:none">Title:</tspan></text>
     <path
        sodipodi:type="star"
        style="fill:none;stroke:#eb6841;stroke-width:3.35348511;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -391,7 +396,7 @@
        inkscape:randomized="0"
        d="m 62.050043,62.142561 -115.638717,10e-7 0,-115.638717 115.638717,-10e-7 z"
        transform="matrix(2.3209014,0,0,1.0614031,130.21684,975.95446)"
-       inkscape:export-filename="M:\Images\Fundraisers\Perks\21-manowar_badge.png"
+       inkscape:export-filename="M:\Images\Fundraisers\Perks\21-manowar_sash.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
   </g>

@@ -307,21 +307,6 @@
        inkscape:export-filename="M:\Images\Fundraisers\Perks\150-merchant_sash.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
-    <text
-       xml:space="preserve"
-       style="font-size:17px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:98.00000191%;letter-spacing:0px;word-spacing:0px;fill:#eb6841;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;font-family:Almendra;-inkscape-font-specification:Almendra Bold"
-       x="122.20795"
-       y="1089.2782"
-       id="text3048"
-       sodipodi:linespacing="98.000002%"><tspan
-         sodipodi:role="line"
-         id="tspan3050"
-         x="122.20795"
-         y="1089.2782">Merchant</tspan><tspan
-         sodipodi:role="line"
-         x="122.20795"
-         y="1105.9382"
-         id="tspan3052">                 Title</tspan></text>
     <rect
        style="opacity:0.5;fill:#ffffff;fill-opacity:1;stroke:#00a0b0;stroke-opacity:1"
        id="rect3938"
@@ -416,7 +401,7 @@
            height="67.437012"
            x="111.57761"
            y="81.370033" /></flowRegion><flowPara
-         id="flowPara3045"></flowPara></flowRoot>    <image
+         id="flowPara3045" /></flowRoot>    <image
        y="966.38623"
        x="40.933048"
        id="image3439"
