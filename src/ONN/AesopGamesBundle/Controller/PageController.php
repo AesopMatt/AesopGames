@@ -16,18 +16,25 @@ class PageController extends Controller
 
     public function getFundraisersImages($currentUrl)
     {
-        $names = ['indiegogo','kickstarter','rockethub','greenlight','epocu'];
+        $names = [
+            'indiegogo'=>'',
+            'kickstarter'=>'https://www.kickstarter.com/projects/mmitchum/560713644?token=ce3cfc9a',
+            'rockethub' => '',
+            'greenlight' => '',
+            'epocu' => ''
+        ];
         //$types = ['comingsoon','live','stretch','complete-no','complete-yes'];
         $types = ['comingsoon'];
         $images = [];
 
-        foreach ($names as $name){
+        foreach ($names as $name=>$url){
             foreach ($types as $type){
                 if (strpos($currentUrl,'localhost') !== false){
-                    $images[$name][$type] = '/Aesop/web/bundles/onnaesopgames/images/Fundraisers/'.$name.'-small-'.$type.'.png';
+                    $images[$name][$type]['image'] = '/Aesop/web/bundles/onnaesopgames/images/Fundraisers/'.$name.'-small-'.$type.'.png';
                 } else {
-                    $images[$name][$type] = '/bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
+                    $images[$name][$type]['image'] = '/bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
                 }
+                $images[$name][$type]['url'] = $url;
             }
         }
         return $images;

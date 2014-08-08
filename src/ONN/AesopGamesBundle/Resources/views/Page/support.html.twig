@@ -18,6 +18,10 @@
             js.src = "//connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+
+        function newPage(url){
+            window.open(url);
+        }
     </script>
 
     <div class="container theme-showcase">
@@ -52,14 +56,14 @@
             <div class="col-md-12">
             {% for fundraiser in fundraisers %}
                 <div class="text-center pull-right" style="width:auto;margin:1px;">
-                    {% for type,image in fundraiser %}
+                    {% for type,fund in fundraiser %}
                         {% if type == 'live' or type == 'stretch' %}
                             {% set button_class = 'btn-custom btn-custom-success' %}
                         {% else %}
                             {% set button_class = 'btn btn-default' %}
                         {% endif %}
-                        <button class="btn-large {{ button_class }}" {% if type == 'comingsoon' %}disabled="disabled"{% endif %} style="opacity: .9">
-                            <img src="{{ asset( image ) }}" class="img-rounded" style="height: 75px; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <button {% if fund.url|length > 0 %}onclick="newPage('{{ fund.url }}')"{% endif %}class="btn-large {{ button_class }}" {% if type == 'comingsoon' and fund.url|length == 0 %}disabled="disabled"{% endif %} style="opacity: .9">
+                            <img src="{{ asset( fund.image ) }}" class="img-rounded" style="height: 75px; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         </button>
                     {% endfor %}
                 </div>
