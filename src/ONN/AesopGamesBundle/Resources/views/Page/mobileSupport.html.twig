@@ -133,10 +133,8 @@
             <p>Construct magic shops or train Military Troops?</p>
             <p>Will you obey the conventions of society or pursue secret actions and the life of a criminal?</p>
 
-            <div style="width:30%;float:right;margin:10px;">
-                <div class="svg-container">
-                    <object class="svg-content" data="{{ asset( city_building|replace({'png':'svg'}) ) }}" type="image/svg+xml" style="width:100%;"></object>
-                </div>
+            <div style="width:30%;float:right;">
+                {% include "ONNAesopGamesBundle:Svg:cityBuilding.html.twig" %}
             </div>
 
             <p>Play a Lord and you gain the glorious opportunity to take the world on your shoulders as a Sovereign or Minister, building and managing the great Settlements of the World.</p>
