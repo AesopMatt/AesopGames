@@ -127,7 +127,13 @@
             <p style="margin-top:10px;"><b>Characters in Brunelleschi are either Heroes or Lords.</b>.</p>
 
             <div style="width:30%;float:left;margin:10px;overflow:hidden;">
-                <img src="{{ asset(role_play|replace({'png':'svg'})) }}" style="width:100%; height:auto;">
+                <img src="{{ asset(role_play|replace({'png':'svg'})) }}" style="
+                      display: block;
+                      outline: 1px solid blue;
+                      width:100%;
+                      max-width: 100%;
+                      max-height:300px;
+                      height: auto;">
             </div>
 
             <p>Will you build walls or markets?</p>
