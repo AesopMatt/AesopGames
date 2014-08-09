@@ -249,6 +249,7 @@ class PageController extends Controller
 
         $mobileDetector = $this->get('mobile_detect.mobile_detector');
         $mobile = $mobileDetector->isMobile();
+        $mobile = true;
         $tablet = $mobileDetector->isTablet();
         $page = 'support.html.twig';
         if ($mobile == true || $tablet == true){
