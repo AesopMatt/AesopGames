@@ -145,7 +145,7 @@
 
             <p>Both types of characters can wear specialized equipment, own buildings, and make a mint in the player run markets. With 50 districts per settlement and over 900 varieties of equipment, the possibilities are endless!</p>
 
-            <img src="{{ asset(city_building) }}" style="width:30%;float:right;margin:10px;">
+            <img src="{{ asset(social_strategy) }}" style="width:30%;float:right;margin:10px;">
 
             <p>Each District in a Settlement can employ a Minister, a major element of Gameplay, which allows Lords to team up and build impressive Settlements that a single player would struggle to effectively manage.</p>
 
@@ -261,7 +261,9 @@
             <h3 class="panel-title">Fund Allocation Pie Charts</h3>
         </div>
         <div class="panel-body">
-            <img src="{{ asset( budget_pies|replace({'png':'svg'}) ) }}" onerror="{{ asset( budget_pies ) }}"  class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            <object data="{{ asset( budget_pies|replace({'png':'svg'}) ) }}" type="image/svg+xml" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                <img src="{{ asset( budget_pies ) }}" />
+            </object>
         </div>
     </div>
     {# Info Panel 3b #}
