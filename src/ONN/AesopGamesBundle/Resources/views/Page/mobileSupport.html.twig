@@ -233,7 +233,9 @@
             <p>Subsequent funds will be used for development services and software</p>
             <p>Once overhead is covered we will be able to use whatever budget we receive on expanding Brunelleschi from an interesting and fun web game with a 3D client into a fully immersive 3D MMO world.</p>
 
-            <img src="{{ asset( plat_panel|replace({'png':'svg'}) ) }}" onerror="{{ asset( plat_panel ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
+            <object data="{{ asset( plat_panel|replace({'png':'svg'}) ) }}" type="image/svg+xml" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                <img src="{{ asset( plat_panel ) }}" />
+            </object>
             <img src="{{ asset( badge_panel|replace({'png':'svg'}) ) }}" onerror="{{ asset( badge_panel ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
         </div>
     </div>
@@ -333,7 +335,11 @@
         <div class="panel-heading">
             <h3 class="panel-title" id="stretch">Stretch Goals</h3>
         </div>
-        <div class="panel-body" id="stretch-div">
+        <div class="panel-body text-center" id="stretch-div">
+            <h1>Stretch Goals</h1>
+            <button class="btn btn-large btn-success" onclick="loadPanel('stretch-div','{{ path('stretch') }}')" style="margin-left:auto;margin-right:auto;">
+                <h2>Take a Look</h2>
+            </button>
         </div>
     </div>
     {# Info Panel 7 #}
@@ -341,20 +347,23 @@
         <div class="panel-heading">
             <h3 class="panel-title" id="rewards">Selected Perk Packages</h3>
         </div>
-        <div class="panel-body">
-            {% for image in rewards_images %}
-                <img src="{{ asset( image|replace({'png':'svg'}) ) }}" onerror="{{ asset( image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 0px; display:block">
-            {% endfor %}
+        <div class="panel-body text-center" id="packages-div">
+            <h1>Selected Perk Packages</h1>
+            <button class="btn btn-large btn-success" onclick="loadPanel('packages-div','{{ path('packages') }}')" style="margin-left:auto;margin-right:auto;">
+                <h2>Take a Look</h2>
+            </button>
         </div>
     </div>
-
-    {# Info Panel Future Games #}
+    {# Info Panel 7b #}
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">Future Games</h3>
+            <h3 class="panel-title" id="perks">Supporter Perks</h3>
         </div>
-        <div class="panel-body">
-            <img src="{{ asset( games|replace({'png':'svg'}) ) }}" onerror="{{ asset( games ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+        <div class="panel-body text-center" id="perks-div">
+            <h1>Supporter Perks</h1>
+            <button class="btn btn-large btn-success" onclick="loadPanel('perks-div','{{ path('perks') }}')" style="margin-left:auto;margin-right:auto;">
+                <h2>Take a Look</h2>
+            </button>
         </div>
     </div>
 
@@ -398,6 +407,17 @@
             <small>*Private Server: Your server will be specially branded as a Brunelleschi: Private Server. We won’t remove this branding but we’ll be happy to add your logo and images within reason. If for some reason you use your Brunelleschi Server to violate US Law we will have to cancel service and take the server down. Violation of certain sections of the ToS will also cause your server to be shut down, as our company will not support Hate Speech or other overtly objectionable uses of the software. If you have specific questions please contact us about your intended use case and we’ll let you know if there are any potential problems.</small>
         </div>
     </div>
+
+    {# Info Panel Future Games #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Future Games</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ asset( games|replace({'png':'svg'}) ) }}" onerror="{{ asset( games ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+        </div>
+    </div>
+
     </div><!-- /.col-sm-4 -->
     </div>
     {#

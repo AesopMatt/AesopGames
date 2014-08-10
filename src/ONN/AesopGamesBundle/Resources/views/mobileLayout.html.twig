@@ -188,6 +188,13 @@
 </footer>
 
 <script>
+    function loadPanel(name,path){
+        $.get(path,
+                function(data){
+                    $('#'+name).empty().append(data);
+                }
+        );
+    }
 
     function selectMain(path) {
         document.body.style.cursor="wait";

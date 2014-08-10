@@ -25,3 +25,9 @@ perks:
 looking_closer:
     pattern:   /looking_closer
     defaults:  { _controller: ONNAesopGamesBundle:Page:lookingCloser }
+stretch:
+    pattern:   /stretch
+    defaults:  { _controller: ONNAesopGamesBundle:Page:stretch }
+packages:
+    pattern:   /packages
+    defaults:  { _controller: ONNAesopGamesBundle:Page:packages }

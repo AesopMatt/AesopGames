@@ -298,6 +298,27 @@ class PageController extends Controller
         return $response;
     }
 
+    public function stretchAction()
+    {
+        $currentUrl = $this->getRequest()->getUri();
+        if (strpos($currentUrl,'localhost') !== false){
+            $stretch_image = '/Aesop/web/bundles/onnaesopgames/images/stretch.png';
+        } else {
+            $stretch_image = '/bundles/onnaesopgames/images/stretch.png';
+        }
+        return $this->render('ONNAesopGamesBundle:Svg:stretch.html.twig', array('stretch'=>$stretch_image));
+    }
+
+    public function packagesAction()
+    {
+        $currentUrl = $this->getRequest()->getUri();
+
+        $rewards_images = $this->getRewardsImages($currentUrl);
+
+        return $this->render('ONNAesopGamesBundle:Svg:packages.html.twig', array('rewards_images'=>$rewards_images));
+    }
+
+
     public function aboutAction(Request $request)
     {
         $session = $request->getSession();
