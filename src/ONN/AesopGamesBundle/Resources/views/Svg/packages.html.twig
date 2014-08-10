@@ -1,7 +1,17 @@
-{% for image in rewards_images %}
-    <div style="width:90%;margin-left:auto;margin-right:auto;">
-        <object data="{{ asset( image|replace({'png':'svg'}) ) }}" type="image/svg+xml">
-            <img src="{{ asset( image ) }}" />
-        </object>
-    </div>
-{% endfor %}
+{% if mobile != true %}
+    {% for image in rewards_images %}
+        <div style="margin-left:auto;margin-right:auto;">
+            <object data="{{ asset( image|replace({'png':'svg'}) ) }}" type="image/svg+xml">
+                <img src="{{ asset( image ) }}" />
+            </object>
+        </div>
+    {% endfor %}
+{% else %}
+    {% for image in rewards_images %}
+        <div style="margin-left:auto;margin-right:auto;">
+            <object data="{{ asset( image|replace({'png':'svg'}) ) }}" type="image/svg+xml">
+                <img src="{{ asset( image ) }}" />
+            </object>
+        </div>
+    {% endfor %}
+{% endif %}
