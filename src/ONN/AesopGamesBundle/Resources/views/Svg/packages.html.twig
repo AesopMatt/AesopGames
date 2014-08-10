@@ -1,5 +1,7 @@
 {% for image in rewards_images %}
-    <object data="{{ asset( image|replace({'png':'svg'}) ) }}" type="image/svg+xml" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
-        <img src="{{ asset( image ) }}" />
-    </object>
+    <div style="width:90%;margin-left:auto;margin-right:auto;">
+        <object data="{{ asset( image|replace({'png':'svg'}) ) }}" type="image/svg+xml">
+            <img src="{{ asset( image ) }}" />
+        </object>
+    </div>
 {% endfor %}

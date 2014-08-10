@@ -100,7 +100,10 @@ class PageController extends Controller
         $currentUrl = $this->getRequest()->getUri();
         $perks = $this->getPerks($currentUrl);
 
-        $response = $this->render('ONNAesopGamesBundle:Page:perks.html.twig', array('perks'=>$perks));
+        $mobileDetector = $this->get('mobile_detect.mobile_detector');
+        $mobile = $mobileDetector->isMobile();
+
+        $response = $this->render('ONNAesopGamesBundle:Page:perks.html.twig', array('perks'=>$perks,'mobile'=>$mobile));
 
         return $response;
     }
@@ -315,7 +318,10 @@ class PageController extends Controller
 
         $rewards_images = $this->getRewardsImages($currentUrl);
 
-        return $this->render('ONNAesopGamesBundle:Svg:packages.html.twig', array('rewards_images'=>$rewards_images));
+        $mobileDetector = $this->get('mobile_detect.mobile_detector');
+        $mobile = $mobileDetector->isMobile();
+
+        return $this->render('ONNAesopGamesBundle:Svg:packages.html.twig', array('rewards_images'=>$rewards_images,'mobile'=>$mobile));
     }
 
 
