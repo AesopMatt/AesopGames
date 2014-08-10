@@ -263,9 +263,11 @@
             <h3 class="panel-title">Fund Allocation Pie Charts</h3>
         </div>
         <div class="panel-body">
-            <object data="{{ asset( budget_pies|replace({'png':'svg'}) ) }}" type="image/svg+xml" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
-                <img src="{{ asset( budget_pies ) }}" />
-            </object>
+            {% if android_chrome == false %}
+                <img src="{{ asset( budget_pies|replace({'png':'svg'}) ) }}" onerror="{{ asset( budget_pies ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            {% else %}
+                <img src="{{ asset( budget_pies ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            {% endif %}
         </div>
     </div>
     {# Info Panel 3b #}
@@ -398,6 +400,21 @@
             <p>Please, get in touch if you have any questions or feedback :)</p>
         </div>
     </div>
+
+    {# Info Panel Future Games #}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Future Games</h3>
+        </div>
+        <div class="panel-body">
+            {% if android_chrome == false %}
+            <img src="{{ asset( games|replace({'png':'svg'}) ) }}" onerror="{{ asset( games ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            {% else %}
+                <img src="{{ asset( games ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+            {% endif %}
+        </div>
+    </div>
+
     {# Info Panel Footnotes #}
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -407,18 +424,6 @@
             <small>*Private Server: Your server will be specially branded as a Brunelleschi: Private Server. We won’t remove this branding but we’ll be happy to add your logo and images within reason. If for some reason you use your Brunelleschi Server to violate US Law we will have to cancel service and take the server down. Violation of certain sections of the ToS will also cause your server to be shut down, as our company will not support Hate Speech or other overtly objectionable uses of the software. If you have specific questions please contact us about your intended use case and we’ll let you know if there are any potential problems.</small>
         </div>
     </div>
-
-    {# Info Panel Future Games #}
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Future Games</h3>
-        </div>
-        <div class="panel-body">
-            <img src="{{ asset( games|replace({'png':'svg'}) ) }}" onerror="{{ asset( games ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
-        </div>
-    </div>
-
-    </div><!-- /.col-sm-4 -->
     </div>
     {#
     <div class="row">
