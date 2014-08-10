@@ -19,10 +19,11 @@
             <div class="panel-body">
                 {% if android_chrome == false %}
                     <img src="{{ asset( perk.image|replace({'png':'svg'}) ) }}" onerror="{{ asset( perk.image ) }}" class="img-rounded" style="width: 100%; max-width: 350px; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
+                    <p>{{ perk.desc }}</p>
                 {% else %}
                     <img src="{{ asset( perk.image ) }}" class="img-rounded" style="width: 100%; max-width: 350px; margin-top: 10px; margin-bottom: 10px; display:block;float: left;">
+                    <p style="margin-top:10px">{{ perk.desc }}</p>
                 {% endif %}
-                {{ perk.desc }}
             </div>
         </div>
     {% endfor %}
