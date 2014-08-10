@@ -9,9 +9,13 @@
 {% else %}
     {% for image in rewards_images %}
         <div style="margin-left:auto;margin-right:auto;width:90%;max-width:100%;">
+            {% if android_chrome == false %}
             <object data="{{ asset( image|replace({'png':'svg'}) ) }}" type="image/svg+xml" style="width:100%;height:auto;max-width:100%">
                 <img src="{{ asset( image ) }}" />
             </object>
+            {% else %}
+                <img src="{{ asset( image ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
+            {% endif %}
         </div>
     {% endfor %}
 {% endif %}

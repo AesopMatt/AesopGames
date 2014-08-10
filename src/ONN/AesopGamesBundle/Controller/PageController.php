@@ -102,8 +102,11 @@ class PageController extends Controller
 
         $mobileDetector = $this->get('mobile_detect.mobile_detector');
         $mobile = $mobileDetector->isMobile();
+        $android = $mobileDetector->isAndroidOS();
+        $chrome = $mobileDetector->isChrome();
+        $android_chrome = $android == true && $chrome == true ? true : false;
 
-        $response = $this->render('ONNAesopGamesBundle:Page:perks.html.twig', array('perks'=>$perks,'mobile'=>$mobile));
+        $response = $this->render('ONNAesopGamesBundle:Page:perks.html.twig', array('perks'=>$perks,'mobile'=>$mobile,'android_chrome' => $android_chrome));
 
         return $response;
     }
@@ -253,6 +256,9 @@ class PageController extends Controller
         $mobileDetector = $this->get('mobile_detect.mobile_detector');
         $mobile = $mobileDetector->isMobile();
         $tablet = $mobileDetector->isTablet();
+        $android = $mobileDetector->isAndroidOS();
+        $chrome = $mobileDetector->isChrome();
+        $android_chrome = $android == true && $chrome == true ? true : false;
         $page = 'support.html.twig';
         if ($mobile == true || $tablet == true){
             $page = 'mobileSupport.html.twig';
@@ -291,7 +297,8 @@ class PageController extends Controller
             'you_decide' => $you_decide,
             'belongs_to_players' => $belongs_to_players,
             'tall_grass' => $tall_grass,
-            'character_creation' => $character_creation
+            'character_creation' => $character_creation,
+            'android_chrome' => $android_chrome,
         ));
         /*
         $response->setETag(md5($response->getContent()));
@@ -320,8 +327,11 @@ class PageController extends Controller
 
         $mobileDetector = $this->get('mobile_detect.mobile_detector');
         $mobile = $mobileDetector->isMobile();
+        $android = $mobileDetector->isAndroidOS();
+        $chrome = $mobileDetector->isChrome();
+        $android_chrome = $android == true && $chrome == true ? true : false;
 
-        return $this->render('ONNAesopGamesBundle:Svg:packages.html.twig', array('rewards_images'=>$rewards_images,'mobile'=>$mobile));
+        return $this->render('ONNAesopGamesBundle:Svg:packages.html.twig', array('rewards_images'=>$rewards_images,'mobile'=>$mobile,'android_chrome' => $android_chrome));
     }
 
 
