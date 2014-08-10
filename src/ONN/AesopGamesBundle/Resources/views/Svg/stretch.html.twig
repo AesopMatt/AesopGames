@@ -1,4 +1,7 @@
-
+{% if android_chrome == false %}
 <object data="{{ asset( stretch|replace({'png':'svg'}) ) }}" type="image/svg+xml" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
     <img src="{{ asset( stretch ) }}" />
 </object>
+{% else %}
+    <img src="{{ asset( stretch ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
+{% endif %}

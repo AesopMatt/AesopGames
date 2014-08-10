@@ -316,7 +316,12 @@ class PageController extends Controller
         } else {
             $stretch_image = '/bundles/onnaesopgames/images/stretch.png';
         }
-        return $this->render('ONNAesopGamesBundle:Svg:stretch.html.twig', array('stretch'=>$stretch_image));
+        $mobileDetector = $this->get('mobile_detect.mobile_detector');
+        $mobile = $mobileDetector->isMobile();
+        $android = $mobileDetector->isAndroidOS();
+        $chrome = $mobileDetector->isChrome();
+        $android_chrome = $android == true && $chrome == true ? true : false;
+        return $this->render('ONNAesopGamesBundle:Svg:stretch.html.twig', array('stretch'=>$stretch_image,'android_chrome'=>$android_chrome));
     }
 
     public function packagesAction()
