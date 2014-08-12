@@ -82,29 +82,6 @@
             {% endfor %}
         </div>
     </div>
-    <script>
-        $(function(){
-
-            {#
-            $.get( '{{ path ('perks') }}',
-                    function(data){
-                        $('#perks-div').html(data);
-
-                    }
-            );
-            $.get( '{{ path ('looking_closer') }}',
-                    function(data){
-                        $('#looking-closer-panel').html(data);
-                        var content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
-                        $("#stretch-div").html(content);
-
-                        var content = '<iframe width="420" height="315" src="//www.youtube.com/embed/GiHunFmzFnM" frameborder="0" allowfullscreen></iframe>';
-                        $("#create_character_video").html(content);
-                    }
-            );
-            #}
-        });
-    </script>
     <div class="row">
     <div class="col-md-8">
     {# Info Panel 1 #}
@@ -113,17 +90,6 @@
             <h3 class="panel-title">A Brief Intro to The Team and The Project</h3>
         </div>
         <div class="panel-body">
-            {# Replace with word image: social strategy role playing ? #}
-            {#
-            <h4>Brunelleschi is ...</h4>
-            <li>[a role playing game] image</li>
-            <li>[a city building game] image</li>
-            <li>[a social strategy game] image</li>
-            <li>[set in the mythic renaissance] image</li>
-            <li>[where brave and daring Heroes adventure and advance] image</li>
-            <li>[in the cities, economies, and cultures constructed by teams of brilliant Lords] image</li><br/>
-            #}
-
             <p style="margin-top:10px;"><b>Characters in Brunelleschi are either Heroes or Lords.</b>.</p>
 
             <img src="{{ asset(role_play) }}" style="width:30%;float:left;margin:10px;">

@@ -25,17 +25,21 @@ class PageController extends Controller
         ];
         //$types = ['comingsoon','live','stretch','complete-no','complete-yes'];
         $types = ['comingsoon'];
+        $live = ['epocu'];
         $images = [];
 
         foreach ($names as $name=>$url){
-            foreach ($types as $type){
-                if (strpos($currentUrl,'localhost') !== false){
-                    $images[$name][$type]['image'] = '/Aesop/web/bundles/onnaesopgames/images/Fundraisers/'.$name.'-small-'.$type.'.png';
-                } else {
-                    $images[$name][$type]['image'] = '/bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
-                }
-                $images[$name][$type]['url'] = $url;
+            if (!in_array($name,$live)){
+                $type = 'comingsoon';
+            } else {
+                $type = 'live';
             }
+            if (strpos($currentUrl,'localhost') !== false){
+                $images[$name][$type]['image'] = '/Aesop/web/bundles/onnaesopgames/images/Fundraisers/'.$name.'-small-'.$type.'.png';
+            } else {
+                $images[$name][$type]['image'] = '/bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
+            }
+            $images[$name][$type]['url'] = $url;
         }
         return $images;
     }

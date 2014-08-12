@@ -46,7 +46,18 @@
             </div>
             <div style="clear:both"></div>
             <div class="alert alert-success" style="border: green 2px solid; opacity: .9;">
-                <h4>Aesop Games is working to raise funds for completing Brunelleschi: Age of Architects and embarking on new projects!</h4>
+                <h3>Lend Your Support</h3>
+                <p>The first step in our efforts to get community support for Brunelleschi: Age of Architects is to determine and rally our existing support base!</p>
+                <p>Please, <a href="" target="_blank">visit our Epocu campaign</a> and click to Support Our Efforts by donating an announcement on one or more of your Social Media channels about what we're doing!</p>
+                <p>If we reach our support goal, we will use the donated Tweets and Updates to announce the launch of our fundraising campaign!</p>
+
+
+                <button {% if fundraisers.epocu.live.url|length > 0 %}onclick="newPage('{{ fundraisers.epocu.live.url }}')"{% endif %}class="btn-large btn-custom" style="opacity: .8;float:right; margin:10px; border: solid 2px green; background: transparent; padding-top:4px;">
+                    <img src="{{ asset( fundraisers.epocu.live.image ) }}" class="img-rounded" style="height: 100px;margin-top: 0px; margin-bottom: 0px; display:block">
+                </button>
+
+                <hr>
+                <h4>Aesop Games is working to raise funds for completing Brunelleschi: Age of Architects!</h4>
                 <p>Information on our team, project, and progress put together towards that effort as well as perks available to supporters will be updated here.</p>
                 <p>If you have already supported us through an online campaign, but see a similarly priced Perk here that you would rather have, get in touch and we will be happy to update your reserved Perk.</p>
                 <p style="font-weight:bold; text-align:right; margin-right:10px;margin-top:10px;">Jump to information about <a href="#looking-forward">the Game</a>, <a href="#overview">the Team</a>, <a href="#rewards">the Perks</a>, <a href="#stretch">the Stretch Goals</a>.</p>
@@ -80,9 +91,6 @@
 
                             $('#perks-div').html(data);
 
-                            content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
-                            $("#stretch-div").html(content);
-
                             content = '<iframe width="420" height="315" src="//www.youtube.com/embed/GiHunFmzFnM" frameborder="0" allowfullscreen></iframe>';
                             $("#create_character_video").html(content);
                         }
@@ -90,6 +98,9 @@
                 $.get( '{{ path ('looking_closer') }}',
                         function(data){
                             $('#looking-closer-panel').html(data);
+
+                            content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
+                            $("#stretch-div").html(content);
                         }
                 );
             });
@@ -102,16 +113,6 @@
                         <h3 class="panel-title">A Brief Intro to The Team and The Project</h3>
                     </div>
                     <div class="panel-body">
-                        {# Replace with word image: social strategy role playing ? #}
-                        {#
-                        <h4>Brunelleschi is ...</h4>
-                        <li>[a role playing game] image</li>
-                        <li>[a city building game] image</li>
-                        <li>[a social strategy game] image</li>
-                        <li>[set in the mythic renaissance] image</li>
-                        <li>[where brave and daring Heroes adventure and advance] image</li>
-                        <li>[in the cities, economies, and cultures constructed by teams of brilliant Lords] image</li><br/>
-                        #}
                         <div id="unity_demo_video" style="margin-left:auto;margin-right:auto; width:490px;"></div>
 
                         <p style="margin-top:10px;"><b>Characters in Brunelleschi are either Heroes or Lords.</b>.</p>
