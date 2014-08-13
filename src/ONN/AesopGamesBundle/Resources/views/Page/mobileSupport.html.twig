@@ -59,6 +59,16 @@
         </div>
         <div style="clear:both"></div>
         <div class="alert alert-success" style="border: green 2px solid; opacity: .9;">
+            <h3>Lend Your Support</h3>
+            <p>The first step in our efforts to get community support for Brunelleschi: Age of Architects is to determine and rally our existing support base!</p>
+            <p>Please, <a href="http://epocu.com/campaigns/brunelleschi-age-architects/" target="_blank">visit our Epocu campaign</a> and click to Support Our Efforts by donating an announcement on one or more of your Social Media channels about what we're doing!</p>
+            <p>If we reach our support goal, we will use the donated Tweets and Updates to announce the launch of our fundraising campaign!</p>
+
+
+            <button {% if fundraisers.epocu.live.url|length > 0 %}onclick="newPage('{{ fundraisers.epocu.live.url }}')"{% endif %}class="btn-large btn-custom" style="opacity: .8;float:right; margin:10px; border: solid 2px green; background: transparent; padding-top:4px;">
+                <img src="{{ asset( fundraisers.epocu.live.image ) }}" class="img-rounded" style="height: 100px;margin-top: 0px; margin-bottom: 0px; display:block">
+            </button>
+            
             <h4>Aesop Games is working to raise funds for completing Brunelleschi: Age of Architects and embarking on new projects!</h4>
             <p>Information on our team, project, and progress put together towards that effort as well as perks available to supporters will be updated here.</p>
             <p>If you have already supported us through an online campaign, but see a similarly priced Perk here that you would rather have, get in touch and we will be happy to update your reserved Perk.</p>
