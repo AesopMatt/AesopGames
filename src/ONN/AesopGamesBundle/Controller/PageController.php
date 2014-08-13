@@ -21,7 +21,7 @@ class PageController extends Controller
             'kickstarter'=>'https://www.kickstarter.com/projects/mmitchum/560713644?token=ce3cfc9a',
             'rockethub' => '',
             'greenlight' => '',
-            'epocu' => ''
+            'epocu' => 'http://epocu.com/campaigns/brunelleschi-age-architects/'
         ];
         //$types = ['comingsoon','live','stretch','complete-no','complete-yes'];
         $types = ['comingsoon'];
