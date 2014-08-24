@@ -44,6 +44,30 @@ class PageController extends Controller
         return $images;
     }
 
+    public function oculusAction()
+    {
+
+        $currentUrl = $this->getRequest()->getUri();
+        if (strpos($currentUrl,'localhost') !== false){
+            $oculus_alone = '/Aesop/web/bundles/onnaesopgames/images/Photos/oculus-alone.jpg';
+            $oculus_box = '/Aesop/web/bundles/onnaesopgames/images/Photos/oculus-box.jpg';
+            $oculus_m = '/Aesop/web/bundles/onnaesopgames/images/Photos/oculus-margaret.jpg';
+            $oculus_r = '/Aesop/web/bundles/onnaesopgames/images/Photos/oculus-rebecca.jpg';
+        } else {
+            $oculus_alone = '/bundles/onnaesopgames/images/oculus-alone.jpg';
+            $oculus_box = '/bundles/onnaesopgames/images/oculus-alone.jpg';
+            $oculus_m = '/bundles/onnaesopgames/images/oculus-margaret.jpg';
+            $oculus_r = '/bundles/onnaesopgames/images/oculus-rebecca.jpg';
+        }
+
+        return $this->render('ONNAesopGamesBundle:Page:oculus.html.twig',array(
+            'oculus_alone'=>$oculus_alone,
+            'oculus_box' => $oculus_box,
+            'oculus_m' => $oculus_m,
+            'oculus_r' => $oculus_r
+        ));
+    }
+
     public function getPerks($currentUrl)
     {
         $perks = [];

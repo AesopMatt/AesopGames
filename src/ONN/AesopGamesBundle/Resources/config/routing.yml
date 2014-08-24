@@ -31,3 +31,21 @@ stretch:
 packages:
     pattern:   /packages
     defaults:  { _controller: ONNAesopGamesBundle:Page:packages }
+oculus:
+    pattern:   /oculus
+    defaults:  { _controller: ONNAesopGamesBundle:Page:oculus }
+parties:
+    pattern:   /parties
+    defaults:  { _controller: ONNAesopGamesBundle:Page:oculus }
+party:
+    pattern:   /party
+    defaults:  { _controller: ONNAesopGamesBundle:Page:oculus }
+event:
+    pattern:   /event
+    defaults:  { _controller: ONNAesopGamesBundle:Page:oculus }
+events:
+    pattern:   /events
+    defaults:  { _controller: ONNAesopGamesBundle:Page:oculus }
+local:
+    pattern:   /local
+    defaults:  { _controller: ONNAesopGamesBundle:Page:oculus }

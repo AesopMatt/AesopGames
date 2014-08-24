@@ -1,0 +1,95 @@
+{% extends 'ONNAesopGamesBundle::layout.html.twig' %}
+
+{% block main %}
+    <div class="container theme-showcase">
+        <div class="jumbotron" style="opacity: .8;padding:10px;z-index:100;">
+            <p style="display:inline"><b>Brunelleschi: Age of Architects</b> Bootstrap Beta</p>
+            <a target="_blank" href="http://brunegame.com" class="btn btn-primary btn-lg pull-right" role="button">Play Now &raquo;</a>
+            <a href="#" onclick="selectMain('{{ path('support') }}')" class="btn btn-success btn-lg pull-right" style="margin-right: 10px;" role="button">Support</a>
+        </div>
+        <div class="page-header">
+            <h1>Access 3D VR</h1>
+
+            <div class="alert alert-success media" style="font-size:16px;">
+                <a class="pull-left" href="#">
+                    <img class="media-object img-circle" src="{{ asset(oculus_alone) }}" style="width:215px; border:solid 8px lightgreen;">
+                </a>
+                <div class="media-body">
+                    <h2 class="media-heading">Oculus Rift VR DK2</h2>
+                    <h3>Rent a Preview of the Next Generation Gaming Device</h3>
+                </div>
+                <div class="panel-footer">
+                    <h4>Preview the next generation of gaming with the Oculus Rift VR DK2 at your next event!</h4>
+                </div>
+                <div class="media-body">
+                    <p>As an indie game studio currently developing for the Oculus Rift, we have all of the equipment and know how you and your guests need to provide a first hand preview of this revolutionary gaming device.</p>
+                    <p style="font-weight:bold;">Offer this amazing experience at your next party or event!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="panel panel-success">
+                    <div class="panel-body media">
+                        <h2>Book Your Gaming Adventure</h2>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img src="{{ asset( oculus_box ) }}" style="width:150px; border: solid 8px lightblue;" class="media-object img-rounded ui-corner-all">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Share an New Experience</h4>
+                                <p>Add the Wow factor to you or your child's next birthday party!</p>
+                                <p>Really get their attention at the next company get together!</p>
+                                <p>Make your next event impossible to forget!</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="media">
+                            <a class="pull-right" href="#">
+                                <img src="{{ asset( oculus_r ) }}" style="width:200px; border: solid 8px plum;" class="media-object img-rounded ui-corner-all">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Be Ahead of the Curve</h4>
+                                <p>Full immersion 3D is unlike any previous gaming experience.</p>
+                                <p>Get your VR legs before most have access!</p>
+                                <p>Have that edge in all your 3D games when the technology becomes widely available!</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img src="{{ asset( oculus_m ) }}" style="width:220px; border: solid 8px lightseagreen;" class="media-object img-circle">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Amaze Your Favorite Gamers</h4>
+                                <p>Share an amazing first VR experience with your favorite gamers.</p>
+                                <p>Give a geek you love a sneak peak at mind blowing new tech!</p>
+                                <p>Offer your guests a brand new flavor of fun :)</p>
+                                <br/>
+                                <div class="alert alert-success ui-corner-all text-center" style="border: solid 4px green;">
+                                    <h4>We do all the work - you do all the play!</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="col-sm-5">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Oculus Development Demo</h3>
+                    </div>
+                    <div class="panel-body">
+                        <iframe width="430" height="323" src="//www.youtube.com/embed/LcaNEjuLUFA" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="panel-footer">
+                        <p>2D video can't really convey the 3D effect. The duel images merge into one when viewed through the headset, giving you a wrap around view of the virtual world, and granting an eerily realistic sense of space and depth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /container -->
+{% endblock %}
