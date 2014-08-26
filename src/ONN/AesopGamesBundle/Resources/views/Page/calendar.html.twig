@@ -1,0 +1,10 @@
+{% if android_chrome == false %}
+    {% for each in calendar %}
+        <img src="{{ asset( each|replace({'png':'svg'}) ) }}" type="image/svg+xml" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+        </img>
+    {% endfor %}
+{% else %}
+    {% for each in calendar %}
+        <img src="{{ asset( each ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
+    {% endfor %}
+{% endif %}

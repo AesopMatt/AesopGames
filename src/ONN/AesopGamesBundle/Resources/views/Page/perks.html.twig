@@ -18,13 +18,14 @@
             </div>
             <div class="panel-body">
                 {% if android_chrome == false %}
-                    <img src="{{ asset( perk.image|replace({'png':'svg'}) ) }}" onerror="{{ asset( perk.image ) }}" class="img-rounded" style="width: 100%; max-width: 350px; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
-                    <p>{{ perk.desc }}</p>
+                    <img src="{{ asset( perk.image|replace({'png':'svg'}) ) }}" onerror="{{ asset( perk.image ) }}" class="img-rounded pull-left" style="width: 50%; max-width: 350px; margin: 10px; display:block">
+                    <p style="margin-top:10px;font-size:larger">{{ perk.desc }}</p>
                 {% else %}
-                    <img src="{{ asset( perk.image ) }}" class="img-rounded" style="width: 100%; max-width: 350px; margin-top: 10px; margin-bottom: 10px; display:block;float: left;">
-                    <p style="margin-top:10px">{{ perk.desc }}</p>
+                    <img src="{{ asset( perk.image ) }}" class="img-rounded pull-left" style="width: 50%; max-width: 350px; margin-top: 10px; margin-bottom: 10px; display:block;float: left;">
+                    <p style="margin-top:10px;font-size:larger">{{ perk.desc }}</p>
                 {% endif %}
             </div>
         </div>
     {% endfor %}
 {% endif %}
+<button id="perks_button" class="btn btn-success btn-lg perks_button" onclick="loadMorePerks('{{ last_id }}')" style="margin-left:auto;margin-right:auto">View More</button>

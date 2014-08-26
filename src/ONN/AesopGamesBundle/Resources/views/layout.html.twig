@@ -176,6 +176,7 @@
                         history.replaceState(stateObj, "Aesop Games", path);
                     }
                 );
+                $(document).trigger('load_event');
             }
         );
         return false;

@@ -47,13 +47,13 @@
             <div style="clear:both"></div>
             <div class="alert alert-success" style="border: green 2px solid; opacity: .9;">
                 <h3>Lend Your Support</h3>
-                <p>The first step in our efforts to get community support for Brunelleschi: Age of Architects is to determine and rally our existing support base!</p>
-                <p>Please, <a href="http://epocu.com/campaigns/brunelleschi-age-architects/" target="_blank">visit our Epocu campaign</a> and click to Support Our Efforts by donating an announcement on one or more of your Social Media channels about what we're doing!</p>
-                <p>If we reach our support goal, we will use the donated Tweets and Updates to announce the launch of our fundraising campaign!</p>
+                <p>The first step in our efforts to get community support for Brunelleschi: Age of Architects was a success!</p>
+                <p>The Epocu campaign has successfully ended and the RocketHub crowdfunding campaign is set to go live any minute!</p>
+                <p>Thank you so much for supporting indie game development and Aesop Games' Brunelleschi: Age of Architects!</p>
 
 
-                <button {% if fundraisers.epocu.live.url|length > 0 %}onclick="newPage('{{ fundraisers.epocu.live.url }}')"{% endif %}class="btn-large btn-custom" style="opacity: .8;float:right; margin:10px; border: solid 2px green; background: transparent; padding-top:4px;">
-                    <img src="{{ asset( fundraisers.epocu.live.image ) }}" class="img-rounded" style="height: 100px;margin-top: 0px; margin-bottom: 0px; display:block">
+                <button {% if fundraisers.epocu['complete-yes']['url']|length > 0 %}onclick="newPage('{{ fundraisers.epocu['complete-yes']['url'] }}')"{% endif %}class="btn-large btn-custom" style="opacity: .8;float:right; margin:10px; border: solid 2px green; background: transparent; padding-top:4px;">
+                    <img src="{{ asset( fundraisers.epocu['complete-yes']['image'] ) }}" class="img-rounded" style="height: 100px;margin-top: 0px; margin-bottom: 0px; display:block">
                 </button>
 
                 <hr>
@@ -82,28 +82,81 @@
             </div>
         </div>
         <script>
-            $(function(){
-
-                $.get( '{{ path ('perks') }}',
-                        function(data){
-                            var content = '<iframe width="560" height="315" src="//www.youtube.com/embed/VnwQo_d4FrA" frameborder="0" allowfullscreen></iframe>';
-                            $("#unity_demo_video").html(content);
-
-                            $('#perks-div').html(data);
-
-                            content = '<iframe width="420" height="315" src="//www.youtube.com/embed/GiHunFmzFnM" frameborder="0" allowfullscreen></iframe>';
-                            $("#create_character_video").html(content);
-                        }
-                );
+            function learnMore()
+            {
                 $.get( '{{ path ('looking_closer') }}',
                         function(data){
                             $('#looking-closer-panel').html(data);
-
-                            content = '<img src="{{ asset( stretch_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( stretch_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">';
-                            $("#stretch-div").html(content);
                         }
                 );
+                window.location.hash = '#looking-closer-panel';
+            }
+
+            function loadMoreRewards(last_id)
+            {
+                $("#rewards_button").remove();
+                $.get( '{{ path ('packages') }}/'+last_id,
+                        function(data){
+                            alert("Rewards");
+                            $('#rewards-div').append(data);
+                        }
+                );
+                return false;
+            }
+
+            function loadMorePerks(last_id)
+            {
+                $(".perks_button").remove();
+                $.get( '{{ path ('perks') }}/'+last_id,
+                        function(data){
+
+                            $('#perks-div').append(data);
+                        }
+                );
+                return false;
+            }
+
+            function loadMoreStretch(last_id)
+            {
+                $("#stretch_button").remove();
+                $.get( '{{ path ('stretch') }}/'+last_id,
+                        function(data){
+
+                            $('#stretch-div').append(data);
+                        }
+                );
+                return false;
+            }
+
+            function loadCalendar()
+            {
+                $("#calendar_button").remove();
+                $.get( '{{ path ('calendar') }}',
+                        function(data){
+                            $('#calendar-div').append(data);
+                        }
+                );
+            }
+
+            function onPageLoad()
+            {
+                loadMorePerks(0);
+                loadMoreStretch(0);
+                loadMoreRewards(0);
+                var content = '<iframe width="560" height="315" src="//www.youtube.com/embed/VnwQo_d4FrA" frameborder="0" allowfullscreen></iframe>';
+                $("#unity_demo_video").html(content);
+
+                content = '<iframe width="420" height="315" src="//www.youtube.com/embed/GiHunFmzFnM" frameborder="0" allowfullscreen></iframe>';
+                $("#create_character_video").html(content);
+            }
+            $(document).on('load_event',function(){
+                onPageLoad();
             });
+
+            $(document).ready(function() {
+                $(document).trigger('load_event');
+            });
+
         </script>
         <div class="row">
             <div class="col-md-8">
@@ -135,9 +188,7 @@
                         <img src="{{ asset( social_strategy|replace({'png':'svg'}) ) }}" class="img-rounded" style="width: 35%; margin:10px; display:block; float:right;">
 
                         <p>Each District in a Settlement can employ a Minister, a major element of Gameplay, which allows Lords to team up and build impressive Settlements that a single player would struggle to effectively manage.  A Sovereign can benefit from up to <b>49 friends</b> assisting them as Ministers and more as Citizens and Residents in their shared epic journey through a Historical Fantasy Renaissance.</p>
-                            <a href="#looking-forward"><button class="btn btn-info pull-right" style="margin:10px;">Learn More</button></a></p>
-
-
+                            <button class="btn btn-info pull-right" style="margin:10px;" onclick="learnMore()">Learn More</button></p>
 
                         <img id="overview" src="{{ asset( map_image )|apply_filter("map") }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
                         {#
@@ -154,6 +205,9 @@
 
                         <a target="_blank" class="popularitybtn pull-left" href="http://www.indiedb.com/games/brunelleschi" title="View Brunelleschi on Indie DB"><img src="http://button.indiedb.com/popularity/medium/games/28789.png" alt="Brunelleschi" style="margin-top:10px;margin-bottom:10px;"></a>
                         <a target="_blank" class="ratingbtn pull-right" href="http://www.indiedb.com/games/brunelleschi" title="View Brunelleschi on Indie DB"><img src="http://button.indiedb.com/rating/medium/games/28789.png" alt="Brunelleschi"  style="margin-top:10px;margin-bottom:10px;"></a>
+                        <div style="width:100%;" class="text-center">
+                            <button class="btn btn-info" style="margin:10px;" onclick="learnMore()">Learn More</button>
+                        </div>
                     </div>
                 </div>
                 {# Info Panel Call to Action #}
@@ -174,6 +228,9 @@
                         <p>These features deepen and come to life the more people are using them - and that means players! Any player joining makes the whole game better every time they play!</p>
                         <p>We will use any budget we receive to make the game more fun for more players! We will invest in world interactions, faster servers, snazzier 3D models, more animations, and all the cool features we can afford!</p>
                         <img src="{{ asset( tall_grass )|apply_filter('screenshot-tall-grass') }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <div style="width:100%;" class="text-center">
+                            <button class="btn btn-info" style="margin:10px;" onclick="learnMore()">Learn More</button>
+                        </div>
                     </div>
                 </div>
                 {# Info Panel Call to Action 2 #}
@@ -205,6 +262,9 @@
                             <p>Brunelleschi needs every viewpoint and player type to be great. We need your playstyle and ideas, without the individual and unique qualities that you bring to gameplay, the story will be incomplete. This is a game for whole groups of players, and we need your voice to be heard in the councils and meeting halls of this Socio-Political Adventure! Your votes might make the difference between success and destruction for a City of Hundreds or even Thousands of other people!</p>
 
                         <img src="{{ asset( character_creation)|apply_filter('screenshot-character-creation' ) }}" class="img-rounded" style="margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
+                        <div style="width:100%;" class="text-center">
+                            <button class="btn btn-info" style="margin:10px;" onclick="learnMore()">Learn More</button>
+                        </div>
                     </div>
                 </div>
                 {# Info Panel 2 #}
@@ -273,9 +333,11 @@
                         <img src="{{ asset( rewards_image|replace({'png':'svg'}) ) }}" onerror="{{ asset( rewards_image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 0px; margin-bottom: 0px; display:block">
                         <p>Not every reward can be instantly sent to you.</p>
                         <p>For our rewards that are early and easy access to future game features, here’s our best estimate of when we’ll get those features and your shiny rewards out.</p>
-                        {% for filter,image in calendar_images %}
-                            <img src="{{ asset( image )|apply_filter(filter) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 0px; display:block">
-                        {% endfor %}
+                        <div id="calendar-div">
+                            <div style="width:100%;" class="text-center" id="calendar_button">
+                                <button class="btn btn-success btn-lg" onclick="loadCalendar()">View Rewards Calendar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {# Info Panel 4 #}
@@ -326,9 +388,8 @@
                         <h3 class="panel-title" id="rewards">Selected Perk Packages</h3>
                     </div>
                     <div class="panel-body">
-                        {% for image in rewards_images %}
-                            <img src="{{ asset( image|replace({'png':'svg'}) ) }}" onerror="{{ asset( image ) }}" class="img-rounded" style="width: 90%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 0px; display:block">
-                        {% endfor %}
+                        <h3>To Thank You for supporting indie game development, we have put together a variety of "perks" packages for various contributions levels.  If you have any questions about any of the Perk options, please get in touch!</h3>
+                        <div id="rewards-div"></div>
                     </div>
                 </div>
 

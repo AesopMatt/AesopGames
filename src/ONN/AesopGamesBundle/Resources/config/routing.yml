@@ -20,17 +20,20 @@ navbar:
     pattern:   /navbar
     defaults:  { _controller: ONNAesopGamesBundle:Page:navbar }
 perks:
-    pattern:   /perks
-    defaults:  { _controller: ONNAesopGamesBundle:Page:perks }
+    pattern:   /perks/{last_id}
+    defaults:  { _controller: ONNAesopGamesBundle:Page:perks, last_id: '0' }
 looking_closer:
     pattern:   /looking_closer
     defaults:  { _controller: ONNAesopGamesBundle:Page:lookingCloser }
+calendar:
+    pattern:   /calendar
+    defaults:  { _controller: ONNAesopGamesBundle:Page:calendar }
 stretch:
-    pattern:   /stretch
-    defaults:  { _controller: ONNAesopGamesBundle:Page:stretch }
+    pattern:   /stretch/{id}
+    defaults:  { _controller: ONNAesopGamesBundle:Page:stretch, id: '0' }
 packages:
-    pattern:   /packages
-    defaults:  { _controller: ONNAesopGamesBundle:Page:packages }
+    pattern:   /packages/{last_id}
+    defaults:  { _controller: ONNAesopGamesBundle:Page:packages, last_id: '0' }
 oculus:
     pattern:   /oculus
     defaults:  { _controller: ONNAesopGamesBundle:Page:oculus }

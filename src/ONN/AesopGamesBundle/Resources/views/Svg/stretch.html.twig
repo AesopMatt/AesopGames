@@ -5,3 +5,8 @@
 {% else %}
     <img src="{{ asset( stretch ) }}" class="img-rounded" style="width: 100%; margin-left:auto;margin-right:auto; margin-top: 10px; margin-bottom: 10px; display:block">
 {% endif %}
+{% if id < 5 %}
+    <div style="width:100%;" class="text-center" id=stretch_button>
+        <button class="btn btn-success btn-lg" onclick="loadMoreStretch('{{ id }}')">View More</button>
+    </div>
+{% endif %}
