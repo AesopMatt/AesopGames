@@ -28,4 +28,7 @@
         </div>
     {% endfor %}
 {% endif %}
-<button id="perks_button" class="btn btn-success btn-lg perks_button" onclick="loadMorePerks('{{ last_id }}')" style="margin-left:auto;margin-right:auto">View More</button>
+{% if show != 'all' %}
+<button id="perks_button" class="btn btn-success btn-lg perks_button" onclick="loadMorePerks('{{ last_id }}','limited')" style="margin-left:auto;margin-right:auto">View More</button>
+<button id="perks_button" class="btn btn-success btn-lg perks_button" onclick="loadMorePerks('{{ last_id }}','all')" style="margin-left:auto;margin-right:auto">View All</button>
+{% endif %}

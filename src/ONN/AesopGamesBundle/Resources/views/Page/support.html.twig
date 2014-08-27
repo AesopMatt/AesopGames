@@ -97,17 +97,16 @@
                 $("#rewards_button").remove();
                 $.get( '{{ path ('packages') }}/'+last_id,
                         function(data){
-                            alert("Rewards");
                             $('#rewards-div').append(data);
                         }
                 );
                 return false;
             }
 
-            function loadMorePerks(last_id)
+            function loadMorePerks(last_id,show)
             {
                 $(".perks_button").remove();
-                $.get( '{{ path ('perks') }}/'+last_id,
+                $.get( '{{ path ('perks') }}/'+last_id+'/'+show,
                         function(data){
 
                             $('#perks-div').append(data);

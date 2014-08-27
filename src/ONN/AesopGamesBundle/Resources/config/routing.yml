@@ -20,8 +20,8 @@ navbar:
     pattern:   /navbar
     defaults:  { _controller: ONNAesopGamesBundle:Page:navbar }
 perks:
-    pattern:   /perks/{last_id}
-    defaults:  { _controller: ONNAesopGamesBundle:Page:perks, last_id: '0' }
+    pattern:   /perks/{last_id}/{show}
+    defaults:  { _controller: ONNAesopGamesBundle:Page:perks, last_id: '0','show': 'limited' }
 looking_closer:
     pattern:   /looking_closer
     defaults:  { _controller: ONNAesopGamesBundle:Page:lookingCloser }

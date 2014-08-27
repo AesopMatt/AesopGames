@@ -124,34 +124,59 @@ class PageController extends Controller
         return true;
     }
 
-    public function getPerks($currentUrl,$last_id)
+    public function getPerks($currentUrl,$last_id,$show)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $query = $em->createQueryBuilder()
-            ->select('c')
-            ->from('ONNAesopGamesBundle:Perks', 'c')
-            ->where('c.id > :last_id')
-            ->setParameters(array('last_id' => $last_id))
-            ->orderBy("c.id","ASC")
-            ->setMaxResults(10)
-            ->getQuery();
-
-        $results = $query->getResult();
-
-        if (empty($results)){
-            $this->updatePerks();
+        if ($show != 'all'){
             $query = $em->createQueryBuilder()
                 ->select('c')
                 ->from('ONNAesopGamesBundle:Perks', 'c')
                 ->where('c.id > :last_id')
                 ->setParameters(array('last_id' => $last_id))
                 ->orderBy("c.id","ASC")
-                ->setMaxResults(10)
+                ->setMaxResults(20)
+                ->getQuery();
+
+            $results = $query->getResult();
+        } else {
+            $query = $em->createQueryBuilder()
+                ->select('c')
+                ->from('ONNAesopGamesBundle:Perks', 'c')
+                ->where('c.id > :last_id')
+                ->setParameters(array('last_id' => $last_id))
+                ->orderBy("c.id","ASC")
                 ->getQuery();
 
             $results = $query->getResult();
         }
+
+        if (empty($results)){
+            $this->updatePerks();
+            if ($show != 'all'){
+                $query = $em->createQueryBuilder()
+                    ->select('c')
+                    ->from('ONNAesopGamesBundle:Perks', 'c')
+                    ->where('c.id > :last_id')
+                    ->setParameters(array('last_id' => $last_id))
+                    ->orderBy("c.id","ASC")
+                    ->setMaxResults(20)
+                    ->getQuery();
+
+                $results = $query->getResult();
+            } else {
+                $query = $em->createQueryBuilder()
+                    ->select('c')
+                    ->from('ONNAesopGamesBundle:Perks', 'c')
+                    ->where('c.id > :last_id')
+                    ->setParameters(array('last_id' => $last_id))
+                    ->orderBy("c.id","ASC")
+                    ->getQuery();
+
+                $results = $query->getResult();
+            }
+        }
+
         if (empty($results)){
             return [];
         }
@@ -206,10 +231,10 @@ class PageController extends Controller
         return $this->render('ONNBrunBundle:Fragment:message.html.twig',array('message'=>$message));
     }
 
-    public function perksAction($last_id = 0)
+    public function perksAction($last_id = 0,$show = 'limited')
     {
         $currentUrl = $this->getRequest()->getUri();
-        $perkses = $this->getPerks($currentUrl,$last_id);
+        $perkses = $this->getPerks($currentUrl,$last_id,$show);
         if (empty($perkses)){
             $message = "These are all of the Support Perks packages we have at this time.  If you did not find what you were looking for, but you still want to support us, please get in touch and let us know what you were hoping to find!";
             return $this->showMessage($message);
@@ -227,7 +252,8 @@ class PageController extends Controller
             'perks'=>$perks,
             'mobile'=>$mobile,
             'android_chrome' => $android_chrome,
-            'last_id' => $last_id
+            'last_id' => $last_id,
+            'show' => $show
         ));
 
         return $response;
