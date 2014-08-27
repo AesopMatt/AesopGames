@@ -251,6 +251,7 @@ class PageController extends Controller
 
         $mobileDetector = $this->get('mobile_detect.mobile_detector');
         $mobile = $mobileDetector->isMobile();
+        //$mobile = true;
         $android = $mobileDetector->isAndroidOS();
         $chrome = $mobileDetector->isChrome();
         $android_chrome = $android == true && $chrome == true ? true : false;
@@ -282,6 +283,7 @@ class PageController extends Controller
 
         $mobileDetector = $this->get('mobile_detect.mobile_detector');
         $mobile = $mobileDetector->isMobile();
+        //$mobile = true;
         $android = $mobileDetector->isAndroidOS();
         $chrome = $mobileDetector->isChrome();
         $android_chrome = $android == true && $chrome == true ? true : false;
@@ -439,6 +441,7 @@ class PageController extends Controller
         $tablet = $mobileDetector->isTablet();
         $android = $mobileDetector->isAndroidOS();
         $chrome = $mobileDetector->isChrome();
+        //$mobile = true;
         $android_chrome = $android == true && $chrome == true ? true : false;
         $page = 'support.html.twig';
         if ($mobile == true || $tablet == true){
