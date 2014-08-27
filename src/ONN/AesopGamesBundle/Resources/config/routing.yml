@@ -29,11 +29,11 @@ calendar:
     pattern:   /calendar
     defaults:  { _controller: ONNAesopGamesBundle:Page:calendar }
 stretch:
-    pattern:   /stretch/{id}
-    defaults:  { _controller: ONNAesopGamesBundle:Page:stretch, id: '0' }
+    pattern:   /stretch/{id}/{show}
+    defaults:  { _controller: ONNAesopGamesBundle:Page:stretch, id: '0','show': 'limited' }
 packages:
-    pattern:   /packages/{last_id}
-    defaults:  { _controller: ONNAesopGamesBundle:Page:packages, last_id: '0' }
+    pattern:   /packages/{last_id}/{show}
+    defaults:  { _controller: ONNAesopGamesBundle:Page:packages, last_id: '0','show': 'limited' }
 oculus:
     pattern:   /oculus
     defaults:  { _controller: ONNAesopGamesBundle:Page:oculus }

@@ -200,7 +200,7 @@ class PageController extends Controller
         return ['perks' => $perks, 'last_id'=>$last_id];
     }
 
-    public function getRewardsImages($currentUrl,$last_id)
+    public function getRewardsImages($currentUrl,$last_id,$show)
     {
         $names = ['contributor','teamster','pirate','gear','gondolier','trading','artist','drovers','scribe','engineer','manowar','foodies','merchant'];
 
@@ -216,7 +216,7 @@ class PageController extends Controller
         foreach($images as $key=>$image){
             if ($key > $last_id || ($key == $last_id && $last_id == 0)){
                 $keep[$key] = $image;
-                if (count($keep) > 1){
+                if (count($keep) > 1 && $show != 'all'){
                     $last_id = $key;
                     break;
                 }
@@ -480,13 +480,35 @@ class PageController extends Controller
         return $response;
     }
 
-    public function stretchAction($id = 0)
+    public function stretchAction($id = 0,$show)
     {
         $currentUrl = $this->getRequest()->getUri();
 
         if ($id > 4){
             $message = "These are all the stretch goals we have at this point.  If it looks like we're going to run out, we promise to make more :)";
             return $this->showMessage($message);
+        }
+        if ($show == 'all'){
+            $stretch_images = [];
+            while ($id < 5){
+                $name = "stretch-$id.png";
+                if (strpos($currentUrl,'localhost') !== false){
+                    $stretch_images[] = '/Aesop/web/bundles/onnaesopgames/images/Stretch/' . $name;
+                } else {
+                    $stretch_images[] = '/bundles/onnaesopgames/images/Stretch/'. $name;
+                }
+                $id++;
+            }
+            $mobileDetector = $this->get('mobile_detect.mobile_detector');
+            $mobile = $mobileDetector->isMobile();
+            $android = $mobileDetector->isAndroidOS();
+            $chrome = $mobileDetector->isChrome();
+            $android_chrome = $android == true && $chrome == true ? true : false;
+            return $this->render('ONNAesopGamesBundle:Svg:stretchAll.html.twig', array(
+                'stretches'=>$stretch_images,
+                'android_chrome'=>$android_chrome,
+                'id' => ++$id
+            ));
         }
 
         $name = "stretch-$id.png";
@@ -507,11 +529,11 @@ class PageController extends Controller
         ));
     }
 
-    public function packagesAction($last_id = 0)
+    public function packagesAction($last_id = 0, $show = 'limited')
     {
         $currentUrl = $this->getRequest()->getUri();
 
-        $rewards_imageses = $this->getRewardsImages($currentUrl,$last_id);
+        $rewards_imageses = $this->getRewardsImages($currentUrl,$last_id,$show);
         $rewards_images = $rewards_imageses['images'];
         $last_id = $rewards_imageses['last_id'];
 
@@ -525,7 +547,8 @@ class PageController extends Controller
             'rewards_images'=>$rewards_images,
             'mobile'=>$mobile,
             'android_chrome' => $android_chrome,
-            'last_id' => $last_id
+            'last_id' => $last_id,
+            'show' => $show
         ));
     }
 

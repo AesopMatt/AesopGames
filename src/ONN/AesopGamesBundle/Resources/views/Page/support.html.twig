@@ -92,10 +92,10 @@
                 window.location.hash = '#looking-closer-panel';
             }
 
-            function loadMoreRewards(last_id)
+            function loadMoreRewards(last_id,show)
             {
                 $("#rewards_button").remove();
-                $.get( '{{ path ('packages') }}/'+last_id,
+                $.get( '{{ path ('packages') }}/'+last_id+'/'+show,
                         function(data){
                             $('#rewards-div').append(data);
                         }
@@ -115,10 +115,10 @@
                 return false;
             }
 
-            function loadMoreStretch(last_id)
+            function loadMoreStretch(last_id,show)
             {
                 $("#stretch_button").remove();
-                $.get( '{{ path ('stretch') }}/'+last_id,
+                $.get( '{{ path ('stretch') }}/'+last_id+'/'+show,
                         function(data){
 
                             $('#stretch-div').append(data);

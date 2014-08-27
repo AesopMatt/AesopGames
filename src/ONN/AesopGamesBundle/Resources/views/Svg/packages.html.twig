@@ -19,7 +19,9 @@
         </div>
     {% endfor %}
 {% endif %}
-
+{% if show != 'all' %}
 <div style="width:100%;" class="text-center" id=rewards_button>
-    <button class="btn btn-success btn-lg" onclick="loadMoreRewards('{{ last_id }}')">View More</button>
+    <button class="btn btn-success btn-lg" onclick="loadMoreRewards('{{ last_id }}','limited')">View More</button>
+    <button class="btn btn-success btn-lg" onclick="loadMoreRewards('{{ last_id }}','all')">View All</button>
 </div>
+{% endif %}
