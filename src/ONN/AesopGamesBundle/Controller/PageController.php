@@ -20,13 +20,13 @@ class PageController extends Controller
         $names = [
             'indiegogo'=>'',
             'kickstarter'=>'https://www.kickstarter.com/projects/mmitchum/560713644?token=ce3cfc9a',
-            'rockethub' => '',
+            'rockethub' => 'http://www.rockethub.com/projects/45939-brunelleschi-age-of-architects',
             'greenlight' => '',
             'epocu' => 'http://epocu.com/campaigns/brunelleschi-age-architects/'
         ];
         //$types = ['comingsoon','live','stretch','complete-no','complete-yes'];
         $types = ['comingsoon'];
-        $live = [];
+        $live = ['rockethub'];
         $success = ['epocu'];
         $images = [];
 
@@ -42,6 +42,13 @@ class PageController extends Controller
                 $images[$name][$type]['image'] = '/Aesop/web/bundles/onnaesopgames/images/Fundraisers/'.$name.'-small-'.$type.'.png';
             } else {
                 $images[$name][$type]['image'] = '/bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
+            }
+            if (in_array($name,$live)){
+                if (strpos($currentUrl,'localhost') !== false){
+                    $images[$name][$type]['image'] = '/Aesop/web/bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
+                } else {
+                    $images[$name][$type]['image'] = '/bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
+                }
             }
             $images[$name][$type]['url'] = $url;
         }

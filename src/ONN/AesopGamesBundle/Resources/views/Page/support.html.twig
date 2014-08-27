@@ -46,20 +46,24 @@
             </div>
             <div style="clear:both"></div>
             <div class="alert alert-success" style="border: green 2px solid; opacity: .9;">
-                <h3>Lend Your Support</h3>
-                <p>The first step in our efforts to get community support for Brunelleschi: Age of Architects was a success!</p>
-                <p>The Epocu campaign has successfully ended and the RocketHub crowdfunding campaign is set to go live any minute!</p>
-                <p>Thank you so much for supporting indie game development and Aesop Games' Brunelleschi: Age of Architects!</p>
-
-
-                <button {% if fundraisers.epocu['complete-yes']['url']|length > 0 %}onclick="newPage('{{ fundraisers.epocu['complete-yes']['url'] }}')"{% endif %}class="btn-large btn-custom" style="opacity: .8;float:right; margin:10px; border: solid 2px green; background: transparent; padding-top:4px;">
-                    <img src="{{ asset( fundraisers.epocu['complete-yes']['image'] ) }}" class="img-rounded" style="height: 100px;margin-top: 0px; margin-bottom: 0px; display:block">
-                </button>
-
+                <h3>Help Us Launch on Rockethub!</h3>
+                <div class="pull-left">
+                    <h4>We have launched a crowdsourcing campaign on Rockethub!</h4>
+                    <p style="color:darkgreen;">Support indie game development and let us entertain you with the free beta while we complete the game!</p>
+                    <p style="color:darkgreen;">We are already developing a 3D Unity client for export to all major operating systems!</p>
+                    <p><a href="http://www.indiedb.com/games/brunelleschi/downloads" target="_blank" style="color:darkblue;">[Checkout the 3D client alpha on idiedb]</a></p>
+                    <p style="color:darkgreen;">Thank you for supporting indie game development and Aesop Games' Brunelleschi: Age of Architects!</p>
+                </div>
+                <div class="pull-right">
+                    <button {% if fundraisers.rockethub['live']['url']|length > 0 %}onclick="newPage('{{ fundraisers.rockethub['live']['url'] }}')"{% endif %}class="btn-large btn-custom" style="opacity: .8;float:right; margin:10px; border: solid 2px green; background: transparent; padding-top:4px;">
+                        <img src="{{ asset( fundraisers.rockethub['live']['image'] ) }}" class="img-rounded" style="height: 150px;margin-top: 0px; margin-bottom: 0px; display:block;">
+                    </button>
+                </div>
                 <hr>
-                <h4>Aesop Games is working to raise funds for completing Brunelleschi: Age of Architects!</h4>
-                <p>Information on our team, project, and progress put together towards that effort as well as perks available to supporters will be updated here.</p>
-                <p>If you have already supported us through an online campaign, but see a similarly priced Perk here that you would rather have, get in touch and we will be happy to update your reserved Perk.</p>
+                <br/>
+                <b>Aesop Games is working to raise funds for completing Brunelleschi: Age of Architects!</b><br/>
+                <small>Information on our team, project, and progress put together towards that effort as well as perks available to supporters will be updated here.</small>
+                <small>If you have already supported us through an online campaign, but see a similarly priced Perk here that you would rather have, get in touch and we will be happy to update your reserved Perk.</small>
                 <p style="font-weight:bold; text-align:right; margin-right:10px;margin-top:10px;">Jump to information about <a href="#looking-forward">the Game</a>, <a href="#overview">the Team</a>, <a href="#rewards">the Perks</a>, <a href="#stretch">the Stretch Goals</a>.</p>
             </div>
         </div>
