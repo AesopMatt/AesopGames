@@ -26,7 +26,7 @@ class PageController extends Controller
         ];
         //$types = ['comingsoon','live','stretch','complete-no','complete-yes'];
         $types = ['comingsoon'];
-        $live = ['rockethub'];
+        $live = ['rockethub','indiegogo'];
         $success = ['epocu'];
         $images = [];
 
