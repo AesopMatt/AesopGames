@@ -18,7 +18,7 @@ class PageController extends Controller
     public function getFundraisersImages($currentUrl)
     {
         $names = [
-            'indiegogo'=>'',
+            'indiegogo'=>'https://www.indiegogo.com/projects/brunelleschi-age-of-architects/',
             'kickstarter'=>'https://www.kickstarter.com/projects/mmitchum/560713644?token=ce3cfc9a',
             'rockethub' => 'http://www.rockethub.com/projects/45939-brunelleschi-age-of-architects',
             'greenlight' => '',
