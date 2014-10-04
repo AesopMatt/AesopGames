@@ -450,6 +450,13 @@ class PageController extends Controller
         if ($mobile == true || $tablet == true){
             $page = 'mobileSupport.html.twig';
         }
+
+        if (strpos($currentUrl,'localhost') !== false){
+            $completion_image = '/Aesop/web/bundles/onnaesopgames/images/Web/funding-completion.png';
+        } else {
+            $completion_image = '/bundles/onnaesopgames/images/Web/funding-completion.png';
+        }
+
         $response = $this->render('ONNAesopGamesBundle:Page:'.$page, array(
             'city_building' => $city_building,
             'fantasy_renaissance' => $fantasy_renaissance,
@@ -483,13 +490,15 @@ class PageController extends Controller
             'belongs_to_players' => $belongs_to_players,
             'tall_grass' => $tall_grass,
             'character_creation' => $character_creation,
-            'android_chrome' => $android_chrome
+            'android_chrome' => $android_chrome,
+            'completion_image' => $completion_image
         ));
         /*
         $response->setETag(md5($response->getContent()));
         $response->setPublic(); // make sure the response is public/cacheable
         $response->isNotModified($request);
         */
+
         return $response;
     }
 
