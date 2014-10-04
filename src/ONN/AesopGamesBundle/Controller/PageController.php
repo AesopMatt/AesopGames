@@ -19,14 +19,14 @@ class PageController extends Controller
     {
         $names = [
             'indiegogo'=>'https://www.indiegogo.com/projects/brunelleschi-age-of-architects/',
-            'kickstarter'=>'https://www.kickstarter.com/projects/mmitchum/560713644?token=ce3cfc9a',
+            'kickstarter'=>'https://www.kickstarter.com/projects/mmitchum/brunelleschi-age-of-architects',
             'rockethub' => 'http://www.rockethub.com/projects/45939-brunelleschi-age-of-architects',
             'greenlight' => '',
             'epocu' => 'http://epocu.com/campaigns/brunelleschi-age-architects/'
         ];
         //$types = ['comingsoon','live','stretch','complete-no','complete-yes'];
         $types = ['comingsoon'];
-        $live = ['rockethub','indiegogo'];
+        $live = ['rockethub','indiegogo','kickstarter'];
         $success = ['epocu'];
         $images = [];
 
@@ -116,6 +116,9 @@ class PageController extends Controller
         }
 
         foreach ($perks as $key=>$perk){
+            if (empty($perk)){
+                continue;
+            }
             $image = $perk['image'];
             $title = $perk['title'];
             $desc = $perk['desc'];
