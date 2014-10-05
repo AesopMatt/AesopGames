@@ -34,6 +34,12 @@ stretch:
 packages:
     pattern:   /packages/{last_id}/{show}
     defaults:  { _controller: ONNAesopGamesBundle:Page:packages, last_id: '0','show': 'limited' }
+press_kit:
+    pattern:   /press_kit
+    defaults:  { _controller: ONNAesopGamesBundle:Page:pressKit }
+press_body:
+    pattern:   /press_body/{content}
+    defaults:  { _controller: ONNAesopGamesBundle:Page:pressBody }
 oculus:
     pattern:   /oculus
     defaults:  { _controller: ONNAesopGamesBundle:Page:oculus }

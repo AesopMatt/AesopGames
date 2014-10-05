@@ -30,6 +30,8 @@
     <![endif]-->
     <link rel="icon" href={{ asset('bundles/onnaesopgames/images/favicon.ico') }} type=”image/x-icon”v>
     <style>
+        @font-face { font-family: Almendra; src: url('http://fonts.googleapis.com/css?family=Almendra+SC'); }
+
         body {
             padding-top: 70px;
             padding-bottom: 30px;
@@ -178,6 +180,18 @@
                 );
                 $(document).trigger('load_event');
             }
+        );
+        return false;
+    }
+
+    function selectThis(path,divId) {
+        document.body.style.cursor="wait";
+        $.get( path,
+                function(data){
+                    $('#'+divId).empty().html(data);
+                    //the response is in the data variable
+                    document.body.style.cursor="auto";
+                }
         );
         return false;
     }

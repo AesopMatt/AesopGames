@@ -1,0 +1,60 @@
+{% extends 'ONNAesopGamesBundle::layout.html.twig' %}
+
+{% block main %}
+    <div class="container theme-showcase">
+        <div class="jumbotron" style="opacity: .8;padding:10px;z-index:100;">
+            <p style="display:inline"><b>Brunelleschi: Age of Architects</b> Bootstrap Beta</p>
+            <a href="http://brunegame.com" class="btn btn-primary btn-lg pull-right" role="button">Play Now &raquo;</a>
+            <a href="#" onclick="selectMain('{{ path('support') }}')" class="btn btn-success btn-lg pull-right" style="margin-right: 10px;" role="button">Support</a>
+        </div>
+        <div class="page-header">
+            <h1>Aesop Games: Press Kit</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Contents</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="#" onclick="selectThis('{{ path('press_body', { 'content': 'about' }) }}','press-body')">
+                                    Aesop Games
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#" onclick="selectThis('{{ path('press_body', { 'content': 'features' }) }}','press-body')">
+                                    Game Features
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#" onclick="selectThis('{{ path('press_body', { 'content': 'images' }) }}','press-body')">
+                                    Image Assets
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#" onclick="selectThis('{{ path('press_body', { 'content': 'videos' }) }}','press-body')">
+                                    Featured Videos
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.col-sm-4 -->
+            <div id="press-body">
+                <div class="col-sm-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Press Kit</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>We have assembled here a selection of relevant, current materials for easy access by the press.  If you are a journalist or player writing a review, and do not find what you are looking for here, please reach out.</p>
+                            <p>Thank you for your interest!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /container -->
+{% endblock %}

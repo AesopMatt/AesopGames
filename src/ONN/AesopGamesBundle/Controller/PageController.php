@@ -11,8 +11,71 @@ class PageController extends Controller
     public function indexAction(Request $request)
     {
         $session = $request->getSession();
-        $session->set('page','index');
+        $session->set('page', 'index');
         return $this->render('ONNAesopGamesBundle:Page:index.html.twig');
+    }
+
+    public function pressBodyAction(Request $request,$content)
+    {
+        $contents = [ 'about', 'features', 'images', 'release','videos'];
+
+        if (!in_array($content, $contents)){
+            $content = $contents[0];
+        }
+
+        if ($content == 'images'){
+            $currentUrl = $request->getUri();
+            $images[0]['title'] = 'Character Creation';
+            $images[0]['path'] = $this->getImagePath('Screenshots/character-creation.png',$currentUrl);
+            $images[1]['title'] = 'Equipping a Unit';
+            $images[1]['path'] = $this->getImagePath('Screenshots/equip_unit.png',$currentUrl);
+            $images[2]['title'] = 'Markets';
+            $images[2]['path'] = $this->getImagePath('Screenshots/markets.png',$currentUrl);
+            $images[3]['title'] = 'Competitive Scenario';
+            $images[3]['path'] = $this->getImagePath('Screenshots/scenario.png',$currentUrl);
+            $images[4]['title'] = 'Fight';
+            $images[4]['path'] = $this->getImagePath('Screenshots/fight.png',$currentUrl);
+            $images[5]['title'] = 'Unity3D Alpha Client: Compass';
+            $images[5]['path'] = $this->getImagePath('Screenshots/tall-grass.png',$currentUrl);
+            $images[6]['title'] = 'Unity3D Alpha Client: Alchemist Shop';
+            $images[6]['path'] = $this->getImagePath('Screenshots/unity-alchemist-shop.png',$currentUrl);
+            $images[7]['title'] = 'Unity3D Alpha Client: Manage Building';
+            $images[7]['path'] = $this->getImagePath('Screenshots/unity-manage-building.png',$currentUrl);
+            return $this->render('ONNAesopGamesBundle:Press:'.$content.'.html.twig', array('images'=>$images));
+        }
+
+        if ($content == 'videos'){
+            $videos[0]['title'] = 'Unity3D Alpha Client Walk Through';
+            $videos[0]['path'] = '//www.youtube.com/embed/VnwQo_d4FrA';
+            $videos[1]['title'] = 'Web Beta: Taking an Action';
+            $videos[1]['path'] = '//www.youtube.com/embed/4NE_fOABQ4s';
+            $videos[3]['title'] = 'Web Beta: Direct Trades';
+            $videos[3]['path'] = '//www.youtube.com/embed/_taLP957UMU';
+            $videos[2]['title'] = 'OculusRift Client Demo';
+            $videos[2]['path'] = '//www.youtube.com/embed/DFQJNL4zvDE';
+            $videos[4]['title'] = 'Web Beta: Property Rights';
+            $videos[4]['path'] = '//www.youtube.com/embed/BHigJVplrrA';
+            $videos[5]['title'] = 'Overview';
+            $videos[5]['path'] = '//www.youtube.com/embed/cdX2PYnLu38';
+            return $this->render('ONNAesopGamesBundle:Press:'.$content.'.html.twig', array('videos'=>$videos));
+        }
+
+        return $this->render('ONNAesopGamesBundle:Press:'.$content.'.html.twig');
+    }
+
+    public function getImagePath($name,$currentUrl)
+    {
+        if (strpos($currentUrl,'localhost') !== false){
+            $image = '/Aesop/web/bundles/onnaesopgames/images/'.$name;
+        } else {
+            $image = '/bundles/onnaesopgames/images/'.$name;
+        }
+        return $image;
+    }
+
+    public function pressKitAction()
+    {
+        return $this->render('ONNAesopGamesBundle:Page:pressKit.html.twig');
     }
 
     public function getFundraisersImages($currentUrl)
