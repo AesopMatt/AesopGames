@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1519446"
-     inkscape:cx="-28.978122"
-     inkscape:cy="27.178305"
+     inkscape:cx="-28.978121"
+     inkscape:cy="166.07387"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -66,7 +66,7 @@
          sodipodi:role="line"
          id="tspan2987"
          x="298.36508"
-         y="369.76062">$496</tspan></text>
+         y="369.76062">$522</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -81,14 +81,14 @@
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="284.20831"
+       x="272.20831"
        y="421.85971"
        id="text2993"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan2995"
-         x="284.20831"
-         y="421.85971">As of Oct 5</tspan></text>
+         x="272.20831"
+         y="421.85971">As of Oct 11</tspan></text>
     <rect
        id="rect2997"
        width="275.18686"
