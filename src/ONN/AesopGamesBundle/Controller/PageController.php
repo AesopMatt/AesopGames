@@ -92,13 +92,15 @@ class PageController extends Controller
         $live = ['rockethub','indiegogo'];
         $success = ['epocu'];
         $stretch = ['kickstarter'];
+        $coming_soon = ['greenlight'];
         $images = [];
 
         $type = 'comingsoon';
         foreach ($names as $name=>$url){
             if (in_array($name,$live)){ $type = 'live'; }
-            if (in_array($name,$success)) { $type = 'success'; }
+            if (in_array($name,$success)) { $type = 'complete-yes'; }
             if (in_array($name,$stretch)) { $type = 'stretch'; }
+            if (in_array($name,$coming_soon)) { $type = 'comingsoon'; }
 
             if (strpos($currentUrl,'localhost') !== false){
                 $images[$name][$type]['image'] = '/Aesop/web/bundles/onnaesopgames/images/Fundraisers/'.$name.'-small-'.$type.'.png';
