@@ -89,9 +89,9 @@ class PageController extends Controller
         ];
         //$types = ['comingsoon','live','stretch','complete-no','complete-yes'];
         $types = ['comingsoon'];
-        $live = ['rockethub','indiegogo'];
+        $live = ['indiegogo'];
         $success = ['epocu'];
-        $stretch = ['kickstarter'];
+        $stretch = ['kickstarter','rockethub'];
         $coming_soon = ['greenlight'];
         $images = [];
 
