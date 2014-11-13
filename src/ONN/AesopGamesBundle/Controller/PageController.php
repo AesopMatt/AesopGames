@@ -88,17 +88,16 @@ class PageController extends Controller
             'epocu' => 'http://epocu.com/campaigns/brunelleschi-age-architects/'
         ];
         //$types = ['comingsoon','live','stretch','complete-no','complete-yes'];
-        $types = ['comingsoon'];
-        $live = ['indiegogo'];
-        $success = ['epocu'];
-        $stretch = ['kickstarter','rockethub'];
+        $fail = ['indiegogo'];
+        $success = ['epocu','kickstarter','rockethub'];
+        $stretch = [];
         $coming_soon = ['greenlight'];
         $images = [];
 
         $type = 'comingsoon';
         foreach ($names as $name=>$url){
-            if (in_array($name,$live)){ $type = 'live'; }
             if (in_array($name,$success)) { $type = 'complete-yes'; }
+            if (in_array($name,$fail)) { $type = 'complete-no'; }
             if (in_array($name,$stretch)) { $type = 'stretch'; }
             if (in_array($name,$coming_soon)) { $type = 'comingsoon'; }
 
@@ -107,7 +106,7 @@ class PageController extends Controller
             } else {
                 $images[$name][$type]['image'] = '/bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
             }
-            if (in_array($name,$live)){
+            if (in_array($name,$fail)){
                 if (strpos($currentUrl,'localhost') !== false){
                     $images[$name][$type]['image'] = '/Aesop/web/bundles/onnaesopgames/images/Fundraisers/'.$name.'-'.$type.'.png';
                 } else {
