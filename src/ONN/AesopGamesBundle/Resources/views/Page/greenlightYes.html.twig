@@ -21,7 +21,7 @@
             <div id="container_{{ form_name }}" class="alert alert-success" style="border:solid 2px;margin-left:auto;margin-right:auto;width:450px;{% if show_form != 'yes' %}display:none;{% endif %}">
                 {% set form_message = app.session.get('form_message') %}
 
-                <form id='form_{{ form_name }}' method="post" {{ form_enctype(form) }} name="{{ form_name }}" class="almendra">
+                <form id='form_email' method="post" {{ form_enctype(form) }} name="{{ form_name }}" class="almendra">
                     {{ form_start(form) }}
 
                     <p>{{ form_label(form.email) }}</p>

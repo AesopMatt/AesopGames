@@ -175,7 +175,7 @@
 
         function greenlightYesSubmit() {
             $.post( '{{ path( form_path, { 'active': 'yes' }) }}',
-                    $('#form_{{ form_name }}').serialize(),
+                    $('#form_email').serialize(),
                     function(data){
                         $("#main").empty().append(data);
                     }
