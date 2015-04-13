@@ -21,23 +21,4 @@
             </div>
         {% endfor %}
     </div>
-
-    <script>
-        function selectYes()
-        {
-            selectMain('{{ path( 'greenlight_yes' ) }}');
-        }
-
-        function selectNo(option)
-        {
-            option = parseInt(option);
-            if (option < 3) {
-                var next_option = option + 1;
-                $("#option_set_"+option).css({'display': 'none'});
-                $("#option_set_"+next_option).css({'display': 'inline'});
-            } else {
-                selectMain('{{ path( 'greenlight_no' ) }}');
-            }
-        }
-    </script>
 {% endblock %}
