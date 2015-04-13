@@ -1,0 +1,55 @@
+{% extends 'ONNAesopGamesBundle::layout.html.twig' %}
+
+{% block main %}
+    <script>
+        function greenlightYesSubmit() {
+            $.post( '{{ path( form_path, { 'active': 'yes' }) }}',
+                    $('#form_{{ form_name }}').serialize(),
+                    function(data){
+                        $("#main").empty().append(data);
+                    }
+            );
+            return false;
+        }
+    </script>
+
+
+    <h1 style="margin:10px;">Brunelleschi: Age of Architects</h1>
+
+    <div class="alert alert-info" style="width:90%;margin:10px;border: solid 2px;">
+        <h2>Coming Soon to Steam Greenlight!</h2>
+        <p>We would love to let you know when we're moving forward!</p>
+        <small>We will never sell or distribute your email address.</small>
+            <div id="form">
+
+            </div>
+
+            <div id="thank_you" style="{% if show_form == 'yes' %}display:none;{% endif %}">
+                <h3>Thank You for Your Support!</h3>
+
+                <p>We will be in touch!</p>
+            </div>
+
+            <div id="container_{{ form_name }}" class="alert alert-success" style="border:solid 2px;margin-left:auto;margin-right:auto;width:450px;{% if show_form != 'yes' %}display:none;{% endif %}">
+                {% set form_message = app.session.get('form_message') %}
+
+                <form id='form_{{ form_name }}' method="post" {{ form_enctype(form) }} name="{{ form_name }}" >
+                    {{ form_start(form) }}
+
+                    <p>{{ form_label(form.email) }}</p>
+                    {{ form_errors(form) }}
+                    {% if form_name == app.session.get('last_form') and form_message|length > 0 %}
+                        {{ form_message }}
+                    {% endif %}
+
+                    <p style="margin-left:5px;">{{ form_widget(form.email) }}</p>
+                    <p style="display:none">{{ form_label(form.type) }}</p>
+                    <p style="margin:5px;">{{ form_widget(form.type) }}</p>
+                    <input id="{{ form_name }}" type="button" onclick="{{ form_name }}Submit()" value='Submit' class='btn btn-small btn-custom pull-right' />
+                    {{ form_end(form) }}
+                </form>
+
+                <div id='result_{{ form_name }}' style="clear:both;"></div>
+            </div>
+    </div>
+{% endblock %}

@@ -5,6 +5,7 @@ namespace ONN\AesopGamesBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use ONN\AesopGamesBundle\Entity\Perks;
+use ONN\AesopGamesBundle\Entity\EmailList;
 
 class PageController extends Controller
 {
@@ -301,7 +302,7 @@ class PageController extends Controller
 
     public function showMessage($message)
     {
-        return $this->render('ONNBrunBundle:Fragment:message.html.twig',array('message'=>$message));
+        return $this->render('ONNAesopGamesBundle:Fragment:message.html.twig',array('message'=>$message));
     }
 
     public function perksAction($last_id = 0,$show = 'limited')
@@ -422,6 +423,99 @@ class PageController extends Controller
         $response->isNotModified($request);
         */
         return $response;
+    }
+
+    public function greenlightAction(Request $request)
+    {
+        $session = $request->getSession();
+        $session->set('page','support');
+
+        $currentUrl = $request->getUri();
+
+        if (strpos($currentUrl,'localhost') !== false){
+            $image_prefix = '/Aesop/web/bundles/onnaesopgames/images/';
+        } else {
+            $image_prefex = '/bundles/onnaesopgames/images/';
+        }
+
+        $options = [
+            1 => [
+                'message' => "Would you support Brunelleschi: Age of Architects on Steam Greenlight?",
+                'yes' => "Yes, totally!",
+                'no' => "Nope, sure woudn't.",
+                'no_tag' => 'btn-info'
+            ],
+            2 => [
+                'message' => "What if we got some bugs fixed and improved performance, then would you give Brunelleschi a vote on Steam Greenlight?",
+                'yes' => "Absolutely! Take my feedback - get my vote!",
+                'no' => "Still no, just not gonna.",
+                'no_tag' => 'btn-warning'
+            ],
+            3 => [
+                'message' => "What if we added your favorite stuff like alien space cats with lasers for eyes?",
+                'yes' => "Oh heck yeah! Bring on the laser cats!",
+                'no' => "Not now, not ever, not even if you add all my favorite stuff in my favorite color.",
+                'no_tag' => 'btn-danger'
+            ]
+        ];
+
+        $response = $this->render('ONNAesopGamesBundle:Page:greenlight.html.twig', array(
+            'options' => $options
+        ));
+
+        return $response;
+    }
+
+    public function greenlightYesAction(Request $request, $active = 'no')
+    {
+        $em = $this->getDoctrine()->getManager();
+        $session = $request->getSession();
+        $session->set('page','greenlight_yes');
+        $form_name = 'greenlightYes';
+
+        $options = [
+            'all' => 'Send me all updates',
+            'some' => 'Send me up to one update per week',
+            'one' => 'Just let me know when BruneGame is on Greenlight'
+        ];
+
+        $task = new EmailList();
+        $task->setConfirm('no');
+
+        $form = $this->createFormBuilder($task)
+            ->add('email', 'email')
+            ->add('type', 'choice',array('choices'=>$options,'data'=>'all'))
+            ->getForm();
+
+        $show_form = 'yes';
+        if ($request->isXmlHttpRequest() && $active == 'yes') {
+            $form->bind($request);
+            $session->set('last_form',$form_name);
+            if ($form->isValid() && filter_var($task->getEmail(), FILTER_VALIDATE_EMAIL)) {
+                $em->persist($task);
+                $em->flush();
+
+                $show_form = 'no';
+            } else {
+                $message = "Invalid email provided: ".$task->getEmail();
+                $session->set('form_message',$message);
+            }
+        }
+
+        return $this->render('ONNAesopGamesBundle:Page:greenlightYes.html.twig',array(
+            'form' => $form->createView(),
+            'form_path' => 'greenlight_yes',
+            'form_name' => 'greenlightYes',
+            'show_form' => $show_form
+        ));
+    }
+
+    public function greenlightNoAction(Request $request)
+    {
+        $session = $request->getSession();
+        $session->set('page','greenlight_no');
+
+        return $this->render('ONNAesopGamesBundle:Page:greenlightNo.html.twig');
     }
 
     public function supportAction(Request $request)

@@ -1,0 +1,43 @@
+{% extends 'ONNAesopGamesBundle::layout.html.twig' %}
+
+{% block main %}
+    <h1 style="margin:10px;">Brunelleschi: Age of Architects</h1>
+
+    <div class="alert alert-info" style="width:90%;margin:10px;border: solid 2px;">
+        <h2>Coming Soon to Steam Greenlight!</h2>
+
+        {% for key,option in options %}
+            <div id="option_set_{{ key }}" {% if key != 1 %}style="display:none"{% endif %}>
+                <h3>{{ option.message }}</h3>
+
+                <button onclick="selectYes()"
+                        class="btn btn-success">
+                    {{ option.yes }}
+                </button>
+
+                <button onclick="selectNo('{{ key }}')" class="btn {{ option.no_tag }}">
+                    {{ option.no }}
+                </button>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        function selectYes()
+        {
+            selectMain('{{ path( 'greenlight_yes' ) }}');
+        }
+
+        function selectNo(option)
+        {
+            option = parseInt(option);
+            if (option < 3) {
+                var next_option = option + 1;
+                $("#option_set_"+option).css({'display': 'none'});
+                $("#option_set_"+next_option).css({'display': 'inline'});
+            } else {
+                selectMain('{{ path( 'greenlight_no' ) }}');
+            }
+        }
+    </script>
+{% endblock %}

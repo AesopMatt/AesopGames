@@ -15,7 +15,13 @@ contact:
     defaults:  { _controller: ONNAesopGamesBundle:Page:contact }
 support:
     pattern:   /support
-    defaults:  { _controller: ONNAesopGamesBundle:Page:support }
+    defaults:  { _controller: ONNAesopGamesBundle:Page:greenlight }
+greenlight_yes:
+    pattern:   /greenlight_yes/{active}
+    defaults:  { _controller: ONNAesopGamesBundle:Page:greenlightYes, active:'no' }
+greenlight_no:
+    pattern:   /greenlight_no
+    defaults:  { _controller: ONNAesopGamesBundle:Page:greenlightNo }
 navbar:
     pattern:   /navbar
     defaults:  { _controller: ONNAesopGamesBundle:Page:navbar }
