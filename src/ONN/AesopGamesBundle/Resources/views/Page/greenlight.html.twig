@@ -1,21 +1,21 @@
 {% extends 'ONNAesopGamesBundle::layout.html.twig' %}
 
 {% block main %}
-    <h1 style="margin:10px;">Brunelleschi: Age of Architects</h1>
+    <h1 style="margin:10px;" class="almendra">Brunelleschi: Age of Architects</h1>
 
-    <div class="alert alert-info" style="width:90%;margin:10px;border: solid 2px;">
-        <h2>Coming Soon to Steam Greenlight!</h2>
+    <div class="alert alert-info almendra" style="width:90%;margin:10px;border: solid 2px;">
+        <h2 class="almendra">Coming Soon to Steam Greenlight!</h2>
 
         {% for key,option in options %}
             <div id="option_set_{{ key }}" {% if key != 1 %}style="display:none"{% endif %}>
-                <h3>{{ option.message }}</h3>
+                <h3 class="almendra">{{ option.message }}</h3>
 
                 <button onclick="selectYes()"
-                        class="btn btn-success">
+                        class="btn btn-success almendra" style="font-size:18px;">
                     {{ option.yes }}
                 </button>
 
-                <button onclick="selectNo('{{ key }}')" class="btn {{ option.no_tag }}">
+                <button onclick="selectNo('{{ key }}')" class="btn {{ option.no_tag }} almendra" style="font-size:18px;">
                     {{ option.no }}
                 </button>
             </div>

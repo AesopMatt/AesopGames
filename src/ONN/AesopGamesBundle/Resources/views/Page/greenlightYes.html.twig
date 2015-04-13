@@ -14,26 +14,26 @@
     </script>
 
 
-    <h1 style="margin:10px;">Brunelleschi: Age of Architects</h1>
+    <h1 class="almendra" style="margin:10px;">Brunelleschi: Age of Architects</h1>
 
     <div class="alert alert-info" style="width:90%;margin:10px;border: solid 2px;">
-        <h2>Coming Soon to Steam Greenlight!</h2>
-        <p>We would love to let you know when we're moving forward!</p>
-        <small>We will never sell or distribute your email address.</small>
+        <h2 class="almendra">Coming Soon to Steam Greenlight!</h2>
+        <p class="almendra">We would love to let you know when we're moving forward!</p>
+        <small class="almendra">We will never sell or distribute your email address.</small>
             <div id="form">
 
             </div>
 
             <div id="thank_you" style="{% if show_form == 'yes' %}display:none;{% endif %}">
-                <h3>Thank You for Your Support!</h3>
+                <h3 class="almendra">Thank You for Your Support!</h3>
 
-                <p>We will be in touch!</p>
+                <p class="almendra">We will be in touch!</p>
             </div>
 
             <div id="container_{{ form_name }}" class="alert alert-success" style="border:solid 2px;margin-left:auto;margin-right:auto;width:450px;{% if show_form != 'yes' %}display:none;{% endif %}">
                 {% set form_message = app.session.get('form_message') %}
 
-                <form id='form_{{ form_name }}' method="post" {{ form_enctype(form) }} name="{{ form_name }}" >
+                <form id='form_{{ form_name }}' method="post" {{ form_enctype(form) }} name="{{ form_name }}" class="almendra">
                     {{ form_start(form) }}
 
                     <p>{{ form_label(form.email) }}</p>

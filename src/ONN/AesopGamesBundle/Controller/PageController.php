@@ -475,8 +475,8 @@ class PageController extends Controller
 
         $options = [
             'all' => 'Send me all updates',
-            'some' => 'Send me up to one update per week',
-            'one' => 'Just let me know when BruneGame is on Greenlight'
+            'some' => 'Just send me big updates',
+            'one' => 'Let me know when BruneGame is on Greenlight'
         ];
 
         $task = new EmailList();
