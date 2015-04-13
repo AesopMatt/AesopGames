@@ -495,6 +495,7 @@ class PageController extends Controller
                 $em->persist($task);
                 $em->flush();
 
+                var_dump($task);
                 $show_form = 'no';
             } else {
                 $message = "Invalid email provided: ".$task->getEmail();
