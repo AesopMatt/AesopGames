@@ -172,6 +172,16 @@
                 selectMain('{{ path( 'greenlight_no' ) }}');
             }
         }
+
+        function greenlightYesSubmit() {
+            $.post( '{{ path( form_path, { 'active': 'yes' }) }}',
+                    $('#form_{{ form_name }}').serialize(),
+                    function(data){
+                        $("#main").empty().append(data);
+                    }
+            );
+            return false;
+        }
     </script>
 </head>
 <body>

@@ -1,19 +1,6 @@
 {% extends 'ONNAesopGamesBundle::layout.html.twig' %}
 
 {% block main %}
-    <script>
-        function greenlightYesSubmit() {
-            $.post( '{{ path( form_path, { 'active': 'yes' }) }}',
-                    $('#form_{{ form_name }}').serialize(),
-                    function(data){
-                        $("#main").empty().append(data);
-                    }
-            );
-            return false;
-        }
-    </script>
-
-
     <div class="container theme-showcase">
     <h1 class="almendra" style="margin:10px;">Brunelleschi: Age of Architects</h1>
 
