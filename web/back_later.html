@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="bundles/onnaesopgames/js/jquery-1.8.0.min.js"></script>
+    <script src="bundles/onnaesopgames/js/jquery.backstretch.min.js"></script>
 
     <style>
         body {
+
             background: #a90329; /* Old browsers */
             background: -moz-linear-gradient(left,  #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6+ */
             background: -webkit-gradient(linear, left top, right top, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019)); /* Chrome,Safari4+ */
@@ -28,12 +31,16 @@
 <body>
 
 <div style="width:100%;text-align:center;">
-    <div class="alert alert-warning ui-corner-all" style="margin:25px;">
-        <h1>Brunelleschi: Age of Architects</h1>
-        <h3>Under Extended Maintenance</h3>
-        <h3>Expected return on or before 10PM PST 8/12/2015</h3>
+    <div class="alert alert-danger ui-corner-all" style="margin:15px;background: #a90329;">
+        <div class="alert alert-warning ui-corner-all" style="margin:25px;">
+            <h1>Brunelleschi: Age of Architects</h1>
+            <h3>Under Extended Maintenance</h3>
+            <h3>Expected return on or before 10PM PST 8/12/2015</h3>
+        </div>
     </div>
 </div>
-
+<script>
+    $.backstretch('bundles/onnaesopgames/images/city.jpg');
+</script>
 </body>
 </html>
