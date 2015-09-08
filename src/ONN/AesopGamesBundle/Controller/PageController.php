@@ -518,6 +518,11 @@ class PageController extends Controller
         return $this->render('ONNAesopGamesBundle:Page:greenlightNo.html.twig');
     }
 
+    public function submitFormAction(Request $request)
+    {
+        return $this->render('ONNAesopGamesBundle:Page:submitForm.html.twig');
+    }
+
     public function supportAction(Request $request)
     {
         $session = $request->getSession();

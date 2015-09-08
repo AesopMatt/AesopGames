@@ -64,3 +64,6 @@ events:
 local:
     pattern:   /local
     defaults:  { _controller: ONNAesopGamesBundle:Page:oculus }
+submit_form:
+    pattern:   /submit_form
+    defaults:  { _controller: ONNAesopGamesBundle:Page:submitForm }
