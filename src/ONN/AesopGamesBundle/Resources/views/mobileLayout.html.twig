@@ -206,7 +206,7 @@
                 //the response is in the data variable
                 document.body.style.cursor="auto";
                 data = null;
-                $.get( '{{ path ('navbar') }}',
+                $.get( '{{ url ('navbar') }}',
                     function(data){
                         $('#navbar').empty().append(data);
                         var stateObj = { foo: "bar" };

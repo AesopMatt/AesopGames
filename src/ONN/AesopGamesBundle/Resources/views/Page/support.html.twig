@@ -88,7 +88,7 @@
         <script>
             function learnMore()
             {
-                $.get( '{{ path ('looking_closer') }}',
+                $.get( '{{ url ('looking_closer') }}',
                         function(data){
                             $('#looking-closer-panel').html(data);
                         }
@@ -99,7 +99,7 @@
             function loadMoreRewards(last_id,show)
             {
                 $("#rewards_button").remove();
-                $.get( '{{ path ('packages') }}/'+last_id+'/'+show,
+                $.get( '{{ url ('packages') }}/'+last_id+'/'+show,
                         function(data){
                             $('#rewards-div').append(data);
                         }
@@ -110,7 +110,7 @@
             function loadMorePerks(last_id,show)
             {
                 $(".perks_button").remove();
-                $.get( '{{ path ('perks') }}/'+last_id+'/'+show,
+                $.get( '{{ url ('perks') }}/'+last_id+'/'+show,
                         function(data){
 
                             $('#perks-div').append(data);
@@ -122,7 +122,7 @@
             function loadMoreStretch(last_id,show)
             {
                 $("#stretch_button").remove();
-                $.get( '{{ path ('stretch') }}/'+last_id+'/'+show,
+                $.get( '{{ url ('stretch') }}/'+last_id+'/'+show,
                         function(data){
 
                             $('#stretch-div').append(data);
@@ -134,7 +134,7 @@
             function loadCalendar()
             {
                 $("#calendar_button").remove();
-                $.get( '{{ path ('calendar') }}',
+                $.get( '{{ url ('calendar') }}',
                         function(data){
                             $('#calendar-div').append(data);
                         }

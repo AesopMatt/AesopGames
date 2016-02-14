@@ -158,7 +158,7 @@
     <script>
         function selectYes()
         {
-            selectMain('{{ path( 'greenlight_yes' ) }}');
+            selectMain('{{ url( 'greenlight_yes' ) }}');
         }
 
         function selectNo(option)
@@ -169,12 +169,12 @@
                 $("#option_set_"+option).css({'display': 'none'});
                 $("#option_set_"+next_option).css({'display': 'inline'});
             } else {
-                selectMain('{{ path( 'greenlight_no' ) }}');
+                selectMain('{{ url( 'greenlight_no' ) }}');
             }
         }
 
         function greenlightYesSubmit() {
-            $.post( '{{ path( 'greenlight_yes', { 'active': 'yes' }) }}',
+            $.post( '{{ url( 'greenlight_yes', { 'active': 'yes' }) }}',
                     $('#form_email').serialize(),
                     function(data){
                         $("#main").empty().append(data);
@@ -211,7 +211,7 @@
                 //the response is in the data variable
                 document.body.style.cursor="auto";
                 data = null;
-                $.get( '{{ path ('navbar') }}',
+                $.get( '{{ url ('navbar') }}',
                     function(data){
                         $('#navbar').empty().append(data);
                         var stateObj = { foo: "bar" };

@@ -7,18 +7,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" onclick="selectMain('{{ path('index') }}')">Aesop Games</a>
+            <a class="navbar-brand" href="#" onclick="selectMain('{{ url('index') }}')">Aesop Games</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li {% if app.session.get('page') == 'index' %} class="active" {% endif %}>
-                    <a href="#" onclick="selectMain('{{ path('index') }}')">
+                    <a href="#" onclick="selectMain('{{ url('index') }}')">
                         Home</a></li>
                 <li {% if app.session.get('page') == 'about' %} class="active" {% endif %}>
-                    <a href="#" onclick="selectMain('{{ path('about') }}')">
+                    <a href="#" onclick="selectMain('{{ url('about') }}')">
                         About</a></li>
                 <li {% if app.session.get('page') == 'games' %} class="active" {% endif %}>
-                    <a href="#" onclick="selectMain('{{ path('games') }}')">
+                    <a href="#" onclick="selectMain('{{ url('games') }}')">
                         Games</a></li>
                 <li>
                     <a href="http://brunegame.blogspot.com/" target="_blank">
@@ -27,7 +27,7 @@
                     <a href="https://brunegame.com/premium" target="_blank">
                         Support</a></li>
                 <li {% if app.session.get('page') == 'contact' %} class="active" {% endif %}>
-                    <a href="#" onclick="selectMain('{{ path('contact') }}')">
+                    <a href="#" onclick="selectMain('{{ url('contact') }}')">
                         Contact</a></li>
             </ul>
         </div><!--/.nav-collapse -->
